@@ -1,4 +1,4 @@
-import { Button, FormControlLabel, Grid, IconButton, Link, useMediaQuery, useTheme } from '@material-ui/core';
+import { Button, CircularProgress, FormControlLabel, Grid, IconButton, Link, useMediaQuery, useTheme } from '@material-ui/core';
 import InputAdornment from '@material-ui/core/InputAdornment/InputAdornment';
 import TextField from '@material-ui/core/TextField/TextField';
 import Typography from '@material-ui/core/Typography/Typography';
@@ -14,6 +14,7 @@ import { useForm } from 'react-hook-form';
 import Modal from '../Components/Modal/Modal';
 import { gql, useMutation } from "@apollo/client"
 import { v4 as uuidv4 } from 'uuid'
+import { AnyARecord } from 'dns';
 
 // add loyal customer query
 const ADD_LOYAL_CUSTOMER = gql`
@@ -27,45 +28,94 @@ mutation addLoyalCustomers($data: AddLoyalCustomerInput!){
   }
 }
 `
+// initial values for the form inputs
+const initialValues = {
+    fullName: "eg. Kwame Opoku",
+    email: "eg. example@xyz.com",
+    contact: "eg. 0244000000",
+    location: "eg Teshie, Accra"
+
+}
+
+//  functional componet for getting location of user
+const LocationInput = ({ register, setValue, getValues }: any) => {
+
+    const classes = useStyles();
+    // const { register, setValue, getValues } = useForm()         // destructured props from the react-hook-form package
+    const [showProgress, setShowProgress] = useState(false)     // state variables for cricular progress bar
+
+    // function handles taping location icon
+    const handleLocationIconTap = () => {
+        setShowProgress(true)
+        getLocation()
+    }
+
+    // function gets location using the html 5 api for location services
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            alert("Geolocation is not supported by this browser.");
+        }
+    }
+
+
+    function showPosition(position: any) {
+
+        let coordinates = `Latitude: ${position.coords.latitude} Longitude: ${position.coords.longitude}`;
+        if (coordinates) {
+            setShowProgress(false)
+            setValue("location", coordinates)
+        }
+
+        return coordinates
+    }
+
+
+    return (
+
+        <TextField
+            required
+            id="standard-required"
+            label="Location"
+            value={getValues("location")}
+            inputRef={register}
+            name="location"
+            placeholder={initialValues.location}
+            className={classes.textField}
+            fullWidth
+            disabled
+            helperText="Tap icon to pick location"
+            multiline
+            margin="normal"
+            InputProps={{
+                startAdornment: (
+                    <InputAdornment position="start">
+                        <IconButton style={{ outline: "none" }} edge="start" onClick={handleLocationIconTap}>
+                            <MyLocation className={classes.svgIcon} />
+                        </IconButton>
+                    </InputAdornment>
+                ),
+                endAdornment: (
+                    showProgress && <CircularProgress size={30} thickness={6} style={{ color: "#F9A826" }} />
+                )
+            }}
+        />
+    )
+}
+
 
 const Signup = () => {
+
     var date = new Date();
 
     const classes = useStyles();
     const theme = useTheme();
     const { register, setValue, getValues } = useForm()
     const swapFooterPosition = useMediaQuery(theme.breakpoints.between("md", "xl"));
-    const [showLoader, setShowLoader] = useState(true);
-    const [open, setOpen] = useState(false);
-    const showModal = useRef(false)
-    const value = useRef('')
-    const initialValues = {
-        fullName: "eg. Kwame Opoku",
-        email: "eg. example@xyz.com",
-        contact: "eg. 0244000000",
-        location: "eg Teshie, Accra"
 
-    }
-    const [addLoyalCustomer, { data }] = useMutation(ADD_LOYAL_CUSTOMER);
-
-
-
-    const handleSubmit = (event: any) => {
-        event.preventDefault()
-
-        const data = {
-            id: uuidv4(),
-            fullName: getValues("fullName"),
-            contact: getValues("contact"),
-            location: getValues("location"),
-            email: getValues("email")
-        }
-
-
-        addLoyalCustomer({ variables: { data: data } })
-
-    }
-
+    // 
+    const [showLoader, setShowLoader] = useState(true); // state variables for 
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -76,56 +126,52 @@ const Signup = () => {
         };
     }, []);
 
+    const [open, setOpen] = useState(false);
+    const showModal = useRef(false)
+
+
+    const [addLoyalCustomer, { data }] = useMutation(ADD_LOYAL_CUSTOMER);    // state variables for graphql mutation
+
+    // event handler for form submission
+    const handleSubmit = (event: any) => {
+        event.preventDefault()
+
+        // mutation data 
+        const data = {
+            id: uuidv4(),
+            fullName: getValues("fullName"),
+            contact: getValues("contact"),
+            location: getValues("location"),
+            email: getValues("email")
+        }
+
+        // set mutation state for query
+        addLoyalCustomer({ variables: { data: data } })
+
+    }
+
+
 
     // handle register button click
     const handleClick = () => {
         // setOpen(true)
         showModal.current = true
-    }
-
-
-    const handleClickOpen = () => {
-        // setOpen(true)
-    }
-
-    const handleTap = () => {
-        getLocation()
-        setValue("location", value.current)
-        console.log(getValues("location"));
 
     }
 
     const handleModalClose = () => {
-        return setOpen(false)
+        return false
     };
 
-    function getLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-        } else {
-            alert("Geolocation is not supported by this browser.");
-        }
-    }
 
-    // @ts-ignore
-    function showPosition(position) {
-
-        let coordinates = `Latitude: ${position.coords.latitude} Longitude: ${position.coords.longitude}`;
-        value.current = coordinates
-        // console.log(value.current);
-        return coordinates;
-
-    }
 
 
     const SignUpForm = () => {
 
-
-
         return (
             <React.Fragment>
 
-                <Modal show={showModal.current} handleModalClose={handleModalClose} title={"Awesome!"} message={"Thanks for registering with PigeonBolt App ™"} />
+                {showModal.current && <Modal show={showModal.current} handleModalClose={handleModalClose} title={"Awesome!"} message={"Thanks for registering with PigeonBolt App ™"} />}
 
                 <Grid container className={classes.root}>
                     <Grid item xs={12} className={classes.gradientBg}>
@@ -153,7 +199,7 @@ const Signup = () => {
                                 restaurants, groceries, bakeries, marketplace shops, and pet-care services.
                             </Typography>
 
-                            <form className={clsx(classes.form,)} onSubmit={handleSubmit}>
+                            <form className={clsx(classes.form, 'animate__animated animate__fadeInUp animate__delay-2s')} onSubmit={handleSubmit}>
                                 <TextField
                                     required
                                     id="standard-required"
@@ -184,7 +230,13 @@ const Signup = () => {
                                     id="standard-required"
                                     label="Email"
                                     name="email"
-                                    inputRef={register}
+                                    inputRef={register({
+                                        pattern: {
+                                            value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                                            message: 'error message' // <p>error message</p>
+                                        }
+                                    })
+                                    }
                                     placeholder={initialValues.email}
                                     className={classes.textField}
                                     fullWidth
@@ -233,42 +285,13 @@ const Signup = () => {
                                     }}
                                 />
 
-                                <TextField
-                                    required
-                                    id="standard-required"
-                                    label="Location"
-                                    value={getValues("location")}
-                                    inputRef={register}
-                                    name="location"
-                                    placeholder={initialValues.location}
-                                    className={classes.textField}
-                                    fullWidth
-                                    disabled
-                                    helperText="Tap icon to pick location"
-                                    multiline
-                                    margin="normal"
-                                    InputProps={{
-                                        startAdornment: (
-                                            <InputAdornment position="start">
-                                                <IconButton style={{ outline: "none" }} edge="start" onClick={handleTap}>
-                                                    <MyLocation className={classes.svgIcon} />
-                                                </IconButton>
-                                            </InputAdornment>
-                                        )
-                                    }}
-
-                                    classes={{
-
-                                    }}
-                                />
+                                <LocationInput register={register} getValues={getValues} setValue={setValue} />
 
                                 <Button
                                     className={classes.registerBtn}
                                     endIcon={<CheckCircle />}
                                     onClick={handleClick}
-                                    data-toggle="modal"
-                                    data-target="#myModal"
-                                    // href="#myModal"
+
                                     type="submit"
                                     value="submit"
                                 >
