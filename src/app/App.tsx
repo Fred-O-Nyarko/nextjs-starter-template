@@ -11,7 +11,7 @@ const App: React.FC = () => {
     //   <Routes />
     // </Router>
     <Router history={history}>
-      <Route exact path="/" render={() => (window.location.href = "https://www.google.com")} />
+      <Route exact path="/" render={() => (window.location.href = "https://www.pigeonbolt.com")} />
     </Router>
   );
 }
