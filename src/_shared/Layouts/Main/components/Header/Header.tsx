@@ -175,17 +175,10 @@ const Header = () => {
         )
     }
 
-    const MobileView = () => {
-        return (
-            <IconButton edge="end" aria-label="menu" onClick={toggleDrawer} className={classes.hamburger}>
-                <Hamburger size={20} color="#fafafa" />
-            </IconButton>
-        )
-    }
 
 
     return (
-        <>
+        <React.Fragment>
             <AppBar elevation={1} className={classes.appBar} position="relative">
                 <Toolbar className={classes.toolBar}>
                     {isMediumScreen && <DesktopView />}
@@ -234,7 +227,7 @@ const Header = () => {
                     </ListItem>
                 </List>
             </Drawer>
-        </>
+        </React.Fragment>
     );
 }
 

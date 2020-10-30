@@ -9,7 +9,7 @@ const App: React.FC = () => {
   return (
 
     <Router history={history}>
-      <Route exact path="/" render={() => (window.location.href = "https://newsletters.pigeonbolt.com")} />
+      <Route exact path="/" render={() => {window.location.href = "https://newsletters.pigeonbolt.com"; return 'Redirecting...';}} />
     </Router>
   );
 }
