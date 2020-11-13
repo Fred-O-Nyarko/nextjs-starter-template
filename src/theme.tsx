@@ -1,26 +1,38 @@
-import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
+import { createMuiTheme, responsiveFontSizes } from "@material-ui/core/styles";
 
 let theme = createMuiTheme({
-    palette: {
-        primary: {
-            main: "#FFA023",
-            dark: "#ab6100"
-        },
-
-        secondary: {
-            main: "#fafafa"
-        }
+  palette: {
+    primary: {
+      main: "#FFA023",
+      dark: "#ab6100",
     },
 
-    typography: {
-        fontFamily: [
-            'Open Sans',
-            'Poppins'
-        ].join(','),
-    }
+    secondary: {
+      main: "#fafafa",
+    },
 
-})
+    text: {
+      primary: "#22222",
+      secondary: "#A19E9E",
+    },
 
-theme = responsiveFontSizes(theme)
+    divider: "#E0E0E0",
 
-export default theme
+    // action:{
+    //     active: "",
+    //     hover: "",
+    //     selected:"",
+    //     disabled:"",
+    // },
+
+    // divider: "rgba(0,0,0,0.12)"
+  },
+
+  typography: {
+    fontFamily: ["Open Sans", "Poppins", "Roboto Slab"].join(","),
+  },
+});
+
+theme = responsiveFontSizes(theme);
+
+export default theme;

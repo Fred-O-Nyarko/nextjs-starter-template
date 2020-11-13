@@ -1,30 +1,33 @@
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: #fafafa;
-    display: block;
-    width: 80%;
-    margin: 0 auto !important;
-    float: none !important;
-    font-size: 16px;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  display: block;
+  width: 100%;
+  margin: 0 auto !important;
+  float: none !important;
+  font-size: 16px;
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    /* line-height: 1.5rem; */
-    text-transform: none !important;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  /* line-height: 1.5rem; */
+  text-transform: none !important;
 }
 
 html {
-    overflow-x: inherit;
-    scroll-behavior: smooth;
+  overflow-x: inherit;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -33,7 +36,96 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    text-transform: none !important;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  text-transform: none !important;
+}
+
+.responsive-img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+.container {
+  width: 80% !important;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+}
+
+.swiper-button-prev::after {
+  display: none;
+}
+.swiper-button-prev {
+  background-image: url("/src/_shared/assets/img/bx_bxs-chevron-left-circle.svg") !important;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  width: 2.5rem;
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-next {
+  background-image: url("/src/_shared/assets/img/bx_bxs-chevron-right-circle.svg") !important;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  width: 2.5rem;
+
+}
+
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    left: 0px;
+    right: auto;
+    width: 2rem;
+    transition: all .3s  cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.swiper-button-prev:hover{
+    width: 2.5rem;
+}
+
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    right: 0px;
+    left: auto;
+    width: 2rem;
+    transition: all .3s  cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.swiper-button-next:hover{
+    width: 2.5rem;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    background: #ffa203;
+    color: #fff;
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 1;
+    font-size: 16px;
+    border-radius: 50%;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+    z-index: 11;
+}
+
+.back-to-top i {
+    padding-top: 12px;
+    color: #fff;
+}
+
+
+@media only screen and (max-width: 800px) {
+  body {
+    width: 100%;
+  }
 }
