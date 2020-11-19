@@ -1,3 +1,5 @@
+/* @import "reset.css"; */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -8,8 +10,6 @@ body {
   background-color: #fafafa;
   display: block;
   width: 100%;
-  margin: 0 auto !important;
-  float: none !important;
   font-size: 16px;
 }
 
@@ -39,6 +39,10 @@ h6 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   text-transform: none !important;
+}
+
+.container-fluid{
+  padding: 0;
 }
 
 .responsive-img {
