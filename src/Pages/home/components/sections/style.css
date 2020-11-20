@@ -11,3 +11,19 @@
     opacity: 0; 
   }
   
+  .description{
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .description-text{
+    background-color: #ffa203;
+    margin: 0 auto;
+    width: max-content;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    padding: 5px 10px;
+  }

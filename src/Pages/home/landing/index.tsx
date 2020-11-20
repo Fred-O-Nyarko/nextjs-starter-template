@@ -8,10 +8,10 @@ export default function Landing() {
     <div className="container-fluid">
       <div className="landing-overlay"></div>
       <div className="landing-background">
-        <div className="container h-100">
+        <div className="container h-100 d-flex">
           <div className="landing-content">
-            <div className="row ">
-              <div className="col-lg-12">
+            <div className="row ml-0 mr-0">
+              <div className="col-lg-12 pt-1 pb-1">
                 <Typography
                   variant="h3"
                   color="secondary"
@@ -20,7 +20,7 @@ export default function Landing() {
                   We seriously deliver
                 </Typography>
               </div>
-              <div className="col-lg-12">
+              <div className="col-lg-12 pt-1 pb-1">
                 <Typography
                   variant="h3"
                   color="secondary"
@@ -34,7 +34,7 @@ export default function Landing() {
                   </span>
                 </Typography>
               </div>
-              <div className="col-lg-12">
+              <div className="col-lg-12 pt-1 pb-1">
                 <Typography
                   variant="h6"
                   align="center"
@@ -45,8 +45,13 @@ export default function Landing() {
                   # Lorem Ipsum
                 </Typography>
               </div>
-              <div className="col-lg-12 d-flex justify-content-center">
-                <Button size="large" variant="contained" color="primary">
+              <div className="col-lg-12 d-flex justify-content-center pt-1 pb-1">
+                <Button
+                  size="large"
+                  variant="contained"
+                  color="primary"
+                  className="cta-btn"
+                >
                   <Typography
                     variant="h6"
                     color="secondary"
@@ -57,12 +62,13 @@ export default function Landing() {
                 </Button>
               </div>
             </div>
-            <div className="row position-absolute bottom-0 h-100 w-100">
-              <div className="col-lg-12">
-                <ScrollDown />
-              </div>
-            </div>
+            {/* <div className="row position-absolute bottom-0 h-100 w-100">
+              <div className="col-lg-12"> */}
+
+            {/* </div>
+            </div> */}
           </div>
+          <ScrollDown />
         </div>
       </div>
     </div>

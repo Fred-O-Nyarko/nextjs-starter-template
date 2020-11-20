@@ -51,13 +51,6 @@ h6 {
   height: auto;
 }
 
-.container {
-  width: 80% !important;
-  margin: 0 auto;
-  padding: 1rem;
-  display: flex;
-}
-
 .swiper-button-prev::after {
   display: none;
 }
@@ -128,8 +121,48 @@ h6 {
 }
 
 
-@media only screen and (max-width: 800px) {
-  body {
-    width: 100%;
+.owl-carousel .nav-btn{
+  height: 47px;
+  position: absolute;
+  width: 45px;
+  cursor: pointer;
+  top: 100px !important;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, 
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: #ffa203;
+}
+
+.owl-prev, .owl-next{
+  padding: 0 !important;
+}
+.owl-carousel .prev-slide{
+  background: url("/src/_shared/assets/img/bx_bxs-chevron-left-circle.svg") no-repeat scroll 0 0;
+  left: -33px
+}
+.owl-carousel .next-slide{
+  background: url("/src/_shared/assets/img/bx_bxs-chevron-right-circle.svg") no-repeat scroll 0 0;
+  right: -33px;
+}
+/* .owl-carousel .prev-slide:hover{
+ background-position: 0px -53px;
+}
+.owl-carousel .next-slide:hover{
+background-position: -24px -53px;
+} */
+
+.owl-carousel .item{
+  background-color: rgba(230, 230, 230, 0.48);
+  padding: 1rem;
+}
+
+@media (max-width: 960px){
+
+  .owl-carousel .nav-btn{
+    display: none !important;
   }
+
+
+
 }

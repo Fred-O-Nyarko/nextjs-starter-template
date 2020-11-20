@@ -7,7 +7,7 @@ import useStyles from "./styles";
 export default function Header2() {
   const classes = useStyles();
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light shadow">
       <a className="navbar-brand" href="#">
         <img src={logo} alt="logo" className={classes.logo} />
         {/* <Typography>PigeonBolt</Typography> */}

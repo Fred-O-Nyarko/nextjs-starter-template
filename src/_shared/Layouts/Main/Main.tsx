@@ -10,15 +10,15 @@ interface IProps {
   children: React.ReactNode;
 }
 
-// const BackToTop = () => {
-//   return (
-//     <React.Fragment>
-//       <a href="/" className="back-to-top">
-//         <i className="fa fa-chevron-up"></i>
-//       </a>
-//     </React.Fragment>
-//   );
-// };
+const BackToTop = () => {
+  return (
+    <React.Fragment>
+      <a href="/" className="back-to-top">
+        <i className="fa fa-chevron-up"></i>
+      </a>
+    </React.Fragment>
+  );
+};
 
 const Main: React.FC<IProps> = (props) => {
   // const theme = useTheme();
@@ -30,8 +30,8 @@ const Main: React.FC<IProps> = (props) => {
       {/* <Header />
       {isSmallScreen && <Social />} */}
       <main>{children}</main>
-      {/* <BackToTop />
-      <Footer /> */}
+      <BackToTop />
+      {/* <Footer /> */}
     </React.Fragment>
   );
 };

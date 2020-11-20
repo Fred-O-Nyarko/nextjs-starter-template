@@ -1,13 +1,13 @@
 
 .center-con {
-    display: flex;
-    height: auto;
-    align-items: center;
-    justify-content: center;
     position: absolute;
-    bottom: 0;
+    bottom: 0rem;
     width: 100%;
     margin: 0 auto;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .round {
@@ -16,6 +16,7 @@
     width: 5rem;
     height: 5rem;
     border-radius: 100%;
+    cursor: pointer;
 }
 
 .round span {

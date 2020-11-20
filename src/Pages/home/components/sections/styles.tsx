@@ -1,5 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 import backgroundImg from "../../../../_shared/assets/img/bg.png";
+import cake from "../../../../_shared/assets/img/cake.jpg";
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -30,8 +31,7 @@ const useStyles = makeStyles((theme) => ({
   btn: {
     padding: "0.8rem 3rem",
     filter: "drop-shadow(-2px 4px 13px rgba(0, 0, 0, 0.25)) !important",
-    width: "35%",
-    borderRadius: "5rem",
+    width: "auto",
   },
   outlinedBtn: {
     border: "2px solid #fff",
@@ -83,6 +83,21 @@ const useStyles = makeStyles((theme) => ({
 
   banner: {
     backgroundColor: theme.palette.primary.main,
+  },
+
+  imageContainer: {
+    backgroundImage: `url("${cake}")`,
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: " center center",
+    height: "auto",
+    boxShadow:
+      "0px 0px 21px 4px rgba(223, 223, 223, 0.5), 0px 9px 15px rgba(160, 160, 160, 0.5)",
+    transition: "all .3s ease-out",
+    [theme.breakpoints.down("sm")]: {
+      height: "18rem",
+      marginTop: "3rem",
+    },
   },
 }));
 

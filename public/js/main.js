@@ -17,6 +17,29 @@ jQuery(document).ready(function ($) {
     return false;
   });
 
+
+  // owl carousel
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    lazyLoad: true,
+    autoplay: true,
+    navText: ["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+})
+
+  // animated letters
   var ml4 = {};
   ml4.opacityIn = [0, 1];
   ml4.scaleIn = [0.2, 1];
@@ -78,6 +101,7 @@ jQuery(document).ready(function ($) {
 
     // Wrap every letter in a span
 var textWrapper = document.querySelector('.ml11 .letters');
+// eslint-disable-next-line no-control-regex
 textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
 
 anime.timeline({loop: true})
