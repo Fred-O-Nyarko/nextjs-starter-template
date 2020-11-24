@@ -30,9 +30,9 @@ export const PaymentSuccess: React.FC = () => {
                 className="sub-text text-secondary"
                 gutterBottom
                 paragraph
-                align="left"
+                align="center"
               >
-                Lorem Ipsum: Lorem Ipsum dolor
+                Please close and return to the app to track your order
               </Typography>
 
               <Button

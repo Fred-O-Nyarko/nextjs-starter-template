@@ -33,7 +33,7 @@ export const PaymentFailure: React.FC = () => {
                 paragraph
                 align="left"
               >
-                Lorem Ipsum: Lorem Ipsum dolor
+                Please try again
               </Typography>
 
               <Button
