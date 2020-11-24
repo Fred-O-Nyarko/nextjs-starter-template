@@ -1,5 +1,11 @@
 /* @import "reset.css"; */
 
+@font-face{
+  font-family: Claremont;
+  src: url(_shared/assets/fonts/ClaremontRR-Light.ttf);
+  /* src: url(_shared/assets/fonts/ClaremontRR\ Medium.ttf); */
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -10,7 +16,7 @@ body {
   background-color: #fafafa;
   display: block;
   width: 100%;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 code {
@@ -36,8 +42,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-family: "Claremont", sans-serif !important;
+  font-weight: 500 !important;
   text-transform: none !important;
 }
 

@@ -3,7 +3,7 @@ import Landing from "./landing";
 // import { MainCarousel } from "./components/custom carousel/main carousel/Carousel";
 // import { ItemsCarousel } from "./components/custom carousel/items carousel/items-carousel";
 // import HeroBranding from "./components/hero branding/hero-branding";
-import FirstSection from "./components/sections/first-section";
+import FirstSection from "./components/sections/_first-section";
 import SecondSection from "./components/sections/_second-section";
 import ThirdSection from "./components/sections/_third-section";
 // import FourthSection from "./components/sections/fourth-section";

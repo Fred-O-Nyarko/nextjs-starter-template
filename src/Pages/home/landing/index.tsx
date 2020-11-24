@@ -17,7 +17,7 @@ export default function Landing() {
                   color="secondary"
                   className="text-center"
                 >
-                  We seriously deliver
+                  We save you
                 </Typography>
               </div>
               <div className="col-lg-12 pt-1 pb-1">
@@ -30,7 +30,7 @@ export default function Landing() {
                 >
                   <span className="text-wrapper">
                     <span className="line line1"></span>
-                    <span className="letters">Text</span>
+                    <span className="letters">Time</span>
                   </span>
                 </Typography>
               </div>
