@@ -1,6 +1,6 @@
 import React from "react";
 import HomePage from "./Pages/home/index";
-import { Redirect, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { RouteWithLayout } from "./_shared/components";
 import { Main as MainLayout } from "./_shared/Layouts/Main";
 import { Main as PaymentLayout } from "./_shared/Layouts/Payment";

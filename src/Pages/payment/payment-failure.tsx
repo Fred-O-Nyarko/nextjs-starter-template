@@ -3,6 +3,7 @@ import React from "react";
 import "./style.css";
 import fail from "../../_shared/assets/icons/close.svg";
 import "./style.css";
+
 export const PaymentFailure: React.FC = () => {
   const handleClick = () => {
     window.close();
