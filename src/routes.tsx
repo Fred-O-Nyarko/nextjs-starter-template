@@ -7,6 +7,7 @@ import { Main as PaymentLayout } from "./_shared/Layouts/Payment";
 import PaymentPage from "./Pages/payment/index";
 import { PaymentSuccess } from "./Pages/payment/payment-success";
 import { PaymentFailure } from "./Pages/payment/payment-failure";
+import PrivacyPolicy from "./Pages/privacy/PrivacyPolicy";
 
 const Routes = () => {
   return (
@@ -26,7 +27,7 @@ const Routes = () => {
 
       <Route path="/payments/success" exact component={PaymentSuccess} />
       <Route path="/payments/failure" exact component={PaymentFailure} />
-
+      <Route path="/privacy-policy" exact component={PrivacyPolicy} />
       {/* <Redirect to="not-found" /> */}
     </Switch>
   );
