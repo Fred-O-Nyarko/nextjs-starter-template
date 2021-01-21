@@ -1,6 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Header2 } from "./components/Header";
+// import Footer from "./components/Footer";
+import { useTheme, useMediaQuery } from "@material-ui/core";
+import Social from "./components/Social";
+import Footer2 from "./components/Footer/Footer2";
 // import Header from "./components/Header";
 // import Social from "./components/Social";
 // import { useMediaQuery, useTheme } from "@material-ui/core";
@@ -21,17 +25,18 @@ const BackToTop = () => {
 };
 
 const Main: React.FC<IProps> = (props) => {
-  // const theme = useTheme();
-  // const isSmallScreen = useMediaQuery(theme.breakpoints.up("sm"));
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.up("sm"));
   const { children } = props;
   return (
     <React.Fragment>
       <Header2 />
-      {/* <Header />
-      {isSmallScreen && <Social />} */}
+      {/* <Header /> */}
+      {isSmallScreen && <Social />}
       <main>{children}</main>
       <BackToTop />
       {/* <Footer /> */}
+      <Footer2 />
     </React.Fragment>
   );
 };

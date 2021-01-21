@@ -43,7 +43,7 @@
 }
 
 .section {
-  padding: 64px 24px;
+  padding: 24px 24px;
 }
 
 .callout-row {
@@ -90,7 +90,7 @@ section .section .odd .callout-row {
 
 @media only screen and (min-width: 768px) {
   .callout-row:first-of-type {
-    margin: 34px auto 0;
+    margin: auto !important;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -103,7 +103,7 @@ section .section .odd .callout-row {
 @media only screen and (min-width: 768px) {
   .callout-row {
     margin: 64px auto 0;
-    max-width: 708px;
+    max-width: 50rem;
   }
 }
 
@@ -123,13 +123,6 @@ section .section .odd .callout-row {
   .callout-row {
     flex-direction: row;
     justify-content: space-between;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .callout-row {
-    margin: 64px auto 0;
-    max-width: 708px;
   }
 }
 
@@ -174,7 +167,7 @@ section .section .odd .callout-row {
 
 @media only screen and (min-width: 768px) {
   .section {
-    padding: 72px 24px;
+    padding: 24px;
   }
 }
 
@@ -198,7 +191,7 @@ section .section .odd .callout-row {
 
 .callouts .callout-row .callout-img img {
   margin: 0 auto;
-  max-width: 375px;
+  max-width: 400px;
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -286,7 +279,7 @@ section .section .callouts .odd .callout-caption p {
 }
 @media only screen and (min-width: 768px){
  section.section.callouts.odd p {
-  margin-bottom: 126px !important;
+  margin-bottom: 7rem !important;
 }
 }
 
@@ -296,7 +289,7 @@ section .section .callouts .odd p {
 }
 
 .callouts p {
-  max-width: 368px !important;
+  max-width: 40rem !important;
   margin: 0 auto !important;
 }
 
@@ -304,7 +297,7 @@ section .section .callouts .odd p {
 @media only screen and (min-width: 768px){
    .callouts h3, #front .callouts h4 {
     font-size: 40px !important;
-    max-width: 450px !important;
+    max-width: 40rem !important;
 }
 }
 .callouts h3,  .callouts h4 {

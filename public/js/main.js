@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
     margin:10,
     nav:true,
     lazyLoad: true,
-    autoplay: true,
+    autoplay: false,
     navText: ["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
     responsive:{
         0:{
