@@ -1,6 +1,5 @@
-.ml4 {
+/* .ml4 {
   position: relative !important;
-  /* padding-left: 0.5rem; */
 }
 .ml4 .letters {
   position: absolute;
@@ -9,7 +8,7 @@
   top: 0rem;
   right: 1rem;
   opacity: 0;
-}
+} */
 
 .description {
   position: absolute;

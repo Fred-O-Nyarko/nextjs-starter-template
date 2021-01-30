@@ -28,9 +28,16 @@ export default function Landing() {
                   style={{ width: "auto" }}
                   align="center"
                 >
-                  <span className="text-wrapper">
+                  {/* <span className="text-wrapper">
                     <span className="line line1"></span>
-                    <span className="letters">Time</span>
+                    <span className="letters">Time Energy</span>
+                  </span> */}
+                  <span className="text-wrapper">
+                    <h1 className="ml4">
+                      <span className="letter letters letters-1">Time</span>
+                      <span className="letter letters letters-2">Money</span>
+                      <span className="letter letters letters-3">Effort</span>
+                    </h1>
                   </span>
                 </Typography>
               </div>

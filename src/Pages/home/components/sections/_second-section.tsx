@@ -14,7 +14,7 @@ export default function SecondSection() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const classes = useStyles();
-  const slides = Array(5).fill(0);
+  // const slides = Array(5).fill(0);
   const items = [
     {
       image: luxury,

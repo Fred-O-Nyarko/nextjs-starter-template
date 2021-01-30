@@ -169,6 +169,13 @@ background-position: -24px -53px;
     display: none !important;
   }
 
+}
 
-
+a{
+  color: #f1f1f1;
+  transition: all ease-in .1s;
+}
+a:hover{
+  color: #c7c7c7;
+  text-decoration: none;
 }

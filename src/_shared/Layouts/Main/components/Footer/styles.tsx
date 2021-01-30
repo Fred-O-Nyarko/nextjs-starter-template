@@ -7,7 +7,14 @@ const useStyles = makeStyles((theme) => ({
     left: 0,
     width: "100%",
     // height: "30vh",
-    // backgroundColor: "#FFA023",
+    backgroundColor: "#FFA023",
+    marginTop: "2rem",
+  },
+  row: {
+    width: "80% !important",
+    margin: "0 auto !important",
+    padding: "2rem 0rem",
+    borderBottom: "1px",
   },
   content: {
     margin: "auto 0",
