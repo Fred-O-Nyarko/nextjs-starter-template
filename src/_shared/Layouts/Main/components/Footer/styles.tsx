@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
     width: "80% !important",
     margin: "0 auto !important",
     padding: "2rem 0rem",
-    borderBottom: "1px",
   },
   content: {
     margin: "auto 0",
