@@ -144,7 +144,8 @@ export default function Footer2() {
           </Typography>
 
           <Typography color="secondary" variant="subtitle1">
-            Mail: <a href="mailto:info@pigeonbolt.com">info@pigeonbolt.com</a>
+            Support Mail:{" "}
+            <a href="mailto:info@pigeonbolt.com">info@pigeonbolt.com</a>
           </Typography>
         </Grid>
       </Grid>
