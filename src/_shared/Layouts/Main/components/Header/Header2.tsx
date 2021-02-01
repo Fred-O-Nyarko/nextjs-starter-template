@@ -36,7 +36,7 @@ export default function Header2() {
       <a className="navbar-brand" href="#">
         <img src={logo} alt="logo" className={classes.logo} />
         {headerColor === "navbar-light" && (
-          <Typography variant="h6" color="textSecondary">
+          <Typography variant="h6" color="secondary">
             PigeonBolt
           </Typography>
         )}
