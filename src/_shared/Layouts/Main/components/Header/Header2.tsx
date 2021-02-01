@@ -1,18 +1,47 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 // import { Typography } from "@material-ui/core";
 import logo from "../../../../assets/img/logo.png";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import useStyles from "./styles";
+import { Button, Typography } from "@material-ui/core";
+import classNames from "classnames";
 
 export default function Header2() {
   const classes = useStyles();
+  const [headerColor, setHeaderColor] = useState<string>("navbar-light");
+
+  const listenScrollEvent = () => {
+    if (window.scrollY > 100) {
+      setHeaderColor("bg-light");
+    } else {
+      setHeaderColor("navbar-light");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+    if (window.scrollY > 100) {
+      setHeaderColor("bg-light");
+    }
+  }, []);
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light shadow">
+    <nav
+      className={classNames(
+        "navbar navbar-expand-lg fixed-top",
+        headerColor === "bg-light" ? "bg-light" : "navbar-light",
+        classes.nav,
+        "justify-content-between"
+      )}
+    >
       <a className="navbar-brand" href="#">
         <img src={logo} alt="logo" className={classes.logo} />
-        {/* <Typography>PigeonBolt</Typography> */}
+        {headerColor === "navbar-light" && (
+          <Typography variant="h6" color="textSecondary">
+            PigeonBolt
+          </Typography>
+        )}
       </a>
-      <button
+      {/* <button
         className="navbar-toggler"
         type="button"
         data-toggle="collapse"
@@ -26,15 +55,8 @@ export default function Header2() {
 
       <div
         className="collapse navbar-collapse float-right justify-content-end"
-        id="navbarSupportedContent"
       >
         <form className="form-inline my-2 my-lg-0">
-          {/* <input
-            className="form-control mr-sm-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          /> */}
           <button
             className="btn btn-outline-success my-2 my-sm-0"
             type="submit"
@@ -42,7 +64,22 @@ export default function Header2() {
             LOGIN
           </button>
         </form>
-      </div>
+      </div> */}
+
+      <Button
+        variant={headerColor === "navbar-light" ? "contained" : "outlined"}
+        color="primary"
+        onClick={() => (window.location.href = "https://shops.pigeonbolt.com")}
+        type="submit"
+      >
+        <Typography
+          color={headerColor === "navbar-light" ? "secondary" : "primary"}
+          variant="button"
+          className="font-weight-bold"
+        >
+          Shop Login
+        </Typography>
+      </Button>
     </nav>
   );
 }

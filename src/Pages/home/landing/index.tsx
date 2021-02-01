@@ -1,9 +1,16 @@
 import { Button, Typography } from "@material-ui/core";
 import React from "react";
-import ScrollDown from "./components/scroll-chevron";
+// import ScrollDown from "./components/scroll-chevron";
 import "./styles.css";
+import { systemInfo } from "../../../_shared/hooks";
 
 export default function Landing() {
+  const { operatingSystem } = systemInfo();
+  const url =
+    operatingSystem === operatingSystem?.includes("Windows")
+      ? "https://play.google.com/store/apps/details?id=com.nyeova.pigeonbolt.client"
+      : "https://google.com";
+
   return (
     <div className="container-fluid">
       <div className="landing-overlay"></div>
@@ -13,7 +20,7 @@ export default function Landing() {
             <div className="row ml-0 mr-0">
               <div className="col-lg-12 pt-1 pb-1">
                 <Typography
-                  variant="h3"
+                  variant="h1"
                   color="secondary"
                   className="text-center"
                 >
@@ -22,16 +29,12 @@ export default function Landing() {
               </div>
               <div className="col-lg-12 pt-1 pb-1">
                 <Typography
-                  variant="h3"
+                  variant="h2"
                   color="secondary"
                   className="ml11"
                   style={{ width: "auto" }}
                   align="center"
                 >
-                  {/* <span className="text-wrapper">
-                    <span className="line line1"></span>
-                    <span className="letters">Time Energy</span>
-                  </span> */}
                   <span className="text-wrapper">
                     <h1 className="ml4">
                       <span className="letter letters letters-1">Time</span>
@@ -49,7 +52,7 @@ export default function Landing() {
                   paragraph
                   color="secondary"
                 >
-                  # Lorem Ipsum
+                  <strong>#PigeonIT</strong>
                 </Typography>
               </div>
               <div className="col-lg-12 d-flex justify-content-center pt-1 pb-1">
@@ -58,6 +61,7 @@ export default function Landing() {
                   variant="contained"
                   color="primary"
                   className="cta-btn"
+                  onClick={() => (window.location.href = `${url}`)}
                 >
                   <Typography
                     variant="h6"
@@ -75,7 +79,7 @@ export default function Landing() {
             {/* </div>
             </div> */}
           </div>
-          <ScrollDown />
+          {/* <ScrollDown /> */}
         </div>
       </div>
     </div>

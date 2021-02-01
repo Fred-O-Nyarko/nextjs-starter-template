@@ -8,12 +8,21 @@ import grocery from "../../../../_shared/assets/category/grocery.jpg";
 import liquor from "../../../../_shared/assets/category/liquor.jpeg";
 import luxury from "../../../../_shared/assets/category/luxury.png";
 import virtualKitchen from "../../../../_shared/assets/category/virtualKitchen.png";
+import petcare from "../../../../_shared/assets/category/petcare.jpg";
 import "./style.css";
+import { systemInfo } from "../../../../_shared/hooks";
 
 export default function SecondSection() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const classes = useStyles();
+
+  const { operatingSystem } = systemInfo();
+  const url =
+    operatingSystem === operatingSystem?.includes("Windows")
+      ? "https://play.google.com/store/apps/details?id=com.nyeova.pigeonbolt.client"
+      : "https://google.com";
+
   // const slides = Array(5).fill(0);
   const items = [
     {
@@ -35,11 +44,15 @@ export default function SecondSection() {
     },
     {
       image: liquor,
-      caption: "Liquor",
+      caption: "Liquors",
     },
     {
       image: virtualKitchen,
       caption: "Virtual Kitchens",
+    },
+    {
+      image: petcare,
+      caption: "Pet care products",
     },
   ];
   return (
@@ -93,6 +106,7 @@ export default function SecondSection() {
             className={classNames(classes.btn, "wow rubberBand")}
             data-wow-delay="0.5s"
             data-wow-iteration="5"
+            onClick={() => (window.location.href = url)}
           >
             <Typography
               color="secondary"

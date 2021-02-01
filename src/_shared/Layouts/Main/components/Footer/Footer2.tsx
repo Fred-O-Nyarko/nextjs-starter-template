@@ -1,9 +1,10 @@
-import { Grid, Typography } from "@material-ui/core";
+import { Button, Divider, Grid, Typography } from "@material-ui/core";
 import React from "react";
 import useStyles from "./styles";
 
 export default function Footer2() {
   const classes = useStyles();
+  const date = new Date();
   return (
     <Grid container className={classes.root}>
       <Grid container className={classes.row}>
@@ -33,9 +34,18 @@ export default function Footer2() {
         <Grid
           item
           xs={12}
-          lg={4}
-          md={4}
-          sm={4}
+          lg={1}
+          md={1}
+          sm={1}
+          direction="column"
+          className="p-1"
+        ></Grid>
+        <Grid
+          item
+          xs={12}
+          lg={3}
+          md={3}
+          sm={3}
           direction="column"
           className="p-1"
         >
@@ -96,7 +106,46 @@ export default function Footer2() {
                 <i className="fa fa-instagram mr-1"></i> Instagram
               </a>
             </li>
+            <li className="list-group-item bg-transparent border-0 p-0 mb-2">
+              <span style={{ color: "white", paddingRight: "0.5rem" }}>
+                Join our Loyal Customer program
+              </span>
+              <Button
+                variant="outlined"
+                color="secondary"
+                onClick={() =>
+                  (window.location.href = "https://newsletters.pigeonbolt.com")
+                }
+                type="submit"
+              >
+                <Typography
+                  color={"secondary"}
+                  variant="caption"
+                  className="font-weight-bold"
+                >
+                  Join
+                </Typography>
+              </Button>
+            </li>
           </ul>
+        </Grid>
+        <Divider
+          color="primary"
+          style={{ width: "100%", margin: "0.5rem 0" }}
+        />
+        <Grid container justify="space-between">
+          <Typography color="secondary" variant="subtitle1">
+            <span>&copy;</span>
+            {date.getFullYear()} Nyeova Systems LLC.
+          </Typography>
+
+          <Typography color="secondary" variant="subtitle1">
+            Contact: +233-559-627-280
+          </Typography>
+
+          <Typography color="secondary" variant="subtitle1">
+            Mail: <a href="mailto:info@pigeonbolt.com">info@pigeonbolt.com</a>
+          </Typography>
         </Grid>
       </Grid>
     </Grid>

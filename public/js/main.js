@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
     margin:10,
     nav:true,
     lazyLoad: true,
-    autoplay: false,
+    autoplay: true,
     navText: ["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
     responsive:{
         0:{
@@ -92,6 +92,22 @@ anime.timeline({loop: true})
   });
   // Initiate the wowjs animation library
      new WOW().init();
+
+
+     $(document).ready(function(){
+      $("a").on('click', function(event) {
+        console.log("down")
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset()?.top
+          }, 800, function(){
+            window.location.hash = hash;
+          });
+        } 
+      });
+    });
 
   // // Initiate superfish on nav menu
   // $('.nav-menu').superfish({
