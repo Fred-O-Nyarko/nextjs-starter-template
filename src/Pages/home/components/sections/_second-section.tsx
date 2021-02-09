@@ -1,6 +1,6 @@
 import { Button, Typography, useMediaQuery, useTheme } from "@material-ui/core";
 import classNames from "classnames";
-import React from "react";
+import React, { useState } from "react";
 import useStyles from "./styles";
 import bakery from "../../../../_shared/assets/category/bakery.jpg";
 import comfort from "../../../../_shared/assets/category/comfort.png";
@@ -10,18 +10,19 @@ import luxury from "../../../../_shared/assets/category/luxury.png";
 import virtualKitchen from "../../../../_shared/assets/category/virtualKitchen.png";
 import petcare from "../../../../_shared/assets/category/petcare.jpg";
 import "./style.css";
-import { systemInfo } from "../../../../_shared/hooks";
+// import { systemInfo } from "../../../../_shared/hooks";
+import TransitionsModal from "../../landing/components/modal";
 
 export default function SecondSection() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const classes = useStyles();
 
-  const { operatingSystem } = systemInfo();
-  const url =
-    operatingSystem === operatingSystem?.includes("Windows")
-      ? "https://play.google.com/store/apps/details?id=com.nyeova.pigeonbolt.client"
-      : "https://google.com";
+  // const { operatingSystem } = systemInfo();
+  // const url =
+  //   operatingSystem === operatingSystem?.includes("Windows")
+  //     ? "https://play.google.com/store/apps/details?id=com.nyeova.pigeonbolt.client"
+  //     : "https://google.com";
 
   // const slides = Array(5).fill(0);
   const items = [
@@ -55,8 +56,21 @@ export default function SecondSection() {
       caption: "Pet care products",
     },
   ];
+
+  const [open, setOpen] = useState(false);
+
+  function handleClick() {
+    setOpen(true);
+  }
+
+  function handleClose() {
+    setOpen(false);
+  }
+
   return (
     <section>
+      <TransitionsModal open={open} handleClose={handleClose} />
+
       <div style={{ marginTop: "3rem" }}>
         <Typography
           variant="h4"
@@ -106,7 +120,7 @@ export default function SecondSection() {
             className={classNames(classes.btn, "wow rubberBand")}
             data-wow-delay="0.5s"
             data-wow-iteration="5"
-            onClick={() => (window.location.href = url)}
+            onClick={handleClick}
           >
             <Typography
               color="secondary"

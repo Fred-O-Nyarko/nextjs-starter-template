@@ -33,7 +33,7 @@ export default function Header2() {
         "justify-content-between"
       )}
     >
-      <a className="navbar-brand" href="#">
+      <a className="navbar-brand" href="/">
         <img src={logo} alt="logo" className={classes.logo} />
         {headerColor === "navbar-light" && (
           <Typography variant="h6" color="secondary">

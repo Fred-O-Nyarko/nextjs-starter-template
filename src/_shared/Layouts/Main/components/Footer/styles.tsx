@@ -2,11 +2,9 @@ import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // position: "absolute",
     bottom: 0,
     left: 0,
     width: "100%",
-    // height: "30vh",
     backgroundColor: "#FFA023",
     marginTop: "2rem",
   },
@@ -19,7 +17,6 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto 0",
     backgroundColor: "#FAFAFA",
     width: "100%",
-    // height: "25vh",
   },
 
   hr: {
@@ -58,6 +55,12 @@ const useStyles = makeStyles((theme) => ({
   footerEnd: {
     width: "100%",
     backgroundColor: theme.palette.primary.main,
+  },
+
+  policies: {
+    "&:hover": {
+      cursor: "pointer",
+    },
   },
 }));
 
