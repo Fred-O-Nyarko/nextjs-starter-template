@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
   btn: {
     padding: "0.8rem 3rem",
     filter: "drop-shadow(-2px 4px 13px rgba(0, 0, 0, 0.25))",
+    outline: "none !important",
     // width:"35%",
     // borderRadius:"5rem"
   },

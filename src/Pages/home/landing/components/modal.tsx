@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
-    border: "2px solid #000",
+    border: "1px solid #646464",
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
     width: "auto",
@@ -51,27 +51,25 @@ export default function TransitionsModal(props: any) {
             </Typography>
             <Grid container>
               <Grid container item xs={7} justify="center" alignItems="center">
-                <IconButton aria-label="android">
+                <IconButton
+                  aria-label="android"
+                  onClick={() =>
+                    (window.location.href =
+                      "https://play.google.com/store/apps/details?id=com.nyeova.pigeonbolt.client")
+                  }
+                >
                   <img src={android} alt="android" className={classes.img} />
                 </IconButton>
               </Grid>
               <Grid container item xs={5} justify="center" alignItems="center">
                 <IconButton
-                  aria-label="android"
+                  aria-label="ios"
                   onClick={() =>
                     (window.location.href =
                       "https://apps.apple.com/us/app/pigeonbolt/id1546397948")
                   }
                 >
-                  <img
-                    src={ios}
-                    alt="ios"
-                    className={classes.img}
-                    onClick={() =>
-                      (window.location.href =
-                        "https://play.google.com/store/apps/details?id=com.nyeova.pigeonbolt.client")
-                    }
-                  />
+                  <img src={ios} alt="ios" className={classes.img} />
                 </IconButton>
               </Grid>
             </Grid>
