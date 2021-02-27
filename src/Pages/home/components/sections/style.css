@@ -41,7 +41,7 @@ li{
 #front .callouts h3, #front .callouts h4 {
   margin: 0 0 16px;
   max-width: 319px;
-  font-size: 36px;
+  /* font-size: 36px; */
   font-family: Nunito;
   line-height: 1.25;
   letter-spacing: normal;
@@ -50,6 +50,7 @@ li{
 .callouts {
   clear: both;
   text-align: left;
+  margin-top: 10rem;
 }
 
 .section {
@@ -306,14 +307,14 @@ section .section .callouts .odd p {
 
 @media only screen and (min-width: 768px){
    .callouts h3, #front .callouts h4 {
-    font-size: 40px !important;
-    max-width: 40rem !important;
+    /* font-size: 40px !important; */
+    max-width: 47rem !important;
 }
 }
 .callouts h3,  .callouts h4 {
     margin: 0 0 16px;
     max-width: 319px;
-    font-size: 36px;
+    /* font-size: 36px; */
     font-family: Nunito;
     line-height: 1.25;
     letter-spacing: normal;
@@ -326,13 +327,13 @@ section .section .callouts .odd p {
 
 @media only screen and (min-width: 768px){
 h3 {
-    font-size: 32px;
+    /* font-size: 32px; */
     line-height: 1.13;
 }
 }
 
 h3 {
-    font-size: 28px;
+    /* font-size: 28px; */
     line-height: 1.14;
     font-weight: 500;
 }

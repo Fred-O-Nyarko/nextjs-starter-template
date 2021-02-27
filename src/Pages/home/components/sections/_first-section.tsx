@@ -79,7 +79,7 @@ const ImageWithTextSection = (props: any) => {
 };
 export default function FirstSection() {
   return (
-    <section className="callouts section odd" role="main" id="firstSection">
+    <section className="callouts section odd " role="main" id="firstSection">
       <TextSection
         headerText={"Get your orders delivered on time"}
         subtitle={`We know you have a packed schedule. That is 

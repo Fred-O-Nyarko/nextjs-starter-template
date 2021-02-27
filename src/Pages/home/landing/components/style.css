@@ -87,7 +87,7 @@
     width: 30px;
     height: 50px;
     margin-left: -15px;
-    border: 2px solid #ffa023;
+    border: 2px solid #f4f3f4;
     border-radius: 50px;
     box-sizing: border-box;
   }
@@ -99,7 +99,7 @@
     width: 6px;
     height: 6px;
     margin-left: -3px;
-    background-color: #ffa023;
+    background-color: #f4f3f4;
     border-radius: 100%;
     -webkit-animation: sdb10 2s infinite;
     animation: sdb10 2s infinite;
@@ -146,7 +146,7 @@
     display: inline-block;
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
-    color: #ffa023;
+    color: #f4f3f4;
     font : normal 400 20px/1 'Josefin Sans', sans-serif;
     letter-spacing: .1em;
     text-decoration: none;

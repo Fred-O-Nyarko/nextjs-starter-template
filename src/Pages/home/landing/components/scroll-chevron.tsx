@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import {Link} from 'react-scroll'
 export default function ScrollDown() {
   return (
     // <a
@@ -14,11 +15,10 @@ export default function ScrollDown() {
     //   </div>
     // </a>
 
-    <section id="scroll-down" className="demo">
-      <h1>Scroll Down Button #10</h1>
-      <a href="#firstSection">
+    <section id="scroll-down" className="demo">``
+      <Link to="firstSection" spy={true} smooth={true}>
         <span></span>
-      </a>
+      </Link>
     </section>
   );
 }

@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
     left: 0,
     width: "100%",
     backgroundColor: "#FFA023",
-    marginTop: "2rem",
+    marginTop: "10rem",
   },
   row: {
     width: "80% !important",

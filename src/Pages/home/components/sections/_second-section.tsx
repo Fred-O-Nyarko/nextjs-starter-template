@@ -71,9 +71,9 @@ export default function SecondSection() {
     <section>
       <TransitionsModal open={open} handleClose={handleClose} />
 
-      <div style={{ marginTop: "3rem" }}>
+      <div style={{ marginTop: "10rem" }}>
         <Typography
-          variant="h4"
+          variant="h3"
           gutterBottom
           className="wow fadeInUp "
           align="center"
