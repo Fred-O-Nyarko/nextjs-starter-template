@@ -45,7 +45,7 @@ export default function SecondSection() {
     },
     {
       image: liquor,
-      caption: "Liquors",
+      caption: "Wine & Liquor",
     },
     {
       image: virtualKitchen,

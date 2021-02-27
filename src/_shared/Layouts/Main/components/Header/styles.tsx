@@ -11,6 +11,11 @@ const useStyles = makeStyles((theme) => ({
 
   nav: {
     transition: "all .3s ease-in-out",
+    zIndex: 99999,
+    position: "fixed",
+    top: "4rem",
+    left: 0,
+    right: 0,
   },
 
   toolBar: {

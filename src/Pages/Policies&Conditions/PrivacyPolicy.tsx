@@ -2,7 +2,7 @@ import React from "react";
 import "./text-styles.css";
 export default function PrivacyPolicy() {
   return (
-    <>
+    <div className="container">
       <p className="p3">Last updated: February 06, 2021</p>
       <p className="p3">
         This Privacy Policy describes Our policies and procedures on the
@@ -421,6 +421,6 @@ export default function PrivacyPolicy() {
       <p className="p6">
         <br />
       </p>
-    </>
+    </div>
   );
 }

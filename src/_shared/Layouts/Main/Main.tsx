@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { Header2 } from "./components/Header";
 // import Footer from "./components/Footer";
 import { useTheme, useMediaQuery } from "@material-ui/core";
 import Social from "./components/Social";
 import Footer2 from "./components/Footer/Footer2";
+import Banner from "./components/Header/Banner";
 // import Header from "./components/Header";
 // import Social from "./components/Social";
 // import { useMediaQuery, useTheme } from "@material-ui/core";
@@ -28,9 +29,27 @@ const Main: React.FC<IProps> = (props) => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.up("sm"));
   const { children } = props;
+
+  const [show, setShow] = useState<Boolean>(true);
+
+  useEffect(() => {
+    setShow(true);
+  }, []);
+
+  function handleClick() {
+    setShow(false);
+  }
+
   return (
     <React.Fragment>
-      <Header2 />
+      {show && (
+        <Banner
+          message={"Download our mobile app for UAT"}
+          handleClick={handleClick}
+          className={!show ? "wow fadeInUp" : ""}
+        />
+      )}
+      <Header2 moveUp={show} />
       {/* <Header /> */}
       {isSmallScreen && <Social />}
       <main>{children}</main>

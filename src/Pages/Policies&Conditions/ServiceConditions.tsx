@@ -2,7 +2,7 @@ import React from "react";
 import "./text-styles.css";
 export default function ServiceConditions() {
   return (
-    <>
+    <div className="container">
       <p className="p2">
         <span className="s1">
           SECTION 1. ENTIRE VENDOR AGREEMENT MODIFICATIONS AND INTEREST
@@ -531,6 +531,6 @@ export default function ServiceConditions() {
       <p className="p6">
         <br />
       </p>
-    </>
+    </div>
   );
 }

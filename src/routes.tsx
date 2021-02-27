@@ -3,11 +3,11 @@ import HomePage from "./Pages/home/index";
 import { Route, Switch } from "react-router-dom";
 import { RouteWithLayout } from "./_shared/components";
 import { Main as MainLayout } from "./_shared/Layouts/Main";
-import { Main as PaymentLayout } from "./_shared/Layouts/Payment";
-import PaymentPage from "./Pages/payment/index";
 import { PaymentSuccess } from "./Pages/payment/payment-success";
 import { PaymentFailure } from "./Pages/payment/payment-failure";
-import PrivacyPolicy from "./Pages/privacy/PrivacyPolicy";
+import PrivacyPolicy from "./Pages/Policies&Conditions/PrivacyPolicy";
+import TermsAndConditions from "./Pages/Policies&Conditions/Terms&Conditions";
+import ServiceConditions from "./Pages/Policies&Conditions/ServiceConditions";
 
 const Routes = () => {
   return (
@@ -18,16 +18,11 @@ const Routes = () => {
         layout={MainLayout}
         path="/"
       />
-      <RouteWithLayout
-        component={PaymentPage}
-        layout={PaymentLayout}
-        path="/payments"
-        exact
-      />
-
       <Route path="/payments/success" exact component={PaymentSuccess} />
       <Route path="/payments/failure" exact component={PaymentFailure} />
-      <Route path="/privacy-policy" exact component={PrivacyPolicy} />
+      <Route path="/privacy-policy" component={PrivacyPolicy} />
+      <Route path="/terms-and-conditions" component={TermsAndConditions} />
+      <Route path="/service-conditions" component={ServiceConditions} />
       {/* <Redirect to="not-found" /> */}
     </Switch>
   );

@@ -6,7 +6,7 @@ import useStyles from "./styles";
 import { Button, Typography } from "@material-ui/core";
 import classNames from "classnames";
 
-export default function Header2() {
+export default function Header2(props: any) {
   const classes = useStyles();
   const [headerColor, setHeaderColor] = useState<string>("navbar-light");
 
@@ -27,9 +27,9 @@ export default function Header2() {
   return (
     <nav
       className={classNames(
-        "navbar navbar-expand-lg fixed-top",
+        "navbar navbar-expand-lg",
         headerColor === "bg-light" ? "bg-light" : "navbar-light",
-        classes.nav,
+        props.moveUp ? classes.nav : "fixed-top",
         "justify-content-between"
       )}
     >

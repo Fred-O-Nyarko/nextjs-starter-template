@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import "./styles.css";
 // import { systemInfo } from "../../../_shared/hooks";
 import TransitionsModal from "./components/modal";
+import ScrollDown from "./components/scroll-chevron";
 
 export default function Landing() {
   // const { operatingSystem } = systemInfo();
@@ -92,7 +93,7 @@ export default function Landing() {
               {/* </div>
             </div> */}
             </div>
-            {/* <ScrollDown /> */}
+            <ScrollDown />
           </div>
         </div>
       </div>

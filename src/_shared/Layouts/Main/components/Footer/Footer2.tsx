@@ -1,37 +1,13 @@
 import { Button, Divider, Grid, Typography } from "@material-ui/core";
 import React from "react";
-import PrivacyPolicy from "./components/privacy-policy";
-import ScrollDialog from "./components/scroll-dialog";
-import ServiceConditions from "./components/service-conditions";
-import TermsAndConditions from "./components/terms-and-conditions";
 import useStyles from "./styles";
 
 export default function Footer2() {
   const classes = useStyles();
   const date = new Date();
-  const [open, setOpen] = React.useState<boolean>(false);
-  const [title, setTitle] = React.useState<String>("");
-  const [children, setChildren] = React.useState<Function>();
 
-  const privacyRef = React.useRef("Privacy Policy");
-  const termsRef = React.useRef("Terms and Conditions");
-  const serviceRef = React.useRef("Service Conditions");
-
-  function handleClick() {
-    setOpen(true);
-  }
-
-  function handleClose() {
-    setOpen(false);
-  }
   return (
     <React.Fragment>
-      <ScrollDialog
-        open={open}
-        handleClose={handleClose}
-        title={title}
-        children={children}
-      />
       <Grid container className={classes.root}>
         <Grid container className={classes.row}>
           <Grid
@@ -169,44 +145,40 @@ export default function Footer2() {
           </Grid>
 
           <Grid container justify="space-between" className="mt-2 mb-2">
+            {/* <Link onClick={() => history.push("/privacy-policy")}> */}
             <Typography
               color="secondary"
               variant="subtitle1"
-              onClick={() => {
-                handleClick();
-                setTitle(privacyRef.current);
-                setChildren(PrivacyPolicy);
-              }}
               className={classes.policies}
+              onClick={() => (window.location.pathname = "/privacy-policy")}
             >
               Privacy Policy
             </Typography>
+            {/* </Link> */}
 
+            {/* <Link onClick={() => {}}> */}
             <Typography
               color="secondary"
               variant="subtitle1"
-              onClick={() => {
-                handleClick();
-                setTitle(termsRef.current);
-                setChildren(TermsAndConditions);
-              }}
               className={classes.policies}
+              onClick={() =>
+                (window.location.pathname = "/terms-and-conditions")
+              }
             >
               Terms and Conditions
             </Typography>
+            {/* </Link> */}
 
+            {/* <Link onClick={() => {}}> */}
             <Typography
               color="secondary"
               variant="subtitle1"
-              onClick={() => {
-                handleClick();
-                setTitle(serviceRef.current);
-                setChildren(ServiceConditions);
-              }}
               className={classes.policies}
+              onClick={() => (window.location.pathname = "/service-conditions")}
             >
               Service Conditions
             </Typography>
+            {/* </Link> */}
           </Grid>
 
           <Divider

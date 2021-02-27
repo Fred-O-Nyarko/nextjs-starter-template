@@ -2,7 +2,7 @@ import React from "react";
 import "./text-styles.css";
 export default function TermsAndConditions() {
   return (
-    <>
+    <div className="container">
       <p className="p1">
         <strong>END USER LICENSE AGREEMENT</strong>
       </p>
@@ -334,6 +334,6 @@ export default function TermsAndConditions() {
       <p className="p6">
         <br />
       </p>
-    </>
+    </div>
   );
 }

@@ -10,6 +10,17 @@
   opacity: 0;
 } */
 
+li{
+  list-style-type: none;
+  margin-bottom: 0.5rem;
+ 
+}
+
+ ul{
+  padding-left: 0 !important;
+
+}
+
 .description {
   position: absolute;
   width: 100%;
@@ -31,7 +42,7 @@
   margin: 0 0 16px;
   max-width: 319px;
   font-size: 36px;
-  font-family: Claremont;
+  font-family: Nunito;
   line-height: 1.25;
   letter-spacing: normal;
 }
@@ -303,7 +314,7 @@ section .section .callouts .odd p {
     margin: 0 0 16px;
     max-width: 319px;
     font-size: 36px;
-    font-family: Claremont;
+    font-family: Nunito;
     line-height: 1.25;
     letter-spacing: normal;
 }

@@ -5,6 +5,7 @@ import bakery from "../../../../_shared/assets/img/bakery.jpg";
 import dining from "../../../../_shared/assets/img/dining.jpg";
 import pet from "../../../../_shared/assets/img/pet.jpg";
 import grocery from "../../../../_shared/assets/img/grocery.jpg";
+import HTMLReneder from "react-html-renderer";
 
 const TextSection = (props: any) => {
   const { headerText, subtitle, textAlign } = props;
@@ -32,6 +33,19 @@ const TextSection = (props: any) => {
   );
 };
 
+const HTML = () => {
+  const html = `
+    <ul class="list">
+      <li><strong>Try Luxury Dining</strong> -  This Collection gives you an opportunity to experience something you couldn't make at home.
+      Treat yourself with our most delicious and affordable meal services.
+      </li>
+      <li>
+        <strong>Try Comfort Dining</strong> – This is about quick service, affordability, and delicious warmth. 
+        </li>
+      </ul>
+  `;
+  return <HTMLReneder html={html} />;
+};
 const ImageWithTextSection = (props: any) => {
   const { imageUrl, subtitle, headerText } = props;
   return (
@@ -74,14 +88,13 @@ export default function FirstSection() {
       />
       <ImageWithTextSection
         headerText={"Hungry enough to PigeonIT"}
-        subtitle={`Try Luxury Dining – This Collection gives you an opportunity to experience something you couldn't make it home.
-        Try Comfort Dining – This is about quick service, affordability, and delicious warmth. `}
+        subtitle={<HTML />}
         textAlign={"text-left"}
         imageUrl={dining}
       />
       <ImageWithTextSection
         headerText={"Grocery Shopping Done Right"}
-        subtitle={`Do you Believe you know grocery shopping? Think again. We pick the best produce, and project your eggs too.`}
+        subtitle={`Do you believe you know grocery shopping? Think again. We deliever fresh, well packaged and protected produce with just a click.`}
         textAlign={"text-left"}
         imageUrl={grocery}
       />
