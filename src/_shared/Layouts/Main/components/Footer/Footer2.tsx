@@ -56,7 +56,7 @@ export default function Footer2() {
               className="font-weight-bold"
               color="secondary"
             >
-              Links
+              App Links
             </Typography>
             <ul className="list-group">
               <li className="list-group-item bg-transparent border-0 p-0 mb-2">
@@ -127,8 +127,7 @@ export default function Footer2() {
                   variant="outlined"
                   color="secondary"
                   onClick={() =>
-                    (window.location.href =
-                      "https://newsletters.pigeonbolt.com")
+                    window.open("https://newsletters.pigeonbolt.com", "_blank")
                   }
                   type="submit"
                 >

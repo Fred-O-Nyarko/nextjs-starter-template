@@ -16,7 +16,7 @@ export default function ScrollDown() {
     // </a>
 
     <section id="scroll-down" className="demo">``
-      <Link to="firstSection" spy={true} smooth={true}>
+      <Link to="firstSection" spy={true} smooth={true} >
         <span></span>
       </Link>
     </section>

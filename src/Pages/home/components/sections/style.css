@@ -50,7 +50,7 @@ li{
 .callouts {
   clear: both;
   text-align: left;
-  margin-top: 10rem;
+  padding-top: 10rem !important;
 }
 
 .section {
