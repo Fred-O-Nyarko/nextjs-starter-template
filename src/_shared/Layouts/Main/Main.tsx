@@ -44,7 +44,7 @@ const Main: React.FC<IProps> = (props) => {
     <React.Fragment>
       {show && (
         <Banner
-          message={"Download our mobile app for UAT"}
+          message={"Download our mobile app for UAT/BETA"}
           handleClick={handleClick}
           className={!show ? "wow fadeInUp" : ""}
         />
