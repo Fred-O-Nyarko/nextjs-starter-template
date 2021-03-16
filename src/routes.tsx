@@ -8,6 +8,7 @@ import { PaymentFailure } from "./Pages/payment/payment-failure";
 import PrivacyPolicy from "./Pages/Policies&Conditions/PrivacyPolicy";
 import TermsAndConditions from "./Pages/Policies&Conditions/Terms&Conditions";
 import ServiceConditions from "./Pages/Policies&Conditions/ServiceConditions";
+import { ResetPassword } from "./Pages/ResetPassword/ResetPassword";
 
 const Routes = () => {
   return (
@@ -20,6 +21,7 @@ const Routes = () => {
       />
       <Route path="/payments/success" exact component={PaymentSuccess} />
       <Route path="/payments/failure" exact component={PaymentFailure} />
+      <Route path="/reset-password" exact component={ResetPassword} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/terms-and-conditions" component={TermsAndConditions} />
       <Route path="/service-conditions" component={ServiceConditions} />
