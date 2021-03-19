@@ -12,7 +12,7 @@ let theme = createMuiTheme({
     },
 
     text: {
-      primary: "#22222",
+      primary: "#222",
       secondary: "#A19E9E",
     },
 

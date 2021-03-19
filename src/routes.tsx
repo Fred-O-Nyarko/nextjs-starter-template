@@ -8,7 +8,9 @@ import { PaymentFailure } from "./Pages/payment/payment-failure";
 import PrivacyPolicy from "./Pages/Policies&Conditions/PrivacyPolicy";
 import TermsAndConditions from "./Pages/Policies&Conditions/Terms&Conditions";
 import ServiceConditions from "./Pages/Policies&Conditions/ServiceConditions";
-import { ResetPassword } from "./Pages/ResetPassword/ResetPassword";
+import { ResetPassword } from "./Pages/ForgotPassword/ResetPassword";
+import { ForgotPassword } from "./Pages/ForgotPassword/ForgotPassword";
+import NotFound from "./Pages/NotFound/NotFound";
 
 const Routes = () => {
   return (
@@ -22,10 +24,11 @@ const Routes = () => {
       <Route path="/payments/success" exact component={PaymentSuccess} />
       <Route path="/payments/failure" exact component={PaymentFailure} />
       <Route path="/reset-password" exact component={ResetPassword} />
+      <Route path="/forgot-password" exact component={ForgotPassword} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/terms-and-conditions" component={TermsAndConditions} />
       <Route path="/service-conditions" component={ServiceConditions} />
-      {/* <Redirect to="not-found" /> */}
+      <Route path="*" component={NotFound} />
     </Switch>
   );
 };
