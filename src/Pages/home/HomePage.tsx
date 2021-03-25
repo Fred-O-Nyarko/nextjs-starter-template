@@ -45,7 +45,6 @@ const HomePage = () => {
         />
       )}
       <Header2 moveUp={show} />
-      {/* <Header /> */}
       {isSmallScreen && <Social />}
       <main>
         <Landing />
@@ -53,7 +52,6 @@ const HomePage = () => {
         <SecondSection />
       </main>
       <BackToTop />
-      {/* <Footer /> */}
       <Footer2 />
     </React.Fragment>
 

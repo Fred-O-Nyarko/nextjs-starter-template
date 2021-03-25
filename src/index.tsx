@@ -6,14 +6,11 @@ import * as serviceWorker from './serviceWorker';
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './theme';
 import CssBaseline from '@material-ui/core/CssBaseline/CssBaseline';
-import { BrowserRouter as Router } from 'react-router-dom'
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Router>
-        <App />
-      </Router>
+      <App />
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')

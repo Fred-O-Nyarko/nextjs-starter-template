@@ -30,7 +30,7 @@ export default function Footer2() {
             >
               PigeonBolt App
             </Typography>
-            <Typography variant="subtitle1" color="secondary">
+            <Typography variant="subtitle2" color="secondary">
               Enjoy the best experience with timely deliveries on the PigeonBolt
               App now!
             </Typography>
@@ -145,19 +145,17 @@ export default function Footer2() {
             </ul>
           </Grid>
 
-          <Grid container justify="space-between" className="mt-2 mb-2">
+          <Grid container justify="space-between" className="mt-4">
             <Link
               to={{
                 pathname: "/privacy-policy",
                 state: { background: location },
               }}
-            // onClick={(e) => { setData({ ...data, privacy: true }); handleClick(); }}
             >
               <Typography
                 color="secondary"
-                variant="subtitle1"
+                variant="subtitle2"
                 className={classes.policies}
-              // onClick={(e) => { setData({ ...data, privacy: true }); handleClick(); }}
               >
                 Privacy Policy
               </Typography>
@@ -170,9 +168,8 @@ export default function Footer2() {
             >
               <Typography
                 color="secondary"
-                variant="subtitle1"
+                variant="subtitle2"
                 className={classes.policies}
-              // onClick={(e) => { setData({ ...data, terms: true }); handleClick(); }}
               >
                 Terms and Conditions
               </Typography>
@@ -186,13 +183,21 @@ export default function Footer2() {
             >
               <Typography
                 color="secondary"
-                variant="subtitle1"
+                variant="subtitle2"
                 className={classes.policies}
-              // onClick={(e) => { setData({ ...data, service: true }); handleClick(); }}
               >
                 Service Conditions
               </Typography>
             </Link>
+
+            <Typography
+              color="secondary"
+              variant="subtitle2"
+              className={classes.policies}
+            >
+              FAQs
+              </Typography>
+
           </Grid>
 
           <Divider
@@ -200,16 +205,16 @@ export default function Footer2() {
             style={{ width: "100%", margin: "0.5rem 0" }}
           />
           <Grid container justify="space-between">
-            <Typography color="secondary" variant="subtitle1">
+            <Typography color="secondary" variant="subtitle2">
               <span>&copy;</span>
               {date.getFullYear()} Nyeova Systems LLC.
             </Typography>
 
-            <Typography color="secondary" variant="subtitle1">
+            <Typography color="secondary" variant="subtitle2">
               Contact: +233-559-627-280
             </Typography>
 
-            <Typography color="secondary" variant="subtitle1">
+            <Typography color="secondary" variant="subtitle2">
               Support Mail:{" "}
               <a href="mailto:info@pigeonbolt.com">info@pigeonbolt.com</a>
             </Typography>
