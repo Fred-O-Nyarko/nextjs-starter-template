@@ -17,97 +17,105 @@ jQuery(document).ready(function ($) {
     return false;
   });
 
-
   // owl carousel
-  $('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
     lazyLoad: false,
     autoplay: true,
-    navText: ["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:2
-        },
-        1000:{
-            items:3
-        }
-    }
-})
-
-var ml4 = {};
-ml4.opacityIn = [0,1];
-ml4.scaleIn = [0.2, 1];
-ml4.scaleOut = 3;
-ml4.durationIn = 800;
-ml4.durationOut = 600;
-ml4.delay = 500;
-
-anime.timeline({loop: true})
-  .add({
-    targets: '.ml4 .letters-1',
-    opacity: ml4.opacityIn,
-    scale: ml4.scaleIn,
-    duration: ml4.durationIn
-  }).add({
-    targets: '.ml4 .letters-1',
-    opacity: 0,
-    scale: ml4.scaleOut,
-    duration: ml4.durationOut,
-    easing: "easeInExpo",
-    delay: ml4.delay
-  }).add({
-    targets: '.ml4 .letters-2',
-    opacity: ml4.opacityIn,
-    scale: ml4.scaleIn,
-    duration: ml4.durationIn
-  }).add({
-    targets: '.ml4 .letters-2',
-    opacity: 0,
-    scale: ml4.scaleOut,
-    duration: ml4.durationOut,
-    easing: "easeInExpo",
-    delay: ml4.delay
-  }).add({
-    targets: '.ml4 .letters-3',
-    opacity: ml4.opacityIn,
-    scale: ml4.scaleIn,
-    duration: ml4.durationIn
-  }).add({
-    targets: '.ml4 .letters-3',
-    opacity: 0,
-    scale: ml4.scaleOut,
-    duration: ml4.durationOut,
-    easing: "easeInExpo",
-    delay: ml4.delay
-  }).add({
-    targets: '.ml4',
-    opacity: 0,
-    duration: 500,
-    delay: 500
+    navText: [
+      "<div class='nav-btn prev-slide'></div>",
+      "<div class='nav-btn next-slide'></div>",
+    ],
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 2,
+      },
+      1000: {
+        items: 3,
+      },
+    },
   });
-  // Initiate the wowjs animation library
-     new WOW().init();
 
+  var ml4 = {};
+  ml4.opacityIn = [0, 1];
+  ml4.scaleIn = [0.2, 1];
+  ml4.scaleOut = 3;
+  ml4.durationIn = 800;
+  ml4.durationOut = 600;
+  ml4.delay = 500;
 
-     $(document).ready(function(){
-      $("a").on('click', function(event) {
-        console.log("down")
-        if (this.hash !== "") {
-          event.preventDefault();
-          var hash = this.hash;
-          $('html, body').animate({
-            scrollTop: $(hash).offset()?.top
-          }, 800, function(){
-            window.location.hash = hash;
-          });
-        } 
-      });
+  anime
+    .timeline({ loop: true })
+    .add({
+      targets: ".ml4 .letters-1",
+      opacity: ml4.opacityIn,
+      scale: ml4.scaleIn,
+      duration: ml4.durationIn,
+    })
+    .add({
+      targets: ".ml4 .letters-1",
+      opacity: 0,
+      scale: ml4.scaleOut,
+      duration: ml4.durationOut,
+      easing: "easeInExpo",
+      delay: ml4.delay,
+    })
+    .add({
+      targets: ".ml4 .letters-2",
+      opacity: ml4.opacityIn,
+      scale: ml4.scaleIn,
+      duration: ml4.durationIn,
+    })
+    .add({
+      targets: ".ml4 .letters-2",
+      opacity: 0,
+      scale: ml4.scaleOut,
+      duration: ml4.durationOut,
+      easing: "easeInExpo",
+      delay: ml4.delay,
+    })
+    .add({
+      targets: ".ml4 .letters-3",
+      opacity: ml4.opacityIn,
+      scale: ml4.scaleIn,
+      duration: ml4.durationIn,
+    })
+    .add({
+      targets: ".ml4 .letters-3",
+      opacity: 0,
+      scale: ml4.scaleOut,
+      duration: ml4.durationOut,
+      easing: "easeInExpo",
+      delay: ml4.delay,
+    })
+    .add({
+      targets: ".ml4",
+      opacity: 0,
+      duration: 500,
+      delay: 500,
     });
+  // Initiate the wowjs animation library
+  new WOW().init();
+
+  //  $(document).ready(function(){
+  //   $("a").on('click', function(event) {
+  //     console.log("down")
+  //     if (this.hash !== "") {
+  //       event.preventDefault();
+  //       var hash = this.hash;
+  //       $('html, body').animate({
+  //         scrollTop: $(hash).offset()?.top
+  //       }, 800, function(){
+  //         window.location.hash = hash;
+  //       });
+  //     }
+  //   });
+  // });
 
   // // Initiate superfish on nav menu
   // $('.nav-menu').superfish({

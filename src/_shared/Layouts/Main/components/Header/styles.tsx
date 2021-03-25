@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
 
   nav: {
     transition: "all .3s ease-in-out",
-    zIndex: 99999,
+    zIndex: 999,
     position: "fixed",
     top: "4rem",
     left: 0,

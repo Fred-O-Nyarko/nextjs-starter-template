@@ -1,10 +1,12 @@
 import { Button, Divider, Grid, Typography } from "@material-ui/core";
 import React from "react";
 import useStyles from "./styles";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Footer2() {
   const classes = useStyles();
   const date = new Date();
+  let location = useLocation();
 
   return (
     <React.Fragment>
@@ -144,40 +146,53 @@ export default function Footer2() {
           </Grid>
 
           <Grid container justify="space-between" className="mt-2 mb-2">
-            {/* <Link onClick={() => history.push("/privacy-policy")}> */}
-            <Typography
-              color="secondary"
-              variant="subtitle1"
-              className={classes.policies}
-              onClick={() => (window.location.pathname = "/privacy-policy")}
+            <Link
+              to={{
+                pathname: "/privacy-policy",
+                state: { background: location },
+              }}
+            // onClick={(e) => { setData({ ...data, privacy: true }); handleClick(); }}
             >
-              Privacy Policy
-            </Typography>
-            {/* </Link> */}
+              <Typography
+                color="secondary"
+                variant="subtitle1"
+                className={classes.policies}
+              // onClick={(e) => { setData({ ...data, privacy: true }); handleClick(); }}
+              >
+                Privacy Policy
+              </Typography>
+            </Link>
+            <Link
+              to={{
+                pathname: "/terms",
+                state: { background: location },
+              }}
+            >
+              <Typography
+                color="secondary"
+                variant="subtitle1"
+                className={classes.policies}
+              // onClick={(e) => { setData({ ...data, terms: true }); handleClick(); }}
+              >
+                Terms and Conditions
+              </Typography>
+            </Link>
 
-            {/* <Link onClick={() => {}}> */}
-            <Typography
-              color="secondary"
-              variant="subtitle1"
-              className={classes.policies}
-              onClick={() =>
-                (window.location.pathname = "/terms-and-conditions")
-              }
+            <Link
+              to={{
+                pathname: "/service-conditions",
+                state: { background: location },
+              }}
             >
-              Terms and Conditions
-            </Typography>
-            {/* </Link> */}
-
-            {/* <Link onClick={() => {}}> */}
-            <Typography
-              color="secondary"
-              variant="subtitle1"
-              className={classes.policies}
-              onClick={() => (window.location.pathname = "/service-conditions")}
-            >
-              Service Conditions
-            </Typography>
-            {/* </Link> */}
+              <Typography
+                color="secondary"
+                variant="subtitle1"
+                className={classes.policies}
+              // onClick={(e) => { setData({ ...data, service: true }); handleClick(); }}
+              >
+                Service Conditions
+              </Typography>
+            </Link>
           </Grid>
 
           <Divider
