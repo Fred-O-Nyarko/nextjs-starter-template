@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
-import Modules from "./";
+import Modules from "./main";
 
 const Routes = () => {
   let location = useLocation();
@@ -54,14 +54,6 @@ const Routes = () => {
           component={Modules.Password.Forgot}
         />
         <Route path="*" component={Modules.NotFound} />
-
-        <Route
-          path="/:name"
-          children={
-            <Modules.Shared.Components.Modal data={data} open={!!background} />
-          }
-        />
-
       </Switch>
       {background && (
         <Route
