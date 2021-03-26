@@ -1,12 +1,10 @@
-/* @import "reset.css"; */
-
-html{
+html {
   scroll-behavior: smooth;
 }
 body {
   margin: 0;
-  font-family: "Nunito",-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -45,13 +43,14 @@ h6 {
   text-transform: none !important;
 }
 
-h5, h6{
+h5,
+h6 {
   font-family: "Roboto", sans-serif !important;
-  font-weight: 400 ;
+  font-weight: 400;
   text-transform: none !important;
 }
 
-.container-fluid{
+.container-fluid {
   padding: 0;
 }
 
@@ -65,7 +64,7 @@ h5, h6{
   display: none;
 }
 .swiper-button-prev {
-  background-image: url("/src/_shared/assets/img/bx_bxs-chevron-left-circle.svg") !important;
+  background-image: url("./modules/_shared/assets/img/bx_bxs-chevron-left-circle.svg") !important;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
@@ -77,61 +76,61 @@ h5, h6{
 }
 
 .swiper-button-next {
-  background-image: url("/src/_shared/assets/img/bx_bxs-chevron-right-circle.svg") !important;
+  background-image: url("./modules/_shared/assets/img/bx_bxs-chevron-right-circle.svg") !important;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
   width: 2.5rem;
-
 }
 
-.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
-    left: 0px;
-    right: auto;
-    width: 2rem;
-    transition: all .3s  cubic-bezier(0.075, 0.82, 0.165, 1);
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+  left: 0px;
+  right: auto;
+  width: 2rem;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.swiper-button-prev:hover{
-    width: 2.5rem;
+.swiper-button-prev:hover {
+  width: 2.5rem;
 }
 
-.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
-    right: 0px;
-    left: auto;
-    width: 2rem;
-    transition: all .3s  cubic-bezier(0.075, 0.82, 0.165, 1);
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+  right: 0px;
+  left: auto;
+  width: 2rem;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.swiper-button-next:hover{
-    width: 2.5rem;
+.swiper-button-next:hover {
+  width: 2.5rem;
 }
 
 .back-to-top {
-    position: fixed;
-    display: none;
-    background: #ffa203;
-    color: #fff;
-    display: inline-block;
-    width: 44px;
-    height: 44px;
-    text-align: center;
-    line-height: 1;
-    font-size: 16px;
-    border-radius: 50%;
-    right: 15px;
-    bottom: 15px;
-    transition: background 0.5s;
-    z-index: 11;
+  position: fixed;
+  display: none;
+  background: #ffa203;
+  color: #fff;
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  line-height: 1;
+  font-size: 16px;
+  border-radius: 50%;
+  right: 15px;
+  bottom: 15px;
+  transition: background 0.5s;
+  z-index: 11;
 }
 
 .back-to-top i {
-    padding-top: 12px;
-    color: #fff;
+  padding-top: 12px;
+  color: #fff;
 }
 
-
-.owl-carousel .nav-btn{
+.owl-carousel .nav-btn {
   height: 47px;
   position: absolute;
   width: 45px;
@@ -139,20 +138,23 @@ h5, h6{
   top: 100px !important;
 }
 
-.owl-theme .owl-dots .owl-dot.active span, 
+.owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
-    background: #ffa203;
+  background: #ffa203;
 }
 
-.owl-prev, .owl-next{
+.owl-prev,
+.owl-next {
   padding: 0 !important;
 }
-.owl-carousel .prev-slide{
-  background: url("/src/_shared/assets/img/bx_bxs-chevron-left-circle.svg") no-repeat scroll 0 0;
-  left: -33px
+.owl-carousel .prev-slide {
+  background: url("./modules/_shared/assets/img/bx_bxs-chevron-left-circle.svg")
+    no-repeat scroll 0 0;
+  left: -33px;
 }
-.owl-carousel .next-slide{
-  background: url("/src/_shared/assets/img/bx_bxs-chevron-right-circle.svg") no-repeat scroll 0 0;
+.owl-carousel .next-slide {
+  background: url("./modules/_shared/assets/img/bx_bxs-chevron-right-circle.svg")
+    no-repeat scroll 0 0;
   right: -33px;
 }
 /* .owl-carousel .prev-slide:hover{
@@ -162,47 +164,44 @@ h5, h6{
 background-position: -24px -53px;
 } */
 
-.owl-carousel .item{
+.owl-carousel .item {
   background-color: rgba(230, 230, 230, 0.48);
-  
 }
 
-@media (max-width: 960px){
-
-  .owl-carousel .nav-btn{
+@media (max-width: 960px) {
+  .owl-carousel .nav-btn {
     display: none !important;
   }
-
 }
 
-a{
+a {
   color: #f1f1f1;
-  transition: all ease-in .1s;
+  transition: all ease-in 0.1s;
 }
-a:hover{
+a:hover {
   color: #c7c7c7;
   text-decoration: none;
 }
 
 .swal-button {
-	background-color: #f8a927;
-	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
-	filter: drop-shadow(-2px 4px 13px rgba(0, 0, 0, 0.25)) !important;
-  }
-
-  .swal-button:hover{
-	background-color: #e69c26 !important;
-	transition: all .3s ease-in;
-  }
-
-  .swal-icon--success__ring {
-    border: 4px solid #f8a927  !important;
+  background-color: #f8a927;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+  filter: drop-shadow(-2px 4px 13px rgba(0, 0, 0, 0.25)) !important;
 }
 
-.swal-icon--success__line { 
-    background-color: #f8a927 !important; 
+.swal-button:hover {
+  background-color: #e69c26 !important;
+  transition: all 0.3s ease-in;
+}
+
+.swal-icon--success__ring {
+  border: 4px solid #f8a927 !important;
+}
+
+.swal-icon--success__line {
+  background-color: #f8a927 !important;
 }
 
 .swal-text {
-    color: #f8a927 !important;
+  color: #f8a927 !important;
 }

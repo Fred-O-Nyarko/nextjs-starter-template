@@ -1,19 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
-import Modal from "./_shared/Layouts/Main/components/Footer/components/Dialog";
-import { ForgotPassword } from "./Pages/ForgotPassword/ForgotPassword";
-import { ResetPassword } from "./Pages/ForgotPassword/ResetPassword";
-import HomePage from "./Pages/home";
-import { PaymentFailure } from "./Pages/payment/payment-failure";
-import { PaymentSuccess } from "./Pages/payment/payment-success";
-import NotFound from "./Pages/NotFound/NotFound";
+import Modules from "./";
 
 const Routes = () => {
   let location = useLocation();
-
   let background = location.state && location.state.background;
-  console.log(location, "location");
 
   const initialData = {
     privacy: false,
@@ -40,17 +32,43 @@ const Routes = () => {
   return (
     <div>
       <Switch location={background || location}>
-        <Route path="/" exact component={HomePage} />
-        <Route path="/payments/success" component={PaymentSuccess} />
-        <Route path="/payments/failure" component={PaymentFailure} />
-        <Route path="/reset-password" component={ResetPassword} />
-        <Route path="/forgot-password" component={ForgotPassword} />
-        <Route path="*" component={NotFound} />
+        <Route
+          path={Modules.Shared.Constants.URLS.ROOT}
+          exact
+          component={Modules.Home}
+        />
+        <Route
+          path={Modules.Shared.Constants.URLS.PAYMENT_SUCCESS_URL}
+          component={Modules.Payment.Success}
+        />
+        <Route
+          path={Modules.Shared.Constants.URLS.PAYMENY_FAILURE_URL}
+          component={Modules.Payment.Failure}
+        />
+        <Route
+          path={Modules.Shared.Constants.URLS.RESET_PASSWORD_URL}
+          component={Modules.Password.Reset}
+        />
+        <Route
+          path={Modules.Shared.Constants.URLS.FORGOT_PASSWORD_URL}
+          component={Modules.Password.Forgot}
+        />
+        <Route path="*" component={Modules.NotFound} />
+
+        <Route
+          path="/:name"
+          children={
+            <Modules.Shared.Components.Modal data={data} open={!!background} />
+          }
+        />
+
       </Switch>
       {background && (
         <Route
           path="/:name"
-          children={<Modal data={data} open={!!background} />}
+          children={
+            <Modules.Shared.Components.Modal data={data} open={!!background} />
+          }
         />
       )}
     </div>
