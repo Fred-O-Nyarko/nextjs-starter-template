@@ -70,7 +70,7 @@ const ForgotPassword = () => {
                     variables: {
                         data: {
                             email: values.email,
-                            clientUrl: K.URLS.RESET_PASSWORD_URL,
+                            clientUrl: K.URLS.RESET_PASSWORD,
                         },
                     },
                 })

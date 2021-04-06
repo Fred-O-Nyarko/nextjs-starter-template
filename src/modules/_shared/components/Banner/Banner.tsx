@@ -5,9 +5,9 @@ import BellIcon from "react-bell-icon";
 import React from "react";
 
 const Banner = (props: any) => {
-  const useStyles = makeStyles(() => ({
+  const useStyles = makeStyles((theme) => ({
     root: {
-      widht: "100%",
+      width: "100%",
       backgroundColor: "#ffa023",
       transition: "all .3s ease-in-out",
     },
@@ -24,6 +24,10 @@ const Banner = (props: any) => {
       alignItems: "center",
       justifyContent: "center",
     },
+    message: {
+      display: "flex",
+      alignItems: "center"
+    }
   }));
 
   const classes = useStyles();
@@ -40,16 +44,17 @@ const Banner = (props: any) => {
           >
             <Grid item xs>
               <span className={classes.span}>
-                <Typography color="secondary" align="center" variant="h6">
+                <Typography color="secondary" align="center" variant="h6" className={classes.message}>
                   {props.message}
+                  <BellIcon
+                    width="25"
+                    active={true}
+                    animate={true}
+                    color="#fff"
+                    style={{ marginLeft: "2rem" }}
+                  />
                 </Typography>
-                <BellIcon
-                  width="25"
-                  active={true}
-                  animate={true}
-                  color="#fff"
-                  style={{ marginLeft: "2rem" }}
-                />
+
               </span>
             </Grid>
             <Grid item xs={1} className={classes.close}>

@@ -3,16 +3,18 @@ const DEV = process.env.NODE_ENV !== "production";
 export default {
   DEV,
   URLS: {
-    BASE_URL: DEV ? "csma.pigeonbolt.com" : "api.pigeonbolt.com",
+    BASE_URL: DEV ? "staging.pigeonbolt.com" : "api.pigeonbolt.com",
     ROOT: "/",
-    PRIVACY_POLICY_URL: "/privacy-policy",
-    TERMS_AND_CONDITIONS_URL: "/terms",
-    SERVICE_CONDITIONS_URL: "/service-conditions",
-    PAYMENT_SUCCESS_URL: "/payments/success",
-    PAYMENY_FAILURE_URL: "/payments/failure",
-    FORGOT_PASSWORD_URL: "/forgot-password",
-    RESET_PASSWORD_URL: DEV
+    PRIVACY_POLICY: "/privacy-policy",
+    TERMS_AND_CONDITIONS: "/terms",
+    SERVICE_CONDITIONS: "/service-conditions",
+    PAYMENT_SUCCES: "/payments/success",
+    PAYMENT_FAILURE: "/payments/failure",
+    FORGOT_PASSWORD: "/forgot-password",
+    RESET_PASSWORD: DEV
       ? `http://localhost:${window.location.port}/reset-password`
       : "https://pigeonbolt.com/reset-password",
+    FAQS: "/faqs",
+    NOT_FOUND: "/not-found",
   },
 };

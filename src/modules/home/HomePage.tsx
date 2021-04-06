@@ -22,13 +22,15 @@ const HomePage = () => {
 
 
   const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.up("sm"));
+  const isMediumScreen = useMediaQuery(theme.breakpoints.up("sm"));
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+
 
   const [show, setShow] = useState<Boolean>(true);
 
   useEffect(() => {
-    setShow(true);
-  }, []);
+    isSmallScreen ? setShow(false) : setShow(true)
+  }, [isSmallScreen]);
 
   function handleClick() {
     setShow(false);
@@ -44,7 +46,7 @@ const HomePage = () => {
         />
       )}
       <Components.Header moveUp={show} />
-      {isSmallScreen && <Components.SocialMediaIcons />}
+      {isMediumScreen && <Components.SocialMediaIcons />}
       <main>
         <Landing />
         <FirstSection />
