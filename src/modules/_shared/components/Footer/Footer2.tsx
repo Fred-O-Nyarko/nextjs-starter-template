@@ -190,13 +190,20 @@ export default function Footer2() {
               </Typography>
             </Link>
 
-            <Typography
-              color="secondary"
-              variant="subtitle2"
-              className={classes.policies}
+            <Link
+              to={{
+                pathname: "/faqs",
+
+              }}
             >
-              FAQs
+              <Typography
+                color="secondary"
+                variant="subtitle2"
+                className={classes.policies}
+              >
+                FAQs
               </Typography>
+            </Link>
 
           </Grid>
 

@@ -8,6 +8,7 @@ import {
 import { ExpandMore } from "@material-ui/icons";
 import React from "react";
 import Footer2 from "../_shared/components/Footer";
+import { data, otherData } from "./data";
 import useStyles from "./styles";
 
 const BackToTop = () => {
@@ -33,7 +34,8 @@ const FAQs = () => {
     //     setExpanded(isExpanded ? panel : false);
     // };
 
-    const RenderAccordion = () => {
+    const RenderFaqs = (props: any) => {
+        const { question, answer } = props
         return (
             <Accordion
             // expanded={expanded === "panel1"}
@@ -45,20 +47,32 @@ const FAQs = () => {
                     id="panel1bh-header"
                 >
                     <Typography className={classes.heading} align="left">
-                        General settings
-          </Typography>
+                        {question}
+                    </Typography>
 
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Typography align="left">
-                        Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat.
-                        Aliquam eget maximus est, id dignissim quam.
-          </Typography>
+                    <Typography align="left" color="textSecondary">
+                        {answer}
+                    </Typography>
                 </AccordionDetails>
             </Accordion>
         );
     };
-    const faqs = Array(7).fill(0);
+
+    const RenderOtherFaqs = (props: any) => {
+        const { question, answer } = props
+        return (
+            <React.Fragment>
+                <Typography variant="h6" color="textSecondary" paragraph>
+                    {question}
+                </Typography>
+                <Typography variant="subtitle2" gutterBottom paragraph>
+                    {answer}
+                </Typography>
+            </React.Fragment>
+        )
+    }
     return (
         <React.Fragment>
             <section className={classes.hero}>
@@ -67,12 +81,12 @@ const FAQs = () => {
                         Frequently Asked Questions
           </Typography>
                     <Typography variant="h6" className={classes.subtitle} paragraph>
-                        Lorem Ipsum Dolor sit amet par elsque sil vous a la dire comci
+                        We’ve got answers for your Questions.
           </Typography>
 
                     <div className={classes.root1}>
-                        {faqs.map((faq, idx) => (
-                            <RenderAccordion />
+                        {data.map((faq, idx) => (
+                            <RenderFaqs question={faq.question} answer={faq.answer} key={idx} />
                         ))}
                     </div>
                 </div>
@@ -80,27 +94,12 @@ const FAQs = () => {
             <div className={classes.wrap} style={{ marginLeft: 'auto', marginRight: 'auto' }}>
                 <Grid container direction="column" className={classes.others}>
                     <article>
-                        <Typography variant="h4" color="textSecondary" gutterBottom>
+                        <Typography variant="h4" color="textPrimary" gutterBottom>
                             Other frequently asked questions
           </Typography>
-                        <Typography variant="h6" color="textSecondary" paragraph>
-                            How do I do something else?
-          </Typography>
-                        <Typography variant="subtitle2" gutterBottom paragraph>
-                            This is an example of a WordPress post, you could edit this to put
-                            information about yourself or your site so readers know where you
-                            are coming from. You can create as many posts as you like in order
-                            to share with your readers what exactly is on your mind.
-          </Typography>
-                        <Typography variant="h6" color="textSecondary" paragraph>
-                            How do I do something else?
-          </Typography>
-                        <Typography variant="subtitle2" gutterBottom paragraph>
-                            This is an example of a WordPress post, you could edit this to put
-                            information about yourself or your site so readers know where you
-                            are coming from. You can create as many posts as you like in order
-                            to share with your readers what exactly is on your mind.
-          </Typography>
+                        {otherData.map((faq, idx) => (
+                            <RenderOtherFaqs question={faq.question} answer={faq.answer} key={idx} />
+                        ))}
                     </article>
                 </Grid>
             </div>

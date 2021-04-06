@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     hero: {
-        background: 'linear-gradient(135deg, #ffb347 0%, #ffcc33 100%)',
+        background: 'linear-gradient(128deg, #fbb047 0%, #fda024 100%)',
         zIndex: 4,
         paddingBottom: 0,
         display: "flex",
@@ -81,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
 
     root1: {
         width: '100%',
-        margin: '32px 0 -208px!important;',
+        margin: '32px 0 -120px !important;',
         boxShadow: "0 0 0 1px transparent inset, 0 0 0 0 rgb(34 36 38 / 15%) inset !important",
         filter: "drop-shadow(-2px 4px 13px rgba(0,0,0,0.25)) !important", color: ' #404e6b',
         background: '#fff !important',
@@ -90,16 +90,17 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     heading: {
-        fontSize: theme.typography.pxToRem(15),
-        flexBasis: '33.33%',
+        fontSize: '1.1rem',
+        fontWeight: 600,
+        flexBasis: '100%',
         flexShrink: 0,
     },
     secondaryHeading: {
-        fontSize: theme.typography.pxToRem(15),
-        color: theme.palette.text.secondary,
+        fontSize: '0.9rem !important',
+        color: theme.palette.text.primary,
     },
     others: {
-        marginTop: '240px',
+        marginTop: '175px',
         // width: 'calc(100% - (30rem + 48px))',
         marginRight: ' auto',
         marginLeft: 'auto',
