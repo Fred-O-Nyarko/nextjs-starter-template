@@ -45,20 +45,20 @@ const Routes = () => {
 
 
   function handleClose() {
-    setShow('1')
+    setShow('0')
   }
 
 
   useEffect(() => {
 
-    if ((privacyUrl === '0') && show) {
+    if ((privacyUrl === '1') && show) {
       setData({ ...initialData, privacy: true })
     }
-    if ((termsUrl === '0') && show) {
+    if ((termsUrl === '1') && show) {
       setData({ ...initialData, terms: true })
     }
 
-    if ((serviceConditionsUrl === '0') && show) {
+    if ((serviceConditionsUrl === '1') && show) {
       setData({ ...initialData, service: true })
 
     }
@@ -115,7 +115,7 @@ const Routes = () => {
 
       </Switch>
       { show &&
-        <Modules.Shared.Components.Modal data={data} open={show === '0'} close={handleClose} />
+        <Modules.Shared.Components.Modal data={data} open={show === '1'} close={handleClose} />
 
 
       }

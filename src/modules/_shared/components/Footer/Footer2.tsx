@@ -204,7 +204,7 @@ export default function Footer2() {
             <Link
               to={{
                 pathname: "/",
-                search: `${Constants.URLS.TERMS_AND_CONDITIONS}=0`,
+                search: `${Constants.URLS.TERMS_AND_CONDITIONS}=1`,
                 state: true
               }}
             >
@@ -222,7 +222,7 @@ export default function Footer2() {
             <Link
               to={{
                 pathname: "/",
-                search: `?${Constants.URLS.SERVICE_CONDITIONS}=0`,
+                search: `?${Constants.URLS.SERVICE_CONDITIONS}=1`,
                 state: true
               }}
             >
