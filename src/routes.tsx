@@ -36,26 +36,29 @@ const Routes = () => {
   const serviceConditionsUrl = searchParams.get(Modules.Shared.Constants.URLS.SERVICE_CONDITIONS);
 
 
-  const [show, setShow] = useState(!!termsUrl || !!serviceConditionsUrl || !!privacyUrl)
+  const [show, setShow] = useState(termsUrl || serviceConditionsUrl || privacyUrl)
 
   // console.log('show', show)
   // console.log(location.search);
 
+  console.log(privacyUrl);
+
+
   function handleClose() {
-    setShow(false)
+    setShow('1')
   }
 
 
   useEffect(() => {
 
-    if (privacyUrl && show) {
+    if ((privacyUrl === '0') && show) {
       setData({ ...initialData, privacy: true })
     }
-    if (termsUrl && show) {
+    if ((termsUrl === '0') && show) {
       setData({ ...initialData, terms: true })
     }
 
-    if (serviceConditionsUrl && show) {
+    if ((serviceConditionsUrl === '0') && show) {
       setData({ ...initialData, service: true })
 
     }
@@ -112,7 +115,7 @@ const Routes = () => {
 
       </Switch>
       { show &&
-        <Modules.Shared.Components.Modal data={data} open={show} close={handleClose} />
+        <Modules.Shared.Components.Modal data={data} open={show === '0'} close={handleClose} />
 
 
       }

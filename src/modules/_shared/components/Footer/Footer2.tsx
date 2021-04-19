@@ -187,7 +187,7 @@ export default function Footer2() {
             <Link
               to={{
                 pathname: Constants.URLS.ROOT,
-                search: `?${Constants.URLS.PRIVACY_POLICY}=true`,
+                search: `?${Constants.URLS.PRIVACY_POLICY}=0`,
                 state: true
               }}
             >
@@ -204,7 +204,7 @@ export default function Footer2() {
             <Link
               to={{
                 pathname: "/",
-                search: `${Constants.URLS.TERMS_AND_CONDITIONS}=true`,
+                search: `${Constants.URLS.TERMS_AND_CONDITIONS}=0`,
                 state: true
               }}
             >
@@ -222,7 +222,7 @@ export default function Footer2() {
             <Link
               to={{
                 pathname: "/",
-                search: `?${Constants.URLS.SERVICE_CONDITIONS}=true`,
+                search: `?${Constants.URLS.SERVICE_CONDITIONS}=0`,
                 state: true
               }}
             >
