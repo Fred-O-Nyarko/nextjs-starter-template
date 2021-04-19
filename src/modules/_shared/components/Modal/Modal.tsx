@@ -14,11 +14,12 @@ export default function Modal(props: any) {
 
     const history = useHistory();
 
-
     const handleClose = (e: any) => {
         e.stopPropagation();
         // @ts-ignore
-        history.goBack();
+        history.replace('/');
+
+        props?.close()
     };
 
     const descriptionElementRef = React.useRef<HTMLElement>(null);
@@ -33,7 +34,7 @@ export default function Modal(props: any) {
     }, [props.open]);
 
     return (
-        <div style={{ zIndex: 9999999 }}>
+        <div style={{ zIndex: 9999999 }} id='modal'>
             <Dialog
                 open={props.open}
                 onClose={handleClose}

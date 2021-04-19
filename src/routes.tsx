@@ -6,16 +6,15 @@ import Modules from "./module_exports";
 
 const Routes = () => {
   let location = useLocation();
-  let background = location.state && location.state.background;
+  // let show = location.state;
   const previousLocation = useRef(location)
-  const modals = [
-    '/privacy-policy',
-    '/terms',
-    '/service-conditions'
-  ]
+  // const modals = [
+  //   '/privacy-policy',
+  //   '/terms',
+  //   '/service-conditions'
+  // ]
 
-  const isModal = (background && previousLocation.current !== location) || modals.includes(location.pathname)
-
+  // const isModal = (background && previousLocation.current !== location) || modals.includes(location.pathname)
 
   const initialData = {
     privacy: false,
@@ -29,34 +28,46 @@ const Routes = () => {
     service: false,
   });
 
-  console.log(location.pathname);
-  console.log(background, location, previousLocation.current);
-  console.log(isModal);
+
+  const searchParams = new URLSearchParams(location.search);
+
+  const privacyUrl = searchParams.get(Modules.Shared.Constants.URLS.PRIVACY_POLICY)
+  const termsUrl = searchParams.get(Modules.Shared.Constants.URLS.TERMS_AND_CONDITIONS);
+  const serviceConditionsUrl = searchParams.get(Modules.Shared.Constants.URLS.SERVICE_CONDITIONS);
+
+
+  const [show, setShow] = useState(!!termsUrl || !!serviceConditionsUrl || !!privacyUrl)
+
+  // console.log('show', show)
+  // console.log(location.search);
+
+  function handleClose() {
+    setShow(false)
+  }
 
 
   useEffect(() => {
-    location.pathname === "/privacy-policy"
-      ? setData({ ...initialData, privacy: true })
-      : location.pathname === "/terms"
-        ? setData({ ...initialData, terms: true })
-        : location.pathname === "/service-conditions"
-          ? setData({ ...initialData, service: true })
-          : setData({ ...initialData });
-  }, [location.pathname]);
 
-  useEffect(() => {
-    if (!background) {
-      previousLocation.current = location;
+    if (privacyUrl && show) {
+      setData({ ...initialData, privacy: true })
     }
-  })
+    if (termsUrl && show) {
+      setData({ ...initialData, terms: true })
+    }
+
+    if (serviceConditionsUrl && show) {
+      setData({ ...initialData, service: true })
+
+    }
+  }, [location.search]);
+
 
   const paths = Object.values(Modules.Shared.Constants.URLS)
-  console.log(paths);
 
 
   return (
     <React.Fragment>
-      <Switch location={isModal ? previousLocation.current : location}>
+      <Switch location={show ? previousLocation.current : location}>
         <Route
           exact={paths.includes(location.pathname) ? true : false}
           // exact
@@ -88,24 +99,22 @@ const Routes = () => {
         <Route
           path={Modules.Shared.Constants.URLS.NOT_FOUND}
           component={Modules.NotFound}
+
         />
-        <Route
+        {/* <Route
           path="/:name"
 
           children={
-            <Modules.Shared.Components.Modal data={data} open={isModal} />
+            <Modules.Shared.Components.Modal data={data} open={open} />
           }
-        />
+        /> */}
         {/* <Route path="*" to={Modules.NotFound} /> */}
 
       </Switch>
-      { isModal && <Route
-        path="/:name"
+      { show &&
+        <Modules.Shared.Components.Modal data={data} open={show} close={handleClose} />
 
-      >
-        <Modules.Shared.Components.Modal data={data} open={isModal} />
 
-      </Route>
       }
     </React.Fragment>
   );

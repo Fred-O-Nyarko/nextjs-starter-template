@@ -5,9 +5,9 @@ export default {
   URLS: {
     BASE_URL: DEV ? "staging.pigeonbolt.com" : "api.pigeonbolt.com",
     ROOT: "/",
-    PRIVACY_POLICY: "/privacy-policy",
-    TERMS_AND_CONDITIONS: "/terms",
-    SERVICE_CONDITIONS: "/service-conditions",
+    PRIVACY_POLICY: "privacy-policy",
+    TERMS_AND_CONDITIONS: "terms",
+    SERVICE_CONDITIONS: "service-conditions",
     PAYMENT_SUCCES: "/payments/success",
     PAYMENT_FAILURE: "/payments/failure",
     FORGOT_PASSWORD: "/forgot-password",

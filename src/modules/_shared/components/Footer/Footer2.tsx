@@ -1,15 +1,53 @@
 import { Button, Divider, Grid, Typography } from "@material-ui/core";
 import React from "react";
 import useStyles from "./styles";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { Components, Constants } from "../..";
 
 export default function Footer2() {
   const classes = useStyles();
   const date = new Date();
-  let location = useLocation();
+
+  const initialData = {
+    privacy: false,
+    terms: false,
+    service: false,
+  };
+
+  const [data, setData] = React.useState({
+    privacy: false,
+    terms: false,
+    service: false,
+  });
+
+  const [open, setOpen] = React.useState(false)
+
+
+  function handleClick(url: string) {
+    setOpen(true)
+    switch (url) {
+      case Constants.URLS.PRIVACY_POLICY:
+        setData({ ...initialData, privacy: true })
+        break;
+      case Constants.URLS.TERMS_AND_CONDITIONS:
+        setData({ ...initialData, terms: true })
+        break;
+      case Constants.URLS.SERVICE_CONDITIONS:
+        setData({ ...initialData, service: true })
+        break;
+
+      default:
+        setData({ ...initialData, privacy: true });
+    }
+  }
+
+  function handleClose() {
+    setOpen(false);
+  }
 
   return (
     <React.Fragment>
+      <Components.Modal data={data} open={open} close={handleClose} />
       <Grid container className={classes.root}>
         <Grid container className={classes.row}>
           <Grid
@@ -148,28 +186,34 @@ export default function Footer2() {
           <Grid container justify="space-between" className="mt-4">
             <Link
               to={{
-                pathname: "/privacy-policy",
-                state: { background: location },
+                pathname: Constants.URLS.ROOT,
+                search: `?${Constants.URLS.PRIVACY_POLICY}=true`,
+                state: true
               }}
             >
               <Typography
                 color="secondary"
                 variant="subtitle2"
                 className={classes.policies}
+                onClick={() => handleClick(Constants.URLS.PRIVACY_POLICY)}
               >
                 Privacy Policy
               </Typography>
             </Link>
+
             <Link
               to={{
-                pathname: "/terms",
-                state: { background: location },
+                pathname: "/",
+                search: `${Constants.URLS.TERMS_AND_CONDITIONS}=true`,
+                state: true
               }}
             >
               <Typography
                 color="secondary"
                 variant="subtitle2"
                 className={classes.policies}
+                onClick={() => handleClick(Constants.URLS.TERMS_AND_CONDITIONS)}
+
               >
                 Terms and Conditions
               </Typography>
@@ -177,14 +221,17 @@ export default function Footer2() {
 
             <Link
               to={{
-                pathname: "/service-conditions",
-                state: { background: location },
+                pathname: "/",
+                search: `?${Constants.URLS.SERVICE_CONDITIONS}=true`,
+                state: true
               }}
             >
               <Typography
                 color="secondary"
                 variant="subtitle2"
                 className={classes.policies}
+                onClick={() => handleClick(Constants.URLS.SERVICE_CONDITIONS)}
+
               >
                 Service Conditions
               </Typography>
