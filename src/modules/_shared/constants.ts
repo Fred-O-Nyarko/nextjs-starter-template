@@ -11,9 +11,7 @@ export default {
     PAYMENT_SUCCES: "/payments/success",
     PAYMENT_FAILURE: "/payments/failure",
     FORGOT_PASSWORD: "/forgot-password",
-    RESET_PASSWORD: DEV
-      ? `http://localhost:${window.location.port}/reset-password`
-      : "https://pigeonbolt.com/reset-password",
+    RESET_PASSWORD: `/reset-password`,
     FAQS: "/faqs",
     NOT_FOUND: "/not-found",
   },

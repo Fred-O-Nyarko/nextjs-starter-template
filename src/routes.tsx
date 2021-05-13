@@ -7,7 +7,7 @@ import Modules from "./module_exports";
 const Routes = () => {
   let location = useLocation();
   // let show = location.state;
-  const previousLocation = useRef(location)
+  const previousLocation = useRef(location);
   // const modals = [
   //   '/privacy-policy',
   //   '/terms',
@@ -28,45 +28,45 @@ const Routes = () => {
     service: false,
   });
 
-
   const searchParams = new URLSearchParams(location.search);
 
-  const privacyUrl = searchParams.get(Modules.Shared.Constants.URLS.PRIVACY_POLICY)
-  const termsUrl = searchParams.get(Modules.Shared.Constants.URLS.TERMS_AND_CONDITIONS);
-  const serviceConditionsUrl = searchParams.get(Modules.Shared.Constants.URLS.SERVICE_CONDITIONS);
+  const privacyUrl = searchParams.get(
+    Modules.Shared.Constants.URLS.PRIVACY_POLICY
+  );
+  const termsUrl = searchParams.get(
+    Modules.Shared.Constants.URLS.TERMS_AND_CONDITIONS
+  );
+  const serviceConditionsUrl = searchParams.get(
+    Modules.Shared.Constants.URLS.SERVICE_CONDITIONS
+  );
 
-
-  const [show, setShow] = useState(termsUrl || serviceConditionsUrl || privacyUrl)
+  const [show, setShow] = useState(
+    termsUrl || serviceConditionsUrl || privacyUrl
+  );
 
   // console.log('show', show)
   // console.log(location.search);
 
   console.log(privacyUrl);
 
-
   function handleClose() {
-    setShow('0')
+    setShow("0");
   }
 
-
   useEffect(() => {
-
-    if ((privacyUrl === '1') && show) {
-      setData({ ...initialData, privacy: true })
+    if (privacyUrl === "1" && show) {
+      setData({ ...initialData, privacy: true });
     }
-    if ((termsUrl === '1') && show) {
-      setData({ ...initialData, terms: true })
+    if (termsUrl === "1" && show) {
+      setData({ ...initialData, terms: true });
     }
 
-    if ((serviceConditionsUrl === '1') && show) {
-      setData({ ...initialData, service: true })
-
+    if (serviceConditionsUrl === "1" && show) {
+      setData({ ...initialData, service: true });
     }
   }, [location.search]);
 
-
-  const paths = Object.values(Modules.Shared.Constants.URLS)
-
+  const paths = Object.values(Modules.Shared.Constants.URLS);
 
   return (
     <React.Fragment>
@@ -75,9 +75,13 @@ const Routes = () => {
           exact={paths.includes(location.pathname) ? true : false}
           // exact
           path={Modules.Shared.Constants.URLS.ROOT}
-        // component={Modules.Home}
+          // component={Modules.Home}
         >
-          {paths.includes(location.pathname) ? <HomePage /> : <Redirect to={Modules.Shared.Constants.URLS.NOT_FOUND} />}
+          {paths.includes(location.pathname) ? (
+            <HomePage />
+          ) : (
+            <Redirect to={Modules.Shared.Constants.URLS.NOT_FOUND} />
+          )}
         </Route>
         <Route
           path={Modules.Shared.Constants.URLS.PAYMENT_SUCCES}
@@ -102,7 +106,6 @@ const Routes = () => {
         <Route
           path={Modules.Shared.Constants.URLS.NOT_FOUND}
           component={Modules.NotFound}
-
         />
         {/* <Route
           path="/:name"
@@ -112,13 +115,14 @@ const Routes = () => {
           }
         /> */}
         {/* <Route path="*" to={Modules.NotFound} /> */}
-
       </Switch>
-      { show &&
-        <Modules.Shared.Components.Modal data={data} open={show === '1'} close={handleClose} />
-
-
-      }
+      {show && (
+        <Modules.Shared.Components.Modal
+          data={data}
+          open={show === "1"}
+          close={handleClose}
+        />
+      )}
     </React.Fragment>
   );
 };
