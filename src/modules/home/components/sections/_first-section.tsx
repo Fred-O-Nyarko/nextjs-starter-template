@@ -83,7 +83,7 @@ export default function FirstSection() {
       <TextSection
         headerText={"Get your orders delivered on time"}
         subtitle={`We know you have a packed schedule. That is 
-        why PigeonBolt™ seeks to meet your delivery needs swiftly!`}
+        why PigeonUltra™ seeks to meet your delivery needs swiftly!`}
         textAlign={"text-center"}
       />
       <ImageWithTextSection
@@ -100,7 +100,7 @@ export default function FirstSection() {
       />
       <ImageWithTextSection
         headerText={"Bakeries and Dessert Delight"}
-        subtitle={`Get your midnight temptations from PigeonBolt Bakeries. You got nothing to lose, let us sweeten your day too.`}
+        subtitle={`Get your midnight temptations from PigeonUltra™ Bakeries. You got nothing to lose, let us sweeten your day too.`}
         textAlign={"text-left"}
         imageUrl={bakery}
       />

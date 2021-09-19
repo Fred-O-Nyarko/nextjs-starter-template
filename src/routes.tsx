@@ -6,15 +6,7 @@ import Modules from "./module_exports";
 
 const Routes = () => {
   let location = useLocation();
-  // let show = location.state;
   const previousLocation = useRef(location);
-  // const modals = [
-  //   '/privacy-policy',
-  //   '/terms',
-  //   '/service-conditions'
-  // ]
-
-  // const isModal = (background && previousLocation.current !== location) || modals.includes(location.pathname)
 
   const initialData = {
     privacy: false,
@@ -44,11 +36,6 @@ const Routes = () => {
     termsUrl || serviceConditionsUrl || privacyUrl
   );
 
-  // console.log('show', show)
-  // console.log(location.search);
-
-  console.log(privacyUrl);
-
   function handleClose() {
     setShow("0");
   }
@@ -71,11 +58,14 @@ const Routes = () => {
   return (
     <React.Fragment>
       <Switch location={show ? previousLocation.current : location}>
+        {window.location.host === "https://pigeonbolt.com" && (
+          <Route
+            render={() => (window.location.href = "https://pigeonultra.com")}
+          />
+        )}
         <Route
           exact={paths.includes(location.pathname) ? true : false}
-          // exact
           path={Modules.Shared.Constants.URLS.ROOT}
-          // component={Modules.Home}
         >
           {paths.includes(location.pathname) ? (
             <HomePage />
@@ -102,6 +92,7 @@ const Routes = () => {
         <Route
           path={Modules.Shared.Constants.URLS.FAQS}
           component={Modules.FAQs}
+          exact
         />
         <Route
           path={Modules.Shared.Constants.URLS.NOT_FOUND}

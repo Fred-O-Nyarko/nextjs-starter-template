@@ -36,14 +36,14 @@ export default function Header2(props: any) {
         <img src={logo} alt="logo" className={classes.logo} />
         {headerColor === "navbar-light" && (
           <Typography variant="h6" color="secondary">
-            PigeonBolt
+            PigeonUltra™
           </Typography>
         )}
       </a>
       <Button
         variant={headerColor === "navbar-light" ? "contained" : "outlined"}
         color="primary"
-        onClick={() => (window.location.href = "https://shops.pigeonbolt.com")}
+        onClick={() => (window.location.href = "https://shops.pigeonultra.com")}
         type="submit"
       >
         <Typography

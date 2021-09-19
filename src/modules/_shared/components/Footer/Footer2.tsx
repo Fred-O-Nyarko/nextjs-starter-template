@@ -20,20 +20,19 @@ export default function Footer2() {
     service: false,
   });
 
-  const [open, setOpen] = React.useState(false)
-
+  const [open, setOpen] = React.useState(false);
 
   function handleClick(url: string) {
-    setOpen(true)
+    setOpen(true);
     switch (url) {
       case Constants.URLS.PRIVACY_POLICY:
-        setData({ ...initialData, privacy: true })
+        setData({ ...initialData, privacy: true });
         break;
       case Constants.URLS.TERMS_AND_CONDITIONS:
-        setData({ ...initialData, terms: true })
+        setData({ ...initialData, terms: true });
         break;
       case Constants.URLS.SERVICE_CONDITIONS:
-        setData({ ...initialData, service: true })
+        setData({ ...initialData, service: true });
         break;
 
       default:
@@ -66,11 +65,11 @@ export default function Footer2() {
               gutterBottom
               paragraph
             >
-              PigeonBolt App
+              PigeonUltra™ App
             </Typography>
             <Typography variant="subtitle2" color="secondary">
-              Enjoy the best experience with timely deliveries on the PigeonBolt
-              App now!
+              Enjoy the best experience with timely deliveries on the
+              PigeonUltra™ App now!
             </Typography>
           </Grid>
           <Grid
@@ -101,26 +100,26 @@ export default function Footer2() {
             <ul className="list-group">
               <li className="list-group-item bg-transparent border-0 p-0 mb-2">
                 <a href="https://play.google.com/store/apps/details?id=com.nyeova.pigeonbolt.client">
-                  Android App
+                  Client Android App
                 </a>
               </li>
               <li className="list-group-item bg-transparent border-0 p-0 mb-2">
                 <a href="https://apps.apple.com/us/app/pigeonbolt/id1546397948">
-                  iOS App
+                  Client iOS App
                 </a>
               </li>
               <li className="list-group-item bg-transparent border-0 p-0 mb-2">
                 <a href="https://play.google.com/store/apps/details?id=com.nyeova.pigeonbolt.courier">
-                  Courier Android App
+                  Fleet Android App
                 </a>
               </li>
               <li className="list-group-item bg-transparent border-0 p-0 mb-2">
                 <a href="https://apps.apple.com/us/app/pigeonbolt-courier/id1547093544">
-                  Courier iOS App
+                  Fleet iOS App
                 </a>
               </li>
               <li className="list-group-item bg-transparent border-0 p-0 mb-2">
-                <a href="shops.pigeonbolt.com" target="_blank">
+                <a href="shops.pigeonultra.com" target="_blank">
                   Shops Portal
                 </a>
               </li>
@@ -145,17 +144,17 @@ export default function Footer2() {
 
             <ul className="list-group">
               <li className="list-group-item bg-transparent border-0 p-0 mb-2">
-                <a href="https://www.facebook.com/pigeonboltapp">
+                <a href="https://www.facebook.com/PigeonUltraApp">
                   <i className="fa fa-facebook mr-1"></i> Facebook
                 </a>
               </li>
               <li className="list-group-item bg-transparent border-0 p-0 mb-2">
-                <a href="https://twitter.com/PigeonBoltApp">
+                <a href="https://twitter.com/PigeonUltraApp">
                   <i className="fa fa-twitter mr-1"></i> Twitter
                 </a>
               </li>
               <li className="list-group-item bg-transparent border-0 p-0 mb-2">
-                <a href="https://www.instagram.com/pigeonboltapp/?hl=en">
+                <a href="https://www.instagram.com/pigeonultraapp/?hl=en">
                   <i className="fa fa-instagram mr-1"></i> Instagram
                 </a>
               </li>
@@ -188,7 +187,7 @@ export default function Footer2() {
               to={{
                 pathname: Constants.URLS.ROOT,
                 search: `?${Constants.URLS.PRIVACY_POLICY}=0`,
-                state: true
+                state: true,
               }}
             >
               <Typography
@@ -205,7 +204,7 @@ export default function Footer2() {
               to={{
                 pathname: "/",
                 search: `${Constants.URLS.TERMS_AND_CONDITIONS}=1`,
-                state: true
+                state: true,
               }}
             >
               <Typography
@@ -213,7 +212,6 @@ export default function Footer2() {
                 variant="subtitle2"
                 className={classes.policies}
                 onClick={() => handleClick(Constants.URLS.TERMS_AND_CONDITIONS)}
-
               >
                 Terms and Conditions
               </Typography>
@@ -223,7 +221,7 @@ export default function Footer2() {
               to={{
                 pathname: "/",
                 search: `?${Constants.URLS.SERVICE_CONDITIONS}=1`,
-                state: true
+                state: true,
               }}
             >
               <Typography
@@ -231,7 +229,6 @@ export default function Footer2() {
                 variant="subtitle2"
                 className={classes.policies}
                 onClick={() => handleClick(Constants.URLS.SERVICE_CONDITIONS)}
-
               >
                 Service Conditions
               </Typography>
@@ -240,7 +237,6 @@ export default function Footer2() {
             <Link
               to={{
                 pathname: "/faqs",
-
               }}
             >
               <Typography
@@ -251,7 +247,6 @@ export default function Footer2() {
                 FAQs
               </Typography>
             </Link>
-
           </Grid>
 
           <Divider
@@ -270,7 +265,7 @@ export default function Footer2() {
 
             <Typography color="secondary" variant="subtitle2">
               Support Mail:{" "}
-              <a href="mailto:info@pigeonbolt.com">info@pigeonbolt.com</a>
+              <a href="mailto:info@pigeonultra.com">info@pigeonultra.com</a>
             </Typography>
           </Grid>
         </Grid>

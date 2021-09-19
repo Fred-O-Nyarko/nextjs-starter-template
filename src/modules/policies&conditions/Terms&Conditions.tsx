@@ -8,7 +8,7 @@ export default function TermsAndConditions() {
       </p>
       <p className="p1">Last updated&nbsp;October 30, 2020</p>
       <p className="p1">
-        PigeonBolt&trade; App is licensed to You (End-User) by&nbsp;HodanHogan,
+        PigeonUltra&trade; App is licensed to You (End-User) by&nbsp;HodanHogan,
         located at&nbsp;Teshie-Nungua Estates, Accra, Ghana (hereinafter:
         Licensor), for use only under the terms of this License Agreement. By
         downloading the Application from the Apple AppStore / Google PlayStore,
@@ -30,7 +30,7 @@ export default function TermsAndConditions() {
         <strong>1.&nbsp;THE APPLICATION</strong>
       </p>
       <p className="p2">
-        PigeonBolt&trade; App (hereinafter: Application) is a piece of software
+        PigeonUltra&trade; App (hereinafter: Application) is a piece of software
         created to&nbsp;Facilitate online eCommerce via mobile
         application&nbsp;- and customized for Apple and Android mobile devices
         as well as the web. It can be used to&nbsp;order food, groceries,
@@ -254,7 +254,7 @@ export default function TermsAndConditions() {
       <p className="p2">P. O. Box TN 883</p>
       <p className="p2">Teshie-Nungua Estates, Accra</p>
       <p className="p2">Ghana</p>
-      <p className="p2">admin@pigeonbolt.com</p>
+      <p className="p2">admin@pigeonultra.com</p>
       <p className="p3">
         <br />
       </p>

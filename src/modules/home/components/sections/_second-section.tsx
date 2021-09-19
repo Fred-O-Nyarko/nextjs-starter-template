@@ -9,6 +9,7 @@ import liquor from "../../../_shared/assets/category/liquor.jpeg";
 import luxury from "../../../_shared/assets/category/luxury.png";
 import virtualKitchen from "../../../_shared/assets/category/virtualKitchen.png";
 import petcare from "../../../_shared/assets/category/petcare.jpg";
+import xtra from "../../../_shared/assets/category/xtra.jpg";
 import "./style.css";
 import TransitionsModal from "../../landing/components/modal";
 
@@ -47,6 +48,10 @@ export default function SecondSection() {
       image: petcare,
       caption: "Pet care products",
     },
+    {
+      image: xtra,
+      caption: "Xtras",
+    },
   ];
 
   const [open, setOpen] = useState(false);
@@ -81,7 +86,7 @@ export default function SecondSection() {
           data-wow-delay="0.3s"
           align="center"
         >
-          A list of categories we work with on PigeonBolt.
+          A list of categories we work with on PigeonUltra™.
         </Typography>
         <div
           className={

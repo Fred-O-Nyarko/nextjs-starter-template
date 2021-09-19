@@ -48,7 +48,7 @@ export default function PrivacyPolicy() {
         <li className="li3">
           <strong>Application</strong> means the software program provided by
           the Company downloaded by You on any electronic device, named
-          PigeonBolt
+          PigeonUltra™
         </li>
         <li className="li3">
           <strong>Company</strong> (referred to as either &quot;the
@@ -412,10 +412,10 @@ export default function PrivacyPolicy() {
         If you have any questions about this Privacy Policy, You can contact us:
       </p>
       <ul className="ul1">
-        <li className="li3">By email:&nbsp;Info@PigeonBolt.com</li>
+        <li className="li3">By email:&nbsp;info@pigeonultra.com</li>
         <li className="li3">
           By visiting this page on our website:{" "}
-          <span className="s1">www.pigeonbolt.com</span>
+          <span className="s1">www.pigeonultra.com</span>
         </li>
       </ul>
       <p className="p6">

@@ -119,7 +119,7 @@ const Header = () => {
           <Grid container className={classes.headerLinksContainer}>
             <Grid container item xs={2} justify="flex-start" direction="column">
               <img src={logo} alt="logo" className={classes.logo} />
-              <Typography>PigeonBolt</Typography>
+              <Typography>PigeonUltra™</Typography>
             </Grid>
 
             <Grid container item xs={7} justify="center">

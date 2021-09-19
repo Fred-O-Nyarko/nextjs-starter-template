@@ -44,7 +44,7 @@ export default function ServiceConditions() {
         If any of these terms are deemed invalid or unenforceable for any
         reason, then the invalid or unenforceable provision will be severed from
         these terms and the remaining terms will continue to apply. Failure of
-        HodanHogan Company, owners of PigeonBolt Brand to enforce any of the
+        HodanHogan Company, owners of PigeonUltra™ Brand to enforce any of the
         provisions set out in these Terms and Conditions and any Agreement, or
         failure to exercise any option to terminate, shall not be construed as
         waiver of such provisions and shall not affect the validity of these
@@ -85,17 +85,17 @@ export default function ServiceConditions() {
       </p>
       <p className="p3">
         100% due at time of purchase unless approved in writing by an executive
-        officer of PigeonBolt Brand. All registered property and devices remain
-        the property of the Company until paid for in full.
+        officer of PigeonUltra™ Brand. All registered property and devices
+        remain the property of the Company until paid for in full.
       </p>
       <p className="p4">
         <span className="s1">SECTION 6B. SERVICES</span>
       </p>
       <p className="p3">
         Regardless of predefined payment terms established between Client and
-        PigeonBolt Brand, most services from PigeonBolt Brand require payment
-        prior to resources being scheduled. All dates provided are tentative and
-        subject to change prior to payment receipt.
+        PigeonUltra™ Brand, most services from PigeonUltra™ Brand require
+        payment prior to resources being scheduled. All dates provided are
+        tentative and subject to change prior to payment receipt.
       </p>
       <p className="p3">
         The following table defines actual terms per service type, unless
@@ -132,7 +132,7 @@ export default function ServiceConditions() {
               <p className="p5">12.99% if Payment Defaulted</p>
             </td>
             <td className="td1" valign="middle">
-              <p className="p5">100% Payment Made - By PigeonBolt</p>
+              <p className="p5">100% Payment Made - By PigeonUltra™</p>
               <p className="p5">Service Shop Registration Begins</p>
               <p className="p5">Monthly Payment Automatically</p>
               <p className="p5">Deducted from Restaurant Sales</p>
@@ -373,7 +373,7 @@ export default function ServiceConditions() {
           <tr>
             <td className="td1" valign="middle">
               <p className="p7">
-                PigeonBolt App Design
+                PigeonUltra™ App Design
                 <span className="Apple-converted-space">&nbsp;</span>
               </p>
               <p className="p7">Technology Extension - $3000</p>
@@ -442,17 +442,17 @@ export default function ServiceConditions() {
         <span className="s1">SECTION 9. INDEMNIFICATION</span>
       </p>
       <p className="p3">
-        PigeonBolt Brand shall indemnify and hold harmless Client, and its
+        PigeonUltra™ Brand shall indemnify and hold harmless Client, and its
         officers, directors, agents and employees, from and against any claims
-        brought or alleged against Client resulting from PigeonBolt
+        brought or alleged against Client resulting from PigeonUltra™
         Brand&rsquo;s negligent performance of Services for Client under this
         Agreement, including for costs and attorneys&rsquo; fees; provided,
-        however, that the maximum amount that PigeonBolt Brand shall be liable
-        for hereunder shall be limited to the amount paid to PigeonBolt Brand
+        however, that the maximum amount that PigeonUltra™ Brand shall be liable
+        for hereunder shall be limited to the amount paid to PigeonUltra™ Brand
         hereunder for the specific Services which gave rise to the liability.
-        Client shall indemnify and hold harmless PigeonBolt Brand, and its
+        Client shall indemnify and hold harmless PigeonUltra™ Brand, and its
         officers, directors, agents and employees, from and against any claims
-        brought or alleged against PigeonBolt Brand resulting from
+        brought or alleged against PigeonUltra™ Brand resulting from
         Client&rsquo;s breach of any of its obligations hereunder, including for
         costs and attorneys&rsquo; fees.
       </p>
@@ -460,12 +460,12 @@ export default function ServiceConditions() {
         <span className="s1">SECTION 10. INVENTIONS AND PATENTS</span>
       </p>
       <p className="p3">
-        Client and PigeonBolt Brand agree that PigeonBolt Brand owns all rights,
-        including copyrights, to all original works of authorship created while
-        providing Services to Client hereunder including, without limitation,
-        inventions, programs, software, documents, and written works (the
-        &ldquo;Inventions&rdquo;), but excluding templates, families and
-        drawings. PigeonBolt Brand hereby grants Client a worldwide,
+        Client and PigeonUltra™ Brand agree that PigeonUltra™ Brand owns all
+        rights, including copyrights, to all original works of authorship
+        created while providing Services to Client hereunder including, without
+        limitation, inventions, programs, software, documents, and written works
+        (the &ldquo;Inventions&rdquo;), but excluding templates, families and
+        drawings. PigeonUltra™ Brand hereby grants Client a worldwide,
         nonexclusive, perpetual, non-transferable and non-sublicensable, royalty
         free, license to use the Inventions, including the rights to enhance,
         adapt and modify same.
@@ -474,35 +474,36 @@ export default function ServiceConditions() {
         <span className="s1">SECTION 11. CONSENT TO RECEIVE EMAIL</span>
       </p>
       <p className="p3">
-        Clients business with PigeonBolt Brand constitutes consent to receive
-        email communications from PigeonBolt Brand including messages regarding
-        Client service information and other matters. Any emails sent by
-        PigeonBolt Brand will be in connection with the provision of agreed
+        Clients business with PigeonUltra™ Brand constitutes consent to receive
+        email communications from PigeonUltra™ Brand including messages
+        regarding Client service information and other matters. Any emails sent
+        by PigeonUltra™ Brand will be in connection with the provision of agreed
         services and products.
       </p>
       <p className="p4">
         <span className="s1">SECTION 12. NON-SOLICITATION</span>
       </p>
       <p className="p3">
-        Client recognizes that PigeonBolt Brand&rsquo;s employees and
-        consultants are among its most important assets. &nbsp;PigeonBolt Brand
-        has invested substantial time and expense in training its employees,
-        consultants and subcontractors (collectively, &ldquo;PigeonBolt Brand
-        Personnel&rdquo;) to perform unique and specialized services, including
-        those to be provided to Client hereunder. &nbsp;During the Term, and for
-        a period of two years following termination of this Agreement for any
-        reason, Client will not, and will ensure that its affiliates will not,
-        directly or indirectly, solicit, hire, employ or engage any PigeonBolt
-        Brand Personnel, or any person or entity who was PigeonBolt Brand
-        Personnel in the immediately preceding 24 months period, for the
-        performance of any services that are the same or similar to those
-        provided by PigeonBolt Brand for Client. &nbsp;In the event of a breach
-        of this non-solicitation clause, the parties agree that PigeonBolt
-        Brand&rsquo;s damages are impossible to determine and Client agrees to
-        pay PigeonBolt Brand compensation [equal to 150% of such PigeonBolt
-        Brand employee&rsquo;s initial yearly salary] OR [in the amount of
-        GHS50,000.00] as liquidated damages, which Client agrees is fair and
-        reasonable compensation for PigeonBolt Brand.
+        Client recognizes that PigeonUltra™ Brand&rsquo;s employees and
+        consultants are among its most important assets. &nbsp;PigeonUltra™
+        Brand has invested substantial time and expense in training its
+        employees, consultants and subcontractors (collectively,
+        &ldquo;PigeonUltra™ Brand Personnel&rdquo;) to perform unique and
+        specialized services, including those to be provided to Client
+        hereunder. &nbsp;During the Term, and for a period of two years
+        following termination of this Agreement for any reason, Client will not,
+        and will ensure that its affiliates will not, directly or indirectly,
+        solicit, hire, employ or engage any PigeonUltra™ Brand Personnel, or any
+        person or entity who was PigeonUltra™ Brand Personnel in the immediately
+        preceding 24 months period, for the performance of any services that are
+        the same or similar to those provided by PigeonUltra™ Brand for Client.
+        &nbsp;In the event of a breach of this non-solicitation clause, the
+        parties agree that PigeonUltra™ Brand&rsquo;s damages are impossible to
+        determine and Client agrees to pay PigeonUltra™ Brand compensation
+        [equal to 150% of such PigeonUltra™ Brand employee&rsquo;s initial
+        yearly salary] OR [in the amount of GHS50,000.00] as liquidated damages,
+        which Client agrees is fair and reasonable compensation for PigeonUltra™
+        Brand.
       </p>
       <p className="p4">
         <span className="s1">SECTION 13. NOTIFICATION OF CHANGES</span>
@@ -516,13 +517,13 @@ export default function ServiceConditions() {
       </p>
       <p className="p3">
         These terms and conditions form part of the Agreement between the Client
-        and PigeonBolt Brand. Your undertaking of a booking or Agreement
+        and PigeonUltra™ Brand. Your undertaking of a booking or Agreement
         indicates your understanding, agreement to and acceptance, of the
         Disclaimer Notice and the full Terms and Conditions contained herein.
         Your statutory Consumer Rights are unaffected.
       </p>
       <p className="p3">
-        &copy;Nyeova Systems, LLC, HodanHogan Company; owners of PigeonBolt
+        &copy;Nyeova Systems, LLC, HodanHogan Company; owners of PigeonUltra™
         Brand. 2021 All Rights reserved
       </p>
       <p className="p19">

@@ -16,7 +16,7 @@ const Social = () => {
     >
       <IconButton
         onClick={() =>
-          (window.location.href = "https://twitter.com/PigeonBoltApp")
+          (window.location.href = "https://twitter.com/PigeonUltraApp")
         }
       >
         <span
@@ -28,7 +28,7 @@ const Social = () => {
       <IconButton
         onClick={() =>
           (window.location.href =
-            "https://www.instagram.com/pigeonboltapp/?hl=en")
+            "https://www.instagram.com/pigeonultraapp/?hl=en")
         }
       >
         <span
@@ -39,7 +39,7 @@ const Social = () => {
       </IconButton>
       <IconButton
         onClick={() =>
-          (window.location.href = "https://www.facebook.com/pigeonboltapp")
+          (window.location.href = "https://www.facebook.com/PigeonUltraApp")
         }
       >
         <span

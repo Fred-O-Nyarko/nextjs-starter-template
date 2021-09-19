@@ -268,7 +268,7 @@ const Footer = () => {
             justify="space-evenly"
           >
             <Typography variant="subtitle2" color="textSecondary">
-              © PIGEONBOLTAPP 2020
+              © PigeonUltra 2020
             </Typography>
             <Link className={classes.link}>
               <Typography
