@@ -63,7 +63,7 @@ const Routes = () => {
   return (
     <React.Fragment>
       <Switch location={show ? previousLocation.current : location}>
-        {window.location.host === "localhost:3000" && (
+        {window.location.host === "pigeonbolt.com" && (
           <Route
             render={() => {
               window.location.href = "https://pigeonultra.com";
