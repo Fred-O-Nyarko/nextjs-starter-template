@@ -55,12 +55,20 @@ const Routes = () => {
 
   const paths = Object.values(Modules.Shared.Constants.URLS);
 
+  // useEffect(() => {
+  //   window.location.host === "localhost:3000" &&
+  //     (window.location.href = "https://pigeonultra.com");
+  // }, [window.location]);
+
   return (
     <React.Fragment>
       <Switch location={show ? previousLocation.current : location}>
-        {window.location.host === "pigeonbolt.com" && (
+        {window.location.host === "localhost:3000" && (
           <Route
-            render={() => (window.location.href = "https://pigeonultra.com")}
+            render={() => {
+              window.location.href = "https://pigeonultra.com";
+              return <> </>;
+            }}
           />
         )}
         <Route
