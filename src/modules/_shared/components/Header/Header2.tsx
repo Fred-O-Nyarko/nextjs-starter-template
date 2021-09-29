@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import useStyles from "./styles";
 import { Button, Typography } from "@material-ui/core";
 import classNames from "classnames";
+import { Link } from "react-router-dom";
 
 export default function Header2(props: any) {
   const classes = useStyles();
@@ -40,8 +41,40 @@ export default function Header2(props: any) {
           </Typography>
         )}
       </a>
+
+      <div
+        className="d-flex justify-content-between align-items-center"
+        style={{ width: headerColor === "navbar-light" ? "unset" : "40%" }}
+      >
+        {headerColor !== "navbar-light" && (
+          <>
+            <Link to="/about">
+              <Typography
+                color={headerColor === "navbar-light" ? "secondary" : "primary"}
+              >
+                About us
+              </Typography>
+            </Link>
+            <Link to="/careers">
+              <Typography
+                color={headerColor === "navbar-light" ? "secondary" : "primary"}
+              >
+                Careers
+              </Typography>
+            </Link>
+            <Link to="/contact">
+              <Typography
+                color={headerColor === "navbar-light" ? "secondary" : "primary"}
+              >
+                Contact
+              </Typography>
+            </Link>{" "}
+          </>
+        )}
+      </div>
+
       <Button
-        variant={headerColor === "navbar-light" ? "contained" : "outlined"}
+        variant="outlined"
         color="primary"
         onClick={() => (window.location.href = "https://shops.pigeonultra.com")}
         type="submit"

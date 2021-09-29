@@ -55,7 +55,6 @@ const Routes = () => {
 
   const paths = Object.values(Modules.Shared.Constants.URLS);
 
-
   return (
     <React.Fragment>
       <Switch location={show ? previousLocation.current : location}>
@@ -80,6 +79,10 @@ const Routes = () => {
         <Route
           path={Modules.Shared.Constants.URLS.PAYMENT_SUCCES}
           component={Modules.Payment.Success}
+        />
+        <Route
+          path={Modules.Shared.Constants.URLS.ABOUT}
+          component={Modules.About}
         />
         <Route
           path={Modules.Shared.Constants.URLS.PAYMENT_FAILURE}

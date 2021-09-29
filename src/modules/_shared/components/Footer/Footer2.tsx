@@ -52,9 +52,9 @@ export default function Footer2() {
           <Grid
             item
             xs={12}
-            sm={4}
-            md={4}
-            lg={4}
+            sm={3}
+            md={3}
+            lg={3}
             direction="column"
             className="p-1"
           >
@@ -72,15 +72,6 @@ export default function Footer2() {
               PigeonUltra™ App now!
             </Typography>
           </Grid>
-          <Grid
-            item
-            xs={12}
-            lg={1}
-            md={1}
-            sm={1}
-            direction="column"
-            className="p-1"
-          ></Grid>
           <Grid
             item
             xs={12}
@@ -128,9 +119,9 @@ export default function Footer2() {
           <Grid
             item
             xs={12}
-            lg={4}
-            md={4}
-            sm={4}
+            lg={3}
+            md={3}
+            sm={3}
             direction="column"
             className="p-1"
           >
@@ -178,6 +169,37 @@ export default function Footer2() {
                     Join
                   </Typography>
                 </Button>
+              </li>
+            </ul>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            lg={3}
+            md={3}
+            sm={3}
+            direction="column"
+            className="p-1"
+          >
+            <Typography
+              variant="h6"
+              className="font-weight-bold"
+              color="secondary"
+            >
+              Our Company
+            </Typography>
+
+            <ul className="list-group">
+              <li className="list-group-item bg-transparent border-0 p-0 mb-2">
+                <a href="https://www.facebook.com/PigeonUltraApp">About us</a>
+              </li>
+              <li className="list-group-item bg-transparent border-0 p-0 mb-2">
+                <a href="https://twitter.com/PigeonUltraApp">Contact</a>
+              </li>
+              <li className="list-group-item bg-transparent border-0 p-0 mb-2">
+                <a href="https://www.instagram.com/pigeonultraapp/?hl=en">
+                  Careers
+                </a>
               </li>
             </ul>
           </Grid>

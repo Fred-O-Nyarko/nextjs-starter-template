@@ -6,6 +6,8 @@ import SocialMediaIcons from "./Social";
 import Modal from "./Modal";
 import Banner from "./Banner";
 
+import * as StyledComponents from "./styling/styles";
+
 export {
   Header,
   Loader,
@@ -14,4 +16,5 @@ export {
   SocialMediaIcons,
   Modal,
   Banner,
+  StyledComponents,
 };

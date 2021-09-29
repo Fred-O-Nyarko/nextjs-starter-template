@@ -13,6 +13,7 @@ export default {
     FORGOT_PASSWORD: "/forgot-password",
     RESET_PASSWORD: `/reset-password`,
     FAQS: "/faqs",
+    ABOUT: "/about",
     NOT_FOUND: "/not-found",
   },
 };

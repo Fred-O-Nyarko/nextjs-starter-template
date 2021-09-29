@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "10rem",
   },
   row: {
-    width: "80% !important",
+    width: "90% !important",
     margin: "0 auto !important",
     padding: "2rem 0rem",
   },
