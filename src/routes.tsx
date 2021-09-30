@@ -84,6 +84,11 @@ const Routes = () => {
           path={Modules.Shared.Constants.URLS.ABOUT}
           component={Modules.About}
         />
+
+        <Route
+          path={Modules.Shared.Constants.URLS.CAREERS}
+          component={Modules.Careers}
+        />
         <Route
           path={Modules.Shared.Constants.URLS.PAYMENT_FAILURE}
           component={Modules.Payment.Failure}

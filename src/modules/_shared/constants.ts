@@ -14,6 +14,7 @@ export default {
     RESET_PASSWORD: `/reset-password`,
     FAQS: "/faqs",
     ABOUT: "/about",
+    CAREERS: '/careers',
     NOT_FOUND: "/not-found",
   },
 };

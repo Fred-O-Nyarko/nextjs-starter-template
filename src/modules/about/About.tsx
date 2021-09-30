@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 import { useTheme, useMediaQuery, Typography, Paper } from "@material-ui/core";
 import { Components } from "../_shared";
 import styled from "styled-components";
-import bgImage from "../_shared/assets/img/lorenzo.jpg";
-import business from "../_shared/assets/img/business.jpg";
+import bgImage from "../_shared/assets/img/food_bg.png";
+import business from "../_shared/assets/img/business.png";
 
 const About = () => {
   const BackToTop = () => {
@@ -54,6 +54,32 @@ const About = () => {
             backgroundSize="cover"
           >
             <div className="container-fluid h-100 d-flex">
+              <div className="container">
+                <div className="row">
+                  <section className="vision">
+                    <Typography className="header_text" gutterBottom>
+                      Our Vision
+                    </Typography>
+                    <Typography className="subtext">
+                      "To always put our customers at the center of our growth.
+                      We deliver opportunities without boundaries."
+                    </Typography>
+                  </section>
+                </div>
+                <div className="row">
+                  <section className="mission">
+                    <Typography className="header_text" gutterBottom>
+                      Our Mission
+                    </Typography>
+                    <Typography className="subtext">
+                      "To become the first Ghanaian aggregation delivery company
+                      that improves the supply experiences for every customer,
+                      with seamless experience from vendor to home."
+                    </Typography>
+                  </section>
+                </div>
+              </div>
+
               <div className="row values">
                 <div className="col-lg-3">
                   <div className="d-flex flex-column justify-content-center">
@@ -162,7 +188,7 @@ const About = () => {
           </Components.StyledComponents.Background>
         </div>
 
-        <section className="section">
+        <section className="section mt-5">
           <div className="container">
             <div className="row">
               <div className="col-lg-7">
@@ -205,6 +231,173 @@ const About = () => {
                 Our Development
               </Typography>
             </div>
+            <div className="row">
+              <div className="development-timeline">
+                <div className="country">
+                  <div className="flag">
+                    <img
+                      src="https://www.countryflags.io/gh/shiny/64.png"
+                      alt="ghana"
+                    />
+                  </div>
+                  <span>
+                    <Typography>2017</Typography>
+                  </span>
+                </div>
+                <div className="country">
+                  <div className="flag">
+                    <img
+                      src="https://www.countryflags.io/us/shiny/64.png"
+                      alt="ghana"
+                    />
+                  </div>
+                  <span>
+                    <Typography>2018</Typography>
+                  </span>
+                </div>
+                <div className="country">
+                  <div className="flag">
+                    <img
+                      src="https://www.countryflags.io/us/shiny/64.png"
+                      alt="ghana"
+                    />
+                  </div>
+                  <span>
+                    <Typography>2018</Typography>
+                  </span>
+                </div>
+                <div className="country">
+                  <div className="flag">
+                    <img
+                      src="https://www.countryflags.io/gh/shiny/64.png"
+                      alt="ghana"
+                    />
+                  </div>
+                  <span>
+                    <Typography>2020</Typography>
+                  </span>
+                </div>
+                <div className="country">
+                  <div className="flag">
+                    <img
+                      src="https://www.countryflags.io/gh/shiny/64.png"
+                      alt="ghana"
+                    />
+                  </div>
+                  <span>
+                    <Typography>2021</Typography>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="section">
+          <div className="container">
+            <Typography variant="h4" paragraph>
+              Our Management Board
+            </Typography>
+            <div className="row">
+              <div className="col-lg-3">
+                <div className="management">
+                  <div className="circle">
+                    <img
+                      src="https://www.hom-fix.com/plugins/images/users/4.jpg"
+                      alt="management"
+                      className="img-fluid img"
+                    />
+                  </div>
+
+                  <div className="details">
+                    <Typography variant="h5" className="name" gutterBottom>
+                      Beverly H.
+                    </Typography>
+                    <Typography variant="subtitle1">
+                      Overseer, Head-Honcho
+                    </Typography>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-3">
+                <div className="management">
+                  <div className="circle">
+                    <img
+                      src="https://www.hom-fix.com/plugins/images/users/4.jpg"
+                      alt="management"
+                      className="img-fluid img"
+                    />
+                  </div>
+
+                  <div className="details">
+                    <Typography variant="h5" className="name" gutterBottom>
+                      Benjamin N.S
+                    </Typography>
+                    <Typography variant="subtitle1">
+                      Finance & Marketing
+                    </Typography>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-3">
+                <div className="management">
+                  <div className="circle">
+                    <img
+                      src="https://www.hom-fix.com/plugins/images/users/4.jpg"
+                      alt="management"
+                      className="img-fluid img"
+                    />
+                  </div>
+
+                  <div className="details">
+                    <Typography variant="h5" className="name" gutterBottom>
+                      Frank A
+                    </Typography>
+                    <Typography variant="subtitle1">Attorney at Law</Typography>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-3">
+                <div className="management">
+                  <div className="circle">
+                    <img
+                      src="https://www.hom-fix.com/plugins/images/users/4.jpg"
+                      alt="management"
+                      className="img-fluid img"
+                    />
+                  </div>
+
+                  <div className="details">
+                    <Typography variant="h5" className="name" gutterBottom>
+                      Rachel H
+                    </Typography>
+                    <Typography variant="subtitle1">
+                      Advisory & Board
+                    </Typography>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-3">
+                <div className="management">
+                  <div className="circle">
+                    <img
+                      src="https://www.hom-fix.com/plugins/images/users/4.jpg"
+                      alt="management"
+                      className="img-fluid img"
+                    />
+                  </div>
+
+                  <div className="details">
+                    <Typography variant="h5" className="name" gutterBottom>
+                      Sharvez H
+                    </Typography>
+                    <Typography variant="subtitle1">
+                      Advisory & Board
+                    </Typography>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </Root>
@@ -228,10 +421,125 @@ const Root = styled.main`
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
   }
 
   .section {
-    margin-top: 8rem;
-    padding: 3rem 0rem;
+    /* margin: 5rem 0; */
+    padding: 5rem 0rem;
+  }
+
+  .vision {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 30vw;
+    position: absolute;
+    bottom: 28rem;
+  }
+
+  .mission {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 30vw;
+    position: absolute;
+    bottom: 15rem;
+    left: 30rem;
+  }
+
+  .header_text {
+    color: #fafafa;
+    font-weight: 900;
+  }
+
+  .subtext {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  .development-timeline {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    padding: 32px;
+    overflow-x: auto;
+  }
+
+  .country {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    position: relative;
+  }
+
+  .country:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  .flag {
+    padding-bottom: 3.75rem;
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+  }
+  /* .flag::before {
+    left: 24px;
+    bottom: 40px;
+    width: calc(100% - 48px);
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    background: #4e4040;
+  } */
+  .flag::after {
+    height: 40px;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 1px;
+    background: #242424;
+  }
+
+  span {
+    margin-top: 0.8rem;
+  }
+
+  .management {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+
+  .circle {
+    border-radius: 50%;
+    height: 100%;
+  }
+
+  .img {
+    border-radius: 50%;
+    height: 12rem;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .name {
+    font-weight: 700 !important;
   }
 `;

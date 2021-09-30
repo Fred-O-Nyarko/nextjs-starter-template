@@ -286,8 +286,14 @@ export default function Footer2() {
             </Typography>
 
             <Typography color="secondary" variant="subtitle2">
-              Support Mail:{" "}
+              Inquiries:{" "}
               <a href="mailto:info@pigeonultra.com">info@pigeonultra.com</a>
+            </Typography>
+            <Typography color="secondary" variant="subtitle2">
+              Support Mail:{" "}
+              <a href="mailto:support@pigeonultra.com">
+                support@pigeonultra.com
+              </a>
             </Typography>
           </Grid>
         </Grid>
