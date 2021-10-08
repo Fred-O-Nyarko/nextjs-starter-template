@@ -3,8 +3,10 @@ import React, { useEffect, useState } from "react";
 import { useTheme, useMediaQuery, Typography, Paper } from "@material-ui/core";
 import { Components } from "../_shared";
 import styled from "styled-components";
-import bgImage from "../_shared/assets/img/food_bg.png";
+import bgImage from "../_shared/assets/img/about-bg.png";
 import business from "../_shared/assets/img/business.png";
+import logo from "../_shared/assets/img/logos/logo.png";
+import { ArrowRightAltOutlined } from "@material-ui/icons";
 
 const About = () => {
   const BackToTop = () => {
@@ -55,19 +57,8 @@ const About = () => {
           >
             <div className="container-fluid h-100 d-flex">
               <div className="container">
-                <div className="row">
-                  <section className="vision">
-                    <Typography className="header_text" gutterBottom>
-                      Our Vision
-                    </Typography>
-                    <Typography className="subtext">
-                      "To always put our customers at the center of our growth.
-                      We deliver opportunities without boundaries."
-                    </Typography>
-                  </section>
-                </div>
-                <div className="row">
-                  <section className="mission">
+                <div className="row flex-column mission">
+                  <div className="col-lg-6 mb-5">
                     <Typography className="header_text" gutterBottom>
                       Our Mission
                     </Typography>
@@ -76,7 +67,16 @@ const About = () => {
                       that improves the supply experiences for every customer,
                       with seamless experience from vendor to home."
                     </Typography>
-                  </section>
+                  </div>
+                  <div className="col-lg-6 ">
+                    <Typography className="header_text" gutterBottom>
+                      Our Vision
+                    </Typography>
+                    <Typography className="subtext">
+                      "To always put our customers at the center of our growth.
+                      We deliver opportunities without boundaries."
+                    </Typography>
+                  </div>
                 </div>
               </div>
 
@@ -91,6 +91,7 @@ const About = () => {
                         display: "flex",
                         flexDirection: "column",
                         justifyContent: "center",
+                        marginBottom: "2rem",
                       }}
                     >
                       <Typography variant="h6" align="center">
@@ -116,6 +117,7 @@ const About = () => {
                         display: "flex",
                         flexDirection: "column",
                         justifyContent: "center",
+                        marginBottom: "2rem",
                       }}
                     >
                       <Typography variant="h6" align="center">
@@ -142,6 +144,7 @@ const About = () => {
                         display: "flex",
                         flexDirection: "column",
                         justifyContent: "center",
+                        marginBottom: "2rem",
                       }}
                     >
                       <Typography variant="h6" align="center">
@@ -168,6 +171,7 @@ const About = () => {
                         display: "flex",
                         flexDirection: "column",
                         justifyContent: "center",
+                        marginBottom: "2rem",
                       }}
                     >
                       <Typography variant="h6" align="center">
@@ -263,7 +267,7 @@ const About = () => {
                     />
                   </div>
                   <span>
-                    <Typography>2018</Typography>
+                    <Typography>2019</Typography>
                   </span>
                 </div>
                 <div className="country">
@@ -288,6 +292,15 @@ const About = () => {
                     <Typography>2021</Typography>
                   </span>
                 </div>
+                <div className="col">
+                  <div className="country flex-row">
+                    <ArrowRightAltOutlined className="arrow-right" />
+                    <img src={logo} alt="logo" className="logo img-fluid" />
+                    <Typography className="mascot" color="textPrimary">
+                      "To infinity and beyond!"
+                    </Typography>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -298,8 +311,8 @@ const About = () => {
             <Typography variant="h4" paragraph>
               Our Management Board
             </Typography>
-            <div className="row">
-              <div className="col-lg-3">
+            <div className="row justify-content-center">
+              <div className="col-lg-4">
                 <div className="management">
                   <div className="circle">
                     <img
@@ -319,7 +332,7 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-3">
+              <div className="col-lg-4">
                 <div className="management">
                   <div className="circle">
                     <img
@@ -339,7 +352,7 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-3">
+              <div className="col-lg-4">
                 <div className="management">
                   <div className="circle">
                     <img
@@ -351,13 +364,13 @@ const About = () => {
 
                   <div className="details">
                     <Typography variant="h5" className="name" gutterBottom>
-                      Frank A
+                      Frank A.
                     </Typography>
                     <Typography variant="subtitle1">Attorney at Law</Typography>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-3">
+              <div className="col-lg-4">
                 <div className="management">
                   <div className="circle">
                     <img
@@ -369,7 +382,7 @@ const About = () => {
 
                   <div className="details">
                     <Typography variant="h5" className="name" gutterBottom>
-                      Rachel H
+                      Rachel H.
                     </Typography>
                     <Typography variant="subtitle1">
                       Advisory & Board
@@ -377,7 +390,7 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-3">
+              <div className="col-lg-4">
                 <div className="management">
                   <div className="circle">
                     <img
@@ -389,7 +402,7 @@ const About = () => {
 
                   <div className="details">
                     <Typography variant="h5" className="name" gutterBottom>
-                      Sharvez H
+                      Sharvez H.
                     </Typography>
                     <Typography variant="subtitle1">
                       Advisory & Board
@@ -413,8 +426,9 @@ const Root = styled.main`
   .values {
     position: absolute;
     bottom: 24px;
-    margin: 0 5rem;
+    margin: 0 auto;
     z-index: 2;
+    width: 100%;
   }
   .business-image {
     background-image: url(${business});
@@ -429,23 +443,12 @@ const Root = styled.main`
     padding: 5rem 0rem;
   }
 
-  .vision {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 30vw;
-    position: absolute;
-    bottom: 28rem;
-  }
-
   .mission {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 30vw;
+    top: 50%;
+    left: 2%;
     position: absolute;
-    bottom: 15rem;
-    left: 30rem;
+    transform: translateY(-60%);
+    width: 65vw;
   }
 
   .header_text {
@@ -541,5 +544,22 @@ const Root = styled.main`
 
   .name {
     font-weight: 700 !important;
+  }
+
+  .logo {
+    height: 10rem;
+  }
+
+  .arrow-right {
+    font-size: 5rem;
+    margin-right: 2rem;
+    color: #ffa023;
+  }
+
+  .mascot {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-left: 2rem;
   }
 `;
