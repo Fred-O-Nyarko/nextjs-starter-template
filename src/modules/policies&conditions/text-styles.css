@@ -1,0 +1,277 @@
+
+
+p.p1 {
+    margin: 0.0px 0.0px 0.0px 0.0px;
+    font: 12.0px 'Nunito';
+    color: #221341
+}
+
+p.p2 {
+    margin: 18.8px 0.0px 11.2px 0.0px;
+    font: 12.0px 'Nunito';
+    color: #221341
+}
+
+p.p3 {
+    margin: 0.0px 0.0px 7.5px 0.0px;
+    font: 12.0px 'Nunito'
+}
+
+p.p4 {
+    margin: 15.0px 0.0px 7.5px 0.0px;
+    font: 12.0px 'Nunito';
+    color: #221341
+}
+
+p.p6 {
+    margin: 0.0px 0.0px 0.0px 0.0px;
+    font: 12.0px 'Nunito';
+    color: #49396a;
+    min-height: 15.0px
+}
+
+li.li3 {
+    margin: 0.0px 0.0px 7.5px 0.0px;
+    font: 12.0px 'Nunito'
+}
+
+li.li5 {
+    margin: 5.0px 0.0px 5.0px 0.0px;
+    font: 12.0px 'Nunito'
+}
+
+span.s1 {
+    text-decoration: underline;
+    color: #49396a
+}
+
+span.s2 {
+    text-decoration: underline
+}
+
+ul.ul1 {
+    list-style-type: disc
+}
+
+
+
+
+/* 
+    p.p1 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        font: 12.0px 'Nunito';
+        color: #221341
+    }
+
+    p.p2 {
+        margin: 18.8px 0.0px 11.2px 0.0px;
+        font: 12.0px 'Nunito';
+        color: #221341
+    }
+
+    p.p3 {
+        margin: 0.0px 0.0px 7.5px 0.0px;
+        font: 12.0px 'Nunito'
+    }
+
+    p.p4 {
+        margin: 15.0px 0.0px 7.5px 0.0px;
+        font: 12.0px 'Nunito';
+        color: #221341
+    }
+
+    p.p6 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        font: 12.0px 'Nunito';
+        color: #49396a;
+        min-height: 15.0px
+    }
+
+    li.li3 {
+        margin: 0.0px 0.0px 7.5px 0.0px;
+        font: 12.0px 'Nunito'
+    }
+
+    li.li5 {
+        margin: 5.0px 0.0px 5.0px 0.0px;
+        font: 12.0px 'Nunito'
+    }
+
+    span.s1 {
+        text-decoration: underline;
+        color: #49396a
+    }
+
+    span.s2 {
+        text-decoration: underline
+    }
+
+    ul.ul1 {
+        list-style-type: disc
+    }
+
+    p.p1 {
+        margin: 0.0px 0.0px 12.0px 0.0px;
+        font: 12.0px Times;
+        color: #000000
+    }
+
+    p.p2 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        font: 12.0px Times;
+        color: #000000
+    }
+
+    p.p3 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        font: 12.0px Times;
+        color: #000000;
+        min-height: 14.0px
+    }
+
+    p.p1 {
+        margin: 0.0px 0.0px 5.0px 0.0px;
+        font: 24.0px 'Nunito';
+        color: #ffffff
+    } */
+
+    p.p2 {
+        margin: 0.0px 0.0px 15.0px 0.0px;
+        font: 13.5px 'Nunito';
+        color: #3e697a
+    }
+
+    p.p3 {
+        margin: 15.0px 0.0px 15.0px 0.0px;
+        font: 12.0px 'Nunito'
+    }
+
+    p.p4 {
+        margin: 30.0px 0.0px 15.0px 0.0px;
+        font: 13.5px 'Nunito';
+        color: #3e697a
+    }
+
+    p.p5 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        text-align: center;
+        font: 12.0px 'Nunito';
+        color: #A19E9E
+    }
+
+    p.p6 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        text-align: center;
+        font: 12.0px 'Nunito';
+        color: #A19E9E;
+        min-height: 15.0px
+    }
+
+    p.p7 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        text-align: center;
+        font: 12.0px 'Nunito'
+    }
+
+    p.p8 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        text-align: center;
+        font: 12.0px 'Nunito';
+        color: #a8d08d
+    }
+
+    p.p9 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        text-align: center;
+        font: 12.0px 'Nunito';
+        color: #a8d08d;
+        min-height: 15.0px
+    }
+
+    p.p10 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        text-align: center;
+        font: 12.0px 'Nunito';
+        color: #8eaadb
+    }
+
+    p.p11 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        text-align: center;
+        font: 12.0px 'Nunito';
+        color: #f4b083
+    }
+
+    p.p12 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        text-align: center;
+        font: 12.0px 'Nunito';
+        color: #f4b083;
+        min-height: 15.0px
+    }
+
+    p.p13 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        text-align: center;
+        font: 12.0px 'Nunito';
+        color: #8eaadb;
+        min-height: 15.0px
+    }
+
+    p.p14 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        text-align: center;
+        font: 12.0px 'Nunito';
+        min-height: 15.0px
+    }
+
+    p.p15 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        text-align: center;
+        font: 12.0px 'Nunito';
+        color: #ff99ff
+    }
+
+    p.p16 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        text-align: center;
+        font: 12.0px 'Nunito';
+        color: #ff99ff;
+        min-height: 15.0px
+    }
+
+    p.p17 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        text-align: center;
+        font: 12.0px 'Nunito';
+        color: #00b050
+    }
+
+    p.p18 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        text-align: center;
+        font: 12.0px 'Nunito';
+        color: #00b050;
+        min-height: 15.0px
+    }
+
+    p.p19 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        font: 12.0px 'Nunito';
+        min-height: 15.0px
+    }
+
+    span.s1 {
+        letter-spacing: 1.5px
+    }
+
+    table.t1 {
+        border-collapse: collapse
+    }
+
+    td.td1 {
+        border-style: solid;
+        border-width: 1.0px 1.0px 1.0px 1.0px;
+        border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf;
+        padding: 0.0px 5.0px 0.0px 5.0px
+    }

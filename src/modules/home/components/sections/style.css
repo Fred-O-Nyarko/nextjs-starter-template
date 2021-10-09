@@ -1,0 +1,345 @@
+/* .ml4 {
+  position: relative !important;
+}
+.ml4 .letters {
+  position: absolute;
+  margin: auto;
+  left: 0.5rem;
+  top: 0rem;
+  right: 1rem;
+  opacity: 0;
+} */
+
+li{
+  list-style-type: none;
+  margin-bottom: 0.5rem;
+ 
+}
+
+ ul{
+  padding-left: 0 !important;
+
+}
+
+.description {
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.description-text {
+  background-color: #ffa203;
+  margin: 0 auto;
+  width: max-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  padding: 5px 10px;
+}
+
+#front .callouts h3, #front .callouts h4 {
+  margin: 0 0 16px;
+  max-width: 319px;
+  /* font-size: 36px; */
+  font-family: Nunito;
+  line-height: 1.25;
+  letter-spacing: normal;
+}
+
+.callouts {
+  clear: both;
+  text-align: left;
+  padding-top: 10rem !important;
+}
+
+.section {
+  padding: 24px 24px;
+}
+
+.callout-row {
+  margin-top: 0;
+}
+
+.callouts .callout-row {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.callout-row {
+  margin: 0 auto;
+  max-width: 1080px;
+  width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin: 48px auto 0;
+  max-width: 335px;
+  padding: 0;
+}
+
+.callouts .callout-img {
+  display: block;
+}
+
+section .section .odd .callout-row {
+  margin-top: 0;
+}
+
+.header-text {
+  max-width: 600px !important;
+  margin: 0 auto 16px !important;
+  line-height: 1.2 !important;
+}
+
+.subtitle {
+  color: #382f40 !important;
+  max-width: 508px !important;
+  line-height: 1.38 !important;
+  margin: 0 auto !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .callout-row:first-of-type {
+    margin: auto !important;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .callouts .callout-row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .callout-row {
+    margin: 64px auto 0;
+    max-width: 50rem;
+  }
+}
+
+.callout-row::before,
+.callout-row::after {
+  content: " ";
+  display: table;
+}
+
+@media only screen and (min-width: 768px) {
+  .callout-row:first-of-type {
+    margin: 34px auto 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .callout-row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+   section.section.callouts.odd .callout-img:first-child {
+    margin-bottom: 96px;
+  }
+}
+
+.callouts .callout-img {
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .callouts.odd .callout-row:nth-child(odd) .callout-img {
+    justify-content: flex-end;
+    order: 2;
+  }
+}
+
+.callouts .callout-row .callout-caption,
+.callouts .callout-row .callout-img {
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .callout-row .callout-img {
+    width: 58.3333333333%;
+    float: left;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.callout-row .callout-img {
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .section {
+    padding: 24px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .callout-row .callout-img {
+    max-width: 100%;
+    width: 58.3333333333%;
+    float: left;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .callouts .callout-row .callout-img img {
+    max-width: 100%;
+  }
+}
+
+.callouts .callout-row .callout-img img {
+  margin: 0 auto;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.callout-row .callout-img img {
+  border-radius: 16px;
+  height: auto;
+}
+
+img,
+video {
+  margin: 0;
+  max-width: 100%;
+}
+img {
+  vertical-align: middle;
+}
+img {
+  border: 0;
+}
+
+
+@media only screen and (min-width: 768px){
+.callouts.odd .callout-row:nth-child(odd) .callout-caption {
+    order: 1;
+}
+}
+
+@media only screen and (min-width: 768px){
+.callout-row .callout-caption:last-child:not(:first-child) {
+    float: right;
+}
+}
+
+.callouts .callout-row .callout-caption {
+    flex-grow: 1;
+    height: auto;
+    justify-content: center;
+    text-align: left;
+}
+.callouts .callout-row .callout-caption, .callouts .callout-row .callout-img {
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+@media only screen and (min-width: 768px){
+.callout-row .callout-caption {
+    width: 41.6666666667%;
+    float: left;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+}
+
+@media only screen and (max-width: 767px){
+.callout-row .callout-caption article {
+    margin-top: 26px !important;
+}
+}
+
+@media only screen and (min-width: 768px){
+.callouts .callout-row .callout-caption article {
+    margin: 0;
+}
+}
+
+@media only screen and (max-width: 1079px) and (min-width: 768px){
+.callouts .callout-row .callout-caption article {
+    padding: 0 12px;
+}
+}
+
+.callouts .callout-row .callout-caption article {
+    max-width: 344px;
+}
+
+.callout-row .callout-caption article {
+    margin: 0 auto;
+    text-align: left;
+}
+
+
+section .section .callouts .odd .callout-caption p {
+  text-align: left !important;
+}
+@media only screen and (min-width: 768px){
+ section.section.callouts.odd p {
+  margin-bottom: 7rem !important;
+}
+}
+
+section .section .callouts .odd p {
+  margin-bottom: 80px !important;
+  text-align: center !important;
+}
+
+.callouts p {
+  max-width: 40rem !important;
+  margin: 0 auto !important;
+}
+
+
+@media only screen and (min-width: 768px){
+   .callouts h3, #front .callouts h4 {
+    /* font-size: 40px !important; */
+    max-width: 47rem !important;
+}
+}
+.callouts h3,  .callouts h4 {
+    margin: 0 0 16px;
+    max-width: 319px;
+    /* font-size: 36px; */
+    font-family: Nunito;
+    line-height: 1.25;
+    letter-spacing: normal;
+}
+
+.callouts h3 {
+    margin: 0 auto 16px;
+    max-width: 400px;
+}
+
+@media only screen and (min-width: 768px){
+h3 {
+    /* font-size: 32px; */
+    line-height: 1.13;
+}
+}
+
+h3 {
+    /* font-size: 28px; */
+    line-height: 1.14;
+    font-weight: 500;
+}
+
+.section h1, h2, h3, h4, h5, h6 {
+    color: #180C20 ;
+    margin: 0 0 20px;
+}
+
