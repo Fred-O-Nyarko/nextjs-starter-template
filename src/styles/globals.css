@@ -3,6 +3,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Raleway", sans-serif;
+  min-height: 100vh;
+  font-size: 14px;
   background: linear-gradient(
       180deg,
       rgba(242, 170, 76, 0.17) 0%,
@@ -10,6 +12,7 @@ body {
       rgba(249, 218, 178, 0.12) 99%
     ),
     #ffffff;
+    background-repeat: no-repeat;
 }
 
 a {
@@ -20,3 +23,14 @@ a {
 * {
   box-sizing: border-box;
 }
+
+section {
+  margin: auto;
+  width: calc(100% - 8rem);
+  padding: 1rem 4.125rem;
+}
+
+h1, h2, h3, h4, h5, h6{
+  color: #5e6282
+}
+

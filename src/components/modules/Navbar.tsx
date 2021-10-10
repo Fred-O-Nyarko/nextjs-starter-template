@@ -3,8 +3,7 @@ import styled from "styled-components";
 import { routes } from "../../constants/routes";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "./assets/logos/orange.png";
-import Button from "../elements";
+import {Button} from "../elements";
 
 function Navbar() {
   return (
@@ -16,13 +15,14 @@ function Navbar() {
             width={147}
             height={105}
             layout="intrinsic"
+            alt="logo"
           />
         </div>
 
         <ul className="links">
           {routes.map((route, index) => {
             return (
-              <li>
+              <li key={index}>
                 <Link href={route.route}>
                   <a
                     className="link"
@@ -48,16 +48,14 @@ function Navbar() {
 
 export default Navbar;
 
-const Root = styled.div`
+const Root = styled.section`
   display: flex;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: relative;
   z-index: 999;
   .navbar {
     width: 100%;
-    padding: 1rem 4.125rem;
     display: flex;
   }
   .logo__container {
@@ -90,5 +88,14 @@ const Root = styled.div`
     font-weight: 700;
     color: #5e6282;
     margin: 0 2rem;
+    transition: 0.2s ease-in;
+  }
+
+  li:last-child{
+    margin-right: 0
+  }
+
+  .link:hover {
+    color: #f2aa4c;
   }
 `;

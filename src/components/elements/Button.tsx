@@ -7,6 +7,7 @@ interface ButtonProps {
   raised?: boolean;
   text?: string;
   icon?: boolean;
+  rounded?: boolean;
   iconPosition?: "left" | "right";
   onClick: (...args: any) => typeof args;
 }
@@ -18,11 +19,14 @@ const Button = ({
   text,
   icon,
   iconPosition,
+  rounded,
   onClick,
 }: ButtonProps) => {
   return (
     <StyledDiv onClick={onClick}>
-      <div className="content">
+      <div
+        className={`content  ${variant === "outlined" ? "outlined" : "filled"}`}
+      >
         {text && <div className="text">{text}</div>}
         {icon && <img className="icon" />}
       </div>
@@ -38,9 +42,24 @@ const StyledDiv = styled.div`
   border-color: #f2aa4c;
   border-width: 1px;
   border-style: solid;
-
+  transition: 0.3s ease-in-out all;
+  filter: drop-shadow(0px, 4px, 4px rgba(242, 170, 76, 0.4));
+  box-shadow: 0px, 4px, 4px rgba(242, 170, 76, 0.4);
   .content {
     display: flex;
-    padding: 0.5rem 1.2rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .filled {
+    color: #fff;
+    background-color: #f2aa4c;
+  }
+
+  .outlined {
+    background-color: transparent;
+  }
+
+  :hover {
+    box-shadow: 0px 15px 30px rgba(242, 170, 76, 0.3);
   }
 `;
