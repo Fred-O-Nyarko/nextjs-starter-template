@@ -1,0 +1,22 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  background: linear-gradient(
+      180deg,
+      rgba(242, 170, 76, 0.17) 0%,
+      rgba(242, 170, 76, 0.0546563) 39.62%,
+      rgba(249, 218, 178, 0.12) 99%
+    ),
+    #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
