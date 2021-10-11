@@ -6,41 +6,47 @@ import { K } from "../../constants";
 
 const Landing = () => {
   return (
-    <Root>
-      <div className="main__section">
-        <div className="left__section">
-          <h1 className="main__text">
-            The <span className="primary">Fastest</span> In{" "}<br />
-            <span className="primary">Delivering</span> Your Food
-          </h1>
+    <div className="container">
+      <div className="row">
+        <div className="col-lg-6 col-md-6 col-sm-12">
+          <div className="left__section">
+            <h1 className="main__text">
+              The <span className="primary">Fastest</span> In <br />
+              <span className="primary">Delivering</span> Your Food
+            </h1>
 
-          <h5 className="sub__text">
-            Our job is to fill your tummy with delicious food with super quick
-            delivery.
-          </h5>
-          <Button text="Get Started" onClick={() => console.log("clicked")} />
+            <h5 className="sub__text">
+              Our job is to fill your tummy with delicious food with super quick
+              delivery.
+            </h5>
+            <Button text="Get Started" onClick={() => console.log("clicked")} />
+          </div>
         </div>
-        <div className="right__section">
-          <Image
-            alt="landing-image"
-            src="/assets/images/pizza.png"
-            height={501}
-            width={511}
-            layout="intrinsic"
-          />
-          {K.CONFETTIS.map((confetti, index) => (
-            <div className={confetti.className} key={index}>
-              <Image
-                src={confetti.src}
-                alt="confetti"
-                width={confetti.width}
-                height={confetti.height}
-                layout="intrinsic"
-              />
-            </div>
-          ))}
+
+        <div className="col-lg-6 col-md-6 col-sm-12">
+          <div className="right__section">
+            <Image
+              alt="landing-image"
+              src="/assets/images/pizza.png"
+              height={501}
+              width={511}
+              layout="intrinsic"
+            />
+            {K.CONFETTIS.map((confetti, index) => (
+              <div className={confetti.className} key={index}>
+                <Image
+                  src={confetti.src}
+                  alt="confetti"
+                  width={confetti.width}
+                  height={confetti.height}
+                  layout="intrinsic"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+{/* 
       <div className="bottom__section">
         <div className="lady__with__food">
           <Image
@@ -87,8 +93,8 @@ const Landing = () => {
             </GlassMorphicCard>
           ))}
         </div>
-      </div>
-    </Root>
+      </div> */}
+    </div>
   );
 };
 
@@ -207,9 +213,9 @@ const Root = styled.section`
     bottom: 0;
   }
 
-  .sub__text{
+  .sub__text {
     font-weight: 500;
-    color: #1018206B;
+    color: #1018206b;
   }
   @media (max-width: 991.98px) {
   }

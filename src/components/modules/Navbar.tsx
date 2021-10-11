@@ -7,9 +7,10 @@ import {Button} from "../elements";
 
 function Navbar() {
   return (
-    <Root>
-      <div className="navbar">
-        <div className="logo__container">
+  
+      <nav className="navbar">
+        <div className="container-fluid">
+          <a href="#" className="navbar-brand">
           <Image
             src="/assets/logos/orange.png"
             width={147}
@@ -17,6 +18,10 @@ function Navbar() {
             layout="intrinsic"
             alt="logo"
           />
+          </a>
+        </div>
+        <div className="logo__container">
+         
         </div>
 
         <ul className="nav__links">
@@ -41,8 +46,8 @@ function Navbar() {
             />
           </li>
         </ul>
-      </div>
-    </Root>
+      </nav>
+  
   );
 }
 
@@ -62,7 +67,6 @@ const Root = styled.section`
     display: flex;
     width: 100%;
     align-items: center;
-    flex-basis: 20%;
   }
 
 

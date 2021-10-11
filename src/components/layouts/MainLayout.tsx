@@ -4,11 +4,11 @@ import Navbar from "../modules/Navbar";
 
 const MainLayout: React.FC = ({ children }) => {
   return (
-    <>
+    <div className="container">
       <Navbar />
       {children}
       <Footer />
-    </>
+    </div>
   );
 };
 

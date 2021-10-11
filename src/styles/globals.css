@@ -50,26 +50,7 @@ h1,h2{
   font-family: "Raleway-Bold", sans-serif;
 }
 
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
 
-.row {
-  display: grid;
-  grid-template-columns: repeat(12fr);
-  grid-gap: 20px;
-}
-
-@media (min-width: 992px) {
-}
 
 @media (max-width: 767.98px) {
   section {
