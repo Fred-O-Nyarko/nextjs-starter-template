@@ -19,7 +19,7 @@ function Navbar() {
           />
         </div>
 
-        <ul className="links">
+        <ul className="nav__links">
           {routes.map((route, index) => {
             return (
               <li key={index}>
@@ -37,7 +37,7 @@ function Navbar() {
           <li className="link">
             <Button
               onClick={() => console.log("clicked")}
-              text="Im a button !"
+              text="Login as Shop"
             />
           </li>
         </ul>
@@ -65,19 +65,14 @@ const Root = styled.section`
     flex-basis: 20%;
   }
 
-  .nav__links {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: flex-end;
-  }
 
-  .links {
+  .nav__links {
     display: flex;
     width: 100%;
     justify-content: flex-end;
     align-items: center;
     flex-basis: 80%;
+    transition: .2s ease-in all
   }
 
   li {
@@ -86,7 +81,6 @@ const Root = styled.section`
 
   .link {
     font-weight: 700;
-    color: #5e6282;
     margin: 0 2rem;
     transition: 0.2s ease-in;
   }
@@ -97,5 +91,11 @@ const Root = styled.section`
 
   .link:hover {
     color: #f2aa4c;
+  }
+
+  @media (max-width: 767.98px){
+  	.nav__links{
+      display: none
+    }
   }
 `;

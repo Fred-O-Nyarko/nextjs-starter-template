@@ -1,3 +1,4 @@
+@import url("grid.css");
 html,
 body {
   padding: 0;
@@ -12,7 +13,7 @@ body {
       rgba(249, 218, 178, 0.12) 99%
     ),
     #ffffff;
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
 }
 
 a {
@@ -30,7 +31,49 @@ section {
   padding: 1rem 4.125rem;
 }
 
-h1, h2, h3, h4, h5, h6{
-  color: #5e6282
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #101820c7;
+
+  margin: 1rem 0;
 }
 
+a {
+  color: #101820c7;
+}
+
+h1,h2{
+  font-family: "Raleway-Bold", sans-serif;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12fr);
+  grid-gap: 20px;
+}
+
+@media (min-width: 992px) {
+}
+
+@media (max-width: 767.98px) {
+  section {
+    width: calc(100% - 4rem);
+    padding: 0.5rem 2.065rem;
+  }
+}
