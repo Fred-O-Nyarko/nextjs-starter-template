@@ -51,8 +51,8 @@ const Landing = () => {
           </div>
         </div>
       </div>
-      
-      <div className="row mt-5">
+
+      <div className="row mt-5 flex-nowrap">
         <div className=" col-lg-3">
           <Image
             alt="lady with food"
@@ -63,10 +63,9 @@ const Landing = () => {
           />
         </div>
 
-        
-          {[0, 0, 0].map((card, index) => (
-              <div className="col-lg-3" key={index}>
-            <GlassMorphicCard className="card" >
+        {[0, 0, 0].map((card, index) => (
+          <div className="col-lg-3 card__child" key={index}>
+            <GlassMorphicCard className="card">
               <div className="content">
                 <div className="card__image">
                   <Image
@@ -87,6 +86,7 @@ const Landing = () => {
                         height={20}
                         layout="intrinsic"
                         key={index}
+                        alt=""
                       />
                     ))}
                   </div>
@@ -97,9 +97,8 @@ const Landing = () => {
                 </div>
               </div>
             </GlassMorphicCard>
-            </div>
-          ))}
-        
+          </div>
+        ))}
       </div>
     </Root>
   );
@@ -112,8 +111,8 @@ const Root = styled.div`
     width: fit-content;
   }
 
-  .left__section{
-      margin-top: 15% !important;
+  .left__section {
+    margin-top: 15% !important;
   }
   .confetti__waves {
     left: calc(100% - 7.184rem);
@@ -157,13 +156,10 @@ const Root = styled.div`
     color: #f2aa4c;
   }
 
-
-
-  .bottom__section {
+  .content {
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-gap: 1.2rem;
-    margin-top: 2rem;
+    place-items: center;
+    height: 100%;
   }
 
   .lady__with__food {
@@ -179,11 +175,21 @@ const Root = styled.div`
   .card {
     position: relative;
     /* width: 14.125rem; */
-    /* height: 8.75rem; */
-    max-height: 8.75rem;
+    height: 100%;
+    max-height: 12.75rem;
+    max-width: 16.625rem;
     max-width: 100%;
     padding: 1.5rem 2.5rem;
+   
   }
+
+  .card__child{
+    margin-right: 2rem;
+  }
+  .card__child:last-child{
+    margin-right: 0;
+  }
+  
   .card__image {
     position: absolute;
     width: 100%;
@@ -248,9 +254,8 @@ const Root = styled.div`
     }
 
     .confetti__heart__outlined {
-    /* left: calc(100% - 22rem); */
-   
-}
+      /* left: calc(100% - 22rem); */
+    }
 
     .landing__main {
       display: flex;
@@ -259,8 +264,9 @@ const Root = styled.div`
       flex-wrap: no-wrap;
     }
 
-    .sub__text, .cta__button{
-        margin-top: 1rem !important
+    .sub__text,
+    .cta__button {
+      margin-top: 1rem !important;
     }
   }
 `;

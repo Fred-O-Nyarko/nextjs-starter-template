@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 export default {
   CONFETTIS: [
     {
@@ -36,4 +37,34 @@ export default {
       className: "confetti__hexagon__outlined",
     },
   ],
+  ABOUT_US:[
+    {
+      heading: 'Budget',
+      subtext: 'Helping consumers save money, always.',
+      src: '/assets/images/budget.svg',
+      width: 177,
+      height: 130
+    },
+    {
+      heading: 'Flavor',
+      subtext: 'Proving the platform to access and enjoy a varied and flavorful food ',
+      src: '/assets/images/flavor.svg',
+      width: 142,
+      height: 130
+    },
+    {
+      heading: 'Quality',
+      subtext: 'Making a substantive change to how you access high-quality goods.',
+      src: '/assets/images/quality.svg',
+      width: 245,
+      height: 130
+    },
+    {
+      heading: 'Environmental Awareness',
+      subtext: 'Less food waste with minimal CO2 footprint ',
+      src: '/assets/images/environment.svg',
+      width: 178,
+      height: 130
+    }
+  ]
 };

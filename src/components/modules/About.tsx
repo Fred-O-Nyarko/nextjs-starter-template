@@ -1,0 +1,102 @@
+import React from "react";
+import styled from "styled-components";
+import Section from "../layouts/Section";
+import Image from "next/image";
+import { K } from "../../constants";
+import { Button } from "../elements";
+
+const About = () => {
+  return (
+    <StyledSection>
+      <h1 className="text-capitalize text-center fw-bold">What we stand for</h1>
+      <div className="container cards__section">
+        <div className="row">
+          {K.ABOUT_US.map((details, idx) => (
+            <>
+              <div className="card col-lg-3 col-sm-6 col-xs-12 " key={idx}>
+                <div className="content d-flex flex-column p-3">
+                  <div className="image__container d-flex justify-content-center">
+                    <Image
+                      src={details.src}
+                      height={details.height}
+                      width={details.width}
+                      layout="intrinsic"
+                      alt=""
+                    />
+                  </div>
+                  <h4 className="h4 text-center my-3 heading">
+                    {details.heading}
+                  </h4>
+                  <h6 className="h6 text-center subtext">{details.subtext}</h6>
+                </div>
+                <div className="curved__blob">
+                  <Image
+                    src="/assets/images/curved_blob.svg"
+                    height={100}
+                    width={100}
+                    layout="intrinsic"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </>
+          ))}
+        </div>
+        <div className="row float-end">
+          <Button
+            icon
+            iconPath="/asstes/icons/ant-design_arrow-right-outlined.svg"
+            onClick={() => console.log()}
+            className="button"
+            variant="filled"
+            circular
+          />
+        </div>
+      </div>
+    </StyledSection>
+  );
+};
+
+export default About;
+
+const StyledSection = styled.div`
+  margin-top: 9.5rem !important;
+
+  .cards__section {
+    margin-top: 5rem !important;
+  }
+
+  .card {
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    border: none;
+  }
+
+  .heading {
+    color: #1e1d4c !important;
+  }
+
+  .subtext {
+    color: #5e6282 !important;
+  }
+  .card:hover {
+    background: #ffffff;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02),
+      0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852),
+      0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481),
+      0px 20px 13px rgba(0, 0, 0, 0.01),
+      0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185),
+      0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+    border-radius: 36px;
+    display: flex;
+  }
+
+  .curved__blob {
+    position: absolute;
+    display: none;
+  }
+
+  .button {
+    width: fit-content;
+  }
+`;
