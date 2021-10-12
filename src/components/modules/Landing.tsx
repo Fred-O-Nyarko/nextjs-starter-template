@@ -6,31 +6,36 @@ import { K } from "../../constants";
 
 const Landing = () => {
   return (
-    <div className="container">
-      <div className="row">
+    <Root className="container ">
+      <div className="row landing__main">
         <div className="col-lg-6 col-md-6 col-sm-12">
-          <div className="left__section">
-            <h1 className="main__text">
+          <div className="d-flex flex-column h-100 left__section">
+            <h1 className="h1 fw-bold main__text">
               The <span className="primary">Fastest</span> In <br />
               <span className="primary">Delivering</span> Your Food
             </h1>
 
-            <h5 className="sub__text">
+            <h5 className=" h5 sub__text fw-medium mt-5">
               Our job is to fill your tummy with delicious food with super quick
               delivery.
             </h5>
-            <Button text="Get Started" onClick={() => console.log("clicked")} />
+            <Button
+              text="Get Started"
+              className="cta__button mt-5"
+              onClick={() => console.log("clicked")}
+            />
           </div>
         </div>
 
         <div className="col-lg-6 col-md-6 col-sm-12">
-          <div className="right__section">
+          <div className="position-relative d-flex justify-content-center">
             <Image
               alt="landing-image"
               src="/assets/images/pizza.png"
               height={501}
               width={511}
               layout="intrinsic"
+              className="img-fluid img"
             />
             {K.CONFETTIS.map((confetti, index) => (
               <div className={confetti.className} key={index}>
@@ -46,9 +51,9 @@ const Landing = () => {
           </div>
         </div>
       </div>
-{/* 
-      <div className="bottom__section">
-        <div className="lady__with__food">
+      
+      <div className="row mt-5">
+        <div className=" col-lg-3">
           <Image
             alt="lady with food"
             src="/assets/images/lady_with_food.png"
@@ -58,9 +63,10 @@ const Landing = () => {
           />
         </div>
 
-        <div className="item__cards">
+        
           {[0, 0, 0].map((card, index) => (
-            <GlassMorphicCard className="card" key={index}>
+              <div className="col-lg-3" key={index}>
+            <GlassMorphicCard className="card" >
               <div className="content">
                 <div className="card__image">
                   <Image
@@ -71,7 +77,7 @@ const Landing = () => {
                     height={89.62}
                   />
                 </div>
-                <div className="card__details">
+                <div className="">
                   <h5 className="card__header">Special Friedrice and Egg</h5>
                   <div className="rating">
                     {[0, 0, 0, 0, 0].map((star, index) => (
@@ -91,26 +97,24 @@ const Landing = () => {
                 </div>
               </div>
             </GlassMorphicCard>
+            </div>
           ))}
-        </div>
-      </div> */}
-    </div>
+        
+      </div>
+    </Root>
   );
 };
 
 export default Landing;
 
-const Root = styled.section`
-  display: flex;
-  flex-direction: column;
-
-  .main__section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.2s all ease-in-out;
+const Root = styled.div`
+  .cta__button {
+    width: fit-content;
   }
 
+  .left__section{
+      margin-top: 15% !important;
+  }
   .confetti__waves {
     left: calc(100% - 7.184rem);
     top: 0;
@@ -135,17 +139,9 @@ const Root = styled.section`
   }
 
   .confetti__hexagon__outlined {
-    left: calc(100% - 38.184rem);
+    left: calc(100% - 42.184rem);
     bottom: 25rem;
     position: absolute;
-  }
-
-  .left__section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    height: 25vh;
   }
 
   .main__text {
@@ -161,9 +157,7 @@ const Root = styled.section`
     color: #f2aa4c;
   }
 
-  .right__section {
-    position: relative;
-  }
+
 
   .bottom__section {
     display: grid;
@@ -186,6 +180,7 @@ const Root = styled.section`
     position: relative;
     /* width: 14.125rem; */
     /* height: 8.75rem; */
+    max-height: 8.75rem;
     max-width: 100%;
     padding: 1.5rem 2.5rem;
   }
@@ -246,17 +241,26 @@ const Root = styled.section`
       font-weight: 500;
     }
     .confetti__waves {
-      /* left: calc(100% - 3.184rem); */
+      left: calc(100% - 5.184rem);
     }
-    .confetti__heart_filled {
-      /* left: calc(100% - 3rem); */
+    .confetti__heart__filled {
+      left: calc(100% - 4rem);
     }
 
-    .content {
+    .confetti__heart__outlined {
+    /* left: calc(100% - 22rem); */
+   
+}
+
+    .landing__main {
       display: flex;
-      flex-direction: column;
+      flex-direction: column-reverse;
       justify-content: space-between;
       flex-wrap: no-wrap;
+    }
+
+    .sub__text, .cta__button{
+        margin-top: 1rem !important
     }
   }
 `;

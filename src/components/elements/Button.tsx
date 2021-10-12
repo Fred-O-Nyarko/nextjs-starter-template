@@ -20,10 +20,11 @@ const Button = ({
   icon,
   iconPosition,
   rounded,
-  onClick,
-}: ButtonProps) => {
+  className,
+  onClick
+}: ButtonProps & React.HTMLAttributes<HTMLDivElement>) => {
   return (
-    <StyledDiv onClick={onClick}>
+    <StyledDiv onClick={onClick} className={className}>
       <div
         className={`content  ${variant === "outlined" ? "outlined" : "filled"}`}
       >
