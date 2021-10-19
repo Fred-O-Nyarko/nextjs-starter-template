@@ -109,6 +109,8 @@ export default Landing;
 const Root = styled.div`
   .cta__button {
     width: fit-content;
+    border-radius: 64px !important;
+    padding: 1rem 3rem !important;
   }
 
   .left__section {
@@ -146,10 +148,11 @@ const Root = styled.div`
   .main__text {
     font-size: 3.5rem;
     line-height: 4rem;
+    color: rgba(24, 30, 75, 0.78)!important;
   }
 
   .sub__text {
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 1.5rem;
   }
   .primary {
@@ -180,16 +183,16 @@ const Root = styled.div`
     max-width: 16.625rem;
     max-width: 100%;
     padding: 1.5rem 2.5rem;
-   
+    border: none !important;
   }
 
-  .card__child{
+  .card__child {
     margin-right: 2rem;
   }
-  .card__child:last-child{
+  .card__child:last-child {
     margin-right: 0;
   }
-  
+
   .card__image {
     position: absolute;
     width: 100%;

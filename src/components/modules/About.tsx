@@ -7,8 +7,10 @@ import { Button } from "../elements";
 
 const About = () => {
   return (
-    <StyledSection>
-      <h1 className="text-capitalize text-center fw-bold">What we stand for</h1>
+    <StyledDiv>
+      <h1 className="text-capitalize text-center fw-bold mb-5">
+        What we stand for
+      </h1>
       <div className="container cards__section">
         <div className="row">
           {K.ABOUT_US.map((details, idx) => (
@@ -42,29 +44,28 @@ const About = () => {
             </>
           ))}
         </div>
-        <div className="row float-end">
+        <div className="row float-end cta__more align-items-center my-3">
           <Button
             icon
-            iconPath="/asstes/icons/ant-design_arrow-right-outlined.svg"
+            iconPath="/assets/icons/chevron_right.svg"
             onClick={() => console.log()}
             className="button"
             variant="filled"
             circular
           />
+          <h6 className="h6 fw-700 cta__text mb-0">
+            <a>Find out More!</a>
+          </h6>
         </div>
       </div>
-    </StyledSection>
+    </StyledDiv>
   );
 };
 
 export default About;
 
-const StyledSection = styled.div`
+const StyledDiv = styled.div`
   margin-top: 9.5rem !important;
-
-  .cards__section {
-    margin-top: 5rem !important;
-  }
 
   .card {
     background: transparent;
@@ -97,6 +98,10 @@ const StyledSection = styled.div`
   }
 
   .button {
+    width: fit-content !important;
+  }
+
+  .cta__text {
     width: fit-content;
   }
 `;

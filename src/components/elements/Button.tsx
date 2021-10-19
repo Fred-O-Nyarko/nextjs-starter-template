@@ -10,6 +10,7 @@ interface ButtonProps {
   icon?: boolean;
   iconPath?: string;
   circular?: boolean;
+  iconStyles?: { width: number; height: number };
   iconPosition?: "left" | "right" | "center";
   onClick: (...args: any) => typeof args;
 }
@@ -20,6 +21,7 @@ const Button = ({
   raised,
   text,
   icon,
+  iconStyles,
   iconPosition,
   circular,
   className,
@@ -27,9 +29,9 @@ const Button = ({
   onClick,
 }: ButtonProps & React.HTMLAttributes<HTMLDivElement>) => {
   return (
-    <StyledDiv onClick={onClick} className={className} circular={circular}>
+    <StyledDiv onClick={onClick} circular={circular}>
       <div
-        className={`content  ${
+        className={`btn__content ${className}  ${
           variant === "outlined" ? "outlined" : "filled"
         } ${circular && " circular"}`}
       >
@@ -39,8 +41,8 @@ const Button = ({
             className="icon"
             alt=""
             src={iconPath ?? ""}
-            width={40}
-            height={40}
+            width={iconStyles?.width ?? 20}
+            height={iconStyles?.height ?? 20}
             layout="intrinsic"
           />
         )}
@@ -53,21 +55,20 @@ export default Button;
 
 const StyledDiv = styled.div<{ circular?: boolean }>`
   cursor: pointer;
-
-  border-radius: 5px;
-
-  transition: 0.3s ease-in-out all;
-  filter: drop-shadow(0px, 4px, 4px rgba(242, 170, 76, 0.4));
-  box-shadow: 0px, 4px, 4px rgba(242, 170, 76, 0.4);
+  width: auto !important;
+  transition: 0.3s all ease-in-out;
+  filter: drop-shadow(0px, px, 4px rgba(242, 170, 76, 0.4));
+  box-shadow: 0px, 6px, 6px rgba(242, 170, 76, 0.4);
 
   .circular {
     border-radius: 50% !important;
     padding: 1rem !important;
     box-shadow: 0px 15px 30px rgba(242, 170, 76, 0.3);
   }
-  .content {
+  .btn__content {
     display: flex;
     padding: 1rem 1.5rem;
+    border-radius: 5px;
   }
 
   .filled {
@@ -82,7 +83,7 @@ const StyledDiv = styled.div<{ circular?: boolean }>`
     border-style: solid;
   }
 
-  content:hover {
+  .btn__content:hover {
     box-shadow: 0px 15px 30px rgba(242, 170, 76, 0.3);
   }
 `;
