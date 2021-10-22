@@ -11,14 +11,13 @@ function Navbar() {
       <div className="container-fluid">
         <a href="#" className="navbar-brand">
           <div className="logo">
-          <Image
-            src="/assets/logos/orange.png"
-            width={147}
-            height={105}
-            layout="intrinsic"
-            alt="logo"
-          />
-
+            <Image
+              src="/assets/logos/orange.png"
+              width={137}
+              height={95}
+              layout="intrinsic"
+              alt="logo"
+            />
           </div>
         </a>
         <div className="collapes navbar-collapse justify-content-end">
@@ -41,6 +40,7 @@ function Navbar() {
               <Button
                 onClick={() => console.log("clicked")}
                 text="Login as Shop"
+                className="login__btn"
               />
             </li>
           </ul>
@@ -65,8 +65,10 @@ const StyledLink = styled(Link)`
 const Nav = styled.nav`
   .nav-link {
     font-weight: 700;
+    font-size: 0.8rem;
     margin: 0 1rem;
     transition: 0.2s ease-in;
+    color: rgba(24, 30, 75, 0.78);
   }
 
   li:last-child {
@@ -77,11 +79,15 @@ const Nav = styled.nav`
     color: #f2aa4c;
   }
 
+  .login__btn {
+    font-size: 0.8rem;
+  }
+
   @media (max-width: 767.98px) {
     .navbar-nav {
       display: none;
     }
-    .logo{
+    .logo {
       width: 7rem !important;
     }
   }

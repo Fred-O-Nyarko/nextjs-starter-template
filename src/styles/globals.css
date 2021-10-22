@@ -5,13 +5,14 @@ body {
   font-family: "Raleway", sans-serif;
   min-height: 100vh;
   font-size: 16px;
-  background: linear-gradient(
+  /* background: linear-gradient(
       180deg,
       rgba(242, 170, 76, 0.17) 0%,
       rgba(250, 171, 67, 0.055) 39.62%,
       rgba(247, 209, 160, 0.12) 99%
     ),
-    #ffffff;
+    #ffffff; */
+  background: #fbfbfd;
   background-repeat: no-repeat;
 }
 
@@ -33,16 +34,18 @@ section {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
-  color: rgba(16, 24, 32, 0.47) !important;
+h4 {
+  color: rgba(24, 30, 75, 0.78) !important;
 }
 
-a {
+h5,
+h6 {
   color: rgba(16, 24, 32, 0.47);
 }
 
+.z-10 {
+  z-index: 10;
+}
 @media (max-width: 767.98px) {
   section {
     width: calc(100% - 4rem);

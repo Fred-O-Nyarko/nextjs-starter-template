@@ -3,9 +3,16 @@ import styled from "styled-components";
 import Image from "next/image";
 
 const Services = () => {
+  const isServer = typeof window === "undefined";
+  const WOW = !isServer ? require("wowjs") : null;
+
+  React.useEffect(() => {
+    new WOW.WOW().init();
+  });
+
   return (
     <StyledDiv>
-      <h1 className="text-capitalize text-left fw-bold mb-5">
+      <h1 className="text-capitalize text-left fw-bold mb-5 wow fadeIn">
         Our Offered Services
       </h1>
       <div className="container">
@@ -13,15 +20,23 @@ const Services = () => {
           <div className="col-lg-6"></div>
           <div className="col-lg-6">
             <div className="service">
-              <Image
-                src="/assets/images/blob.svg"
-                width={540}
-                height={540}
-                layout="intrinsic"
-                alt=""
-                className="blob"
-              />
-              <div className="service__image">
+              <div className="wow fadeInRight">
+                {" "}
+                <Image
+                  src="/assets/images/blob.svg"
+                  width={540}
+                  height={540}
+                  layout="intrinsic"
+                  alt=""
+                  className="blob"
+                />
+              </div>
+
+              <div
+                className="service__image wow fadeInUp"
+                data-wow-delay="2s"
+                data-wow-duration=""
+              >
                 <Image
                   src="/assets/images/luxury.png"
                   width={392}

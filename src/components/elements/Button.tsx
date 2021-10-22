@@ -29,7 +29,7 @@ const Button = ({
   onClick,
 }: ButtonProps & React.HTMLAttributes<HTMLDivElement>) => {
   return (
-    <StyledDiv onClick={onClick} circular={circular}>
+    <StyledDiv onClick={onClick} circular={circular} iconPath={iconPath}>
       <div
         className={`btn__content ${className}  ${
           variant === "outlined" ? "outlined" : "filled"
@@ -53,13 +53,12 @@ const Button = ({
 
 export default Button;
 
-const StyledDiv = styled.div<{ circular?: boolean }>`
+const StyledDiv = styled.div<{ circular?: boolean; iconPath?: string }>`
   cursor: pointer;
   width: auto !important;
   transition: 0.3s all ease-in-out;
   filter: drop-shadow(0px, px, 4px rgba(242, 170, 76, 0.4));
   box-shadow: 0px, 6px, 6px rgba(242, 170, 76, 0.4);
-
   .circular {
     border-radius: 50% !important;
     padding: 1rem !important;
@@ -67,10 +66,15 @@ const StyledDiv = styled.div<{ circular?: boolean }>`
   }
   .btn__content {
     display: flex;
-    padding: 1rem 1.5rem;
+    padding: 0.5rem 1rem;
+    align-items: center;
     border-radius: 5px;
   }
 
+  .text {
+    font-size: inherit;
+    margin-right: ${({ iconPath }) => (iconPath ? "0.8rem" : "unset")};
+  }
   .filled {
     color: #fff;
     background-color: #f2aa4c;

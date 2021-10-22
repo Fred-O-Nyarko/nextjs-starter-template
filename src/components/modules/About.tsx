@@ -6,16 +6,27 @@ import { K } from "../../constants";
 import { Button } from "../elements";
 
 const About = () => {
+  const isServer = typeof window === "undefined";
+  const WOW = !isServer ? require("wowjs") : null;
+
+  React.useEffect(() => {
+    new WOW.WOW().init();
+  });
+
   return (
     <StyledDiv>
-      <h1 className="text-capitalize text-center fw-bold mb-5">
+      <h1 className="h1 text-capitalize text-center fw-bold mb-5 wow fadeIn">
         What we stand for
       </h1>
       <div className="container cards__section">
         <div className="row">
           {K.ABOUT_US.map((details, idx) => (
             <>
-              <div className="card col-lg-3 col-sm-6 col-xs-12 " key={idx}>
+              <div
+                className="card col-lg-3 col-sm-6 col-xs-12 wow fadeInUpBig"
+                key={idx}
+                data-wow-delay={`${idx / 2}s`}
+              >
                 <div className="content d-flex flex-column p-3">
                   <div className="image__container d-flex justify-content-center">
                     <Image
@@ -69,17 +80,10 @@ const StyledDiv = styled.div`
 
   .card {
     background: transparent;
-    transition: all 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
     border: none;
   }
 
-  .heading {
-    color: #1e1d4c !important;
-  }
-
-  .subtext {
-    color: #5e6282 !important;
-  }
   .card:hover {
     background: #ffffff;
     box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02),
@@ -88,7 +92,7 @@ const StyledDiv = styled.div`
       0px 20px 13px rgba(0, 0, 0, 0.01),
       0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185),
       0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
-    border-radius: 36px;
+    border-radius: 16px;
     display: flex;
   }
 
