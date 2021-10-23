@@ -3,7 +3,9 @@ import styled from "styled-components";
 import Image from "next/image";
 import { Button, GlassMorphicCard } from "../elements";
 import { K } from "../../constants";
-
+import { Autoplay, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 const Landing = () => {
   const isServer = typeof window === "undefined";
   const WOW = !isServer ? require("wowjs") : null;
@@ -73,9 +75,9 @@ const Landing = () => {
         </div>
       </div>
 
-      <div className="row mt-5 flex-nowrap align-items-center">
+      <div className="row mt-5 flex-nowrap align-items-center medium__large">
         <div
-          className=" col-lg-3 wow fadeIn"
+          className=" col-lg-3 wow fadeIn "
           data-wow-duration="2s"
           data-wow-delay="1s"
         >
@@ -138,6 +140,78 @@ const Landing = () => {
           </div>
         ))}
       </div>
+
+      <div className="container-fluid mt-5 small__medium">
+        <div className="row">
+          <Swiper
+            spaceBetween={50}
+            slidesPerView={1}
+            breakpoints={{
+              "640": {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              "768": {
+                slidesPerView: 2,
+                spaceBetween: 40,
+              },
+              "1024": {
+                slidesPerView: 3,
+                spaceBetween: 50,
+              },
+            }}
+            loop
+            autoplay
+            id="swiper-1"
+            modules={[Autoplay]}
+          >
+            {[0, 0, 0].map((card, index) => (
+              <SwiperSlide key={index}>
+                <GlassMorphicCard className="card">
+                  <div className="content">
+                    <div className="card__image">
+                      <Image
+                        alt="card image"
+                        src="/assets/images/food1.png"
+                        layout="intrinsic"
+                        width={97.55}
+                        height={89.62}
+                      />
+                    </div>
+                    <div className="card__details">
+                      <h5 className="card__header fw-bold">
+                        Special Friedrice and Egg
+                      </h5>
+                      <div className="rating">
+                        {[0, 0, 0, 0, 0].map((star, index) => (
+                          <Image
+                            src="/assets/icons/emojione_star.svg"
+                            width={20}
+                            height={20}
+                            layout="intrinsic"
+                            key={index}
+                            alt=""
+                          />
+                        ))}
+                      </div>
+                      <h6 className="price">GHS 45.00</h6>
+                      <div className="button__section">
+                        <Button
+                          text="Order now"
+                          onClick={() => console.log()}
+                          className="order__now"
+                          icon
+                          iconPath="/assets/icons/cart.svg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </GlassMorphicCard>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
     </Root>
   );
 };
@@ -145,6 +219,9 @@ const Landing = () => {
 export default Landing;
 
 const Root = styled.div`
+  .swiper {
+    height: 14rem !important;
+  }
   .cta__button {
     width: fit-content;
     border-radius: 64px !important;
@@ -201,10 +278,6 @@ const Root = styled.div`
     display: grid;
     place-items: center;
     height: 100%;
-  }
-
-  .lady__with__food {
-    grid-column: span 1;
   }
 
   .item__cards {
@@ -265,8 +338,15 @@ const Root = styled.div`
     color: #1018206b;
   }
   @media (max-width: 991.98px) {
+    .medium__large {
+      display: none;
+    }
   }
+
   @media (min-width: 992px) {
+    .small__medium {
+      display: none;
+    }
   }
 
   @media (max-width: 767.98px) {

@@ -83,7 +83,7 @@ const Nav = styled.nav`
     font-size: 0.8rem;
   }
 
-  @media (max-width: 767.98px) {
+  @media (max-width: 991.98px) {
     .navbar-nav {
       display: none;
     }

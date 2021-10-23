@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
-import { Pagination, Autoplay, Controller } from "swiper";
+import { Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -14,12 +14,23 @@ const Testimonials = () => {
       </h1>
       <div className="container">
         <div className="row">
-          {/* <div className="col-lg-4"></div> */}
           <Swiper
             spaceBetween={50}
-            slidesPerView={3}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
+            slidesPerView={1}
+            breakpoints={{
+              "640": {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              "768": {
+                slidesPerView: 2,
+                spaceBetween: 40,
+              },
+              "1024": {
+                slidesPerView: 3,
+                spaceBetween: 50,
+              },
+            }}
             loop
             autoplay
             pagination={{
@@ -43,7 +54,7 @@ const Testimonials = () => {
                       />
                     ))}
                   </div>
-                  <h6 className="h6 testimonial fw-400 mb-4">
+                  <h6 className="h6 testimonial fw-400 mb-4 message">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Lacus, elementum non et quis aliquam. Ullamcorper cursus
                     laoreet semper.
@@ -74,7 +85,6 @@ const Testimonials = () => {
           </Swiper>
         </div>
       </div>
-
       <div className="container">
         <h5 className="text-uppercase text-center fw-bold my-5 h5 partners">
           Proud Partners
@@ -83,23 +93,23 @@ const Testimonials = () => {
           <Swiper
             spaceBetween={50}
             slidesPerView={3}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
-            pagination
-            id="swiper-2"
-            modules={[Controller]}
-            // controller={{}}
+            centeredSlides={true}
+            autoplay
+            loop
+            modules={[Autoplay]}
           >
             {[0, 0, 0, 0].map((partner, idx) => (
-              <div className="partner" key={idx}>
-                <Image
-                  src="/assets/images/mc.png"
-                  alt=""
-                  width={78.84}
-                  height={80}
-                  layout="intrinsic"
-                />
-              </div>
+              <SwiperSlide key={idx}>
+                <div className="d-flex justify-content-center">
+                  <Image
+                    src="/assets/images/mc.png"
+                    alt=""
+                    width={78.84}
+                    height={80}
+                    layout="intrinsic"
+                  />
+                </div>
+              </SwiperSlide>
             ))}
           </Swiper>
         </div>
@@ -156,5 +166,11 @@ const StyledDiv = styled.div`
 
   .swiper-pagination-bullet-active {
     background: #f2aa4c !important;
+  }
+
+  @media (max-width: 767.98px) {
+    .message {
+      font-size: 0.8rem !important;
+    }
   }
 `;
