@@ -12,7 +12,7 @@ const Services = () => {
 
   return (
     <StyledDiv>
-      <h1 className="text-capitalize text-left fw-bold mb-5 wow fadeIn">
+      <h1 className="text-capitalize text-left fw-bold mb-5 wow fadeIn header__text">
         Our Offered Services
       </h1>
       <div className="container">
@@ -66,5 +66,10 @@ const StyledDiv = styled.div`
     position: absolute;
     top: 25%;
     left: 10%;
+  }
+
+  @media (max-width: 767.98px) {
+    .header__text {
+    }
   }
 `;
