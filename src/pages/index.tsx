@@ -1,16 +1,10 @@
-import type { NextPage } from "next";
-import { Landing, About, Services, Apps, Testimonials } from "../components";
+import styled from 'styled-components'
 
-const Home: NextPage = () => {
-  return (
-    <div className="container">
-      <Landing />
-      <About />
-      <Services />
-      <Apps />
-      <Testimonials />
-    </div>
-  );
-};
+const Title = styled.h1`
+  color: red;
+  font-size: 50px;
+`
 
-export default Home;
+export default function Home() {
+  return <Title>My page</Title>
+}

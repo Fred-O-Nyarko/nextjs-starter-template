@@ -1,1 +1,0 @@
-export {default as K } from './page'
